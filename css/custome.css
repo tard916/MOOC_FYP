@@ -35,4 +35,9 @@ body {
 
   .footer{
     background-color: #007bff;
+    margin-bottom: 0em;
+  }
+
+  .cprTxt{
+    color: white;
   }
