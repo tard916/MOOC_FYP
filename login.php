@@ -57,10 +57,10 @@
 
                 <ul class="nav navbar-nav pull-sm-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Log In</a>
+                        <a class="nav-link active" href="login.php">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="signup.php">Sign Up</a>
+                        <a class="nav-link" href="signup.php">Sign Up</a>
                     </li>
                 </ul>
                 
@@ -78,7 +78,7 @@
                         <div class="carousel-caption text-left">
                             <h1 class="text-uppercase slideT">Develop your skills.</h1>
                             <p>Learning is the eyes of the mind.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Log In</a></p>
                         </div>
                     </div>
                 </div>

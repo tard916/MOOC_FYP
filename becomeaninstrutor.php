@@ -44,7 +44,7 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="becomeaninstrutor.php">Become an instructor <span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="becomeaninstrutor.php">Become an instructor <span class="sr-only">(current)</span></a>
                     </li>            
                 </ul>
 
@@ -60,7 +60,7 @@
                         <a class="nav-link" href="login.php">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="signup.php">Sign Up</a>
+                        <a class="nav-link " href="signup.php">Sign Up</a>
                     </li>
                 </ul>
                 
@@ -76,9 +76,9 @@
                     <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption text-left">
-                            <h1 class="text-uppercase slideT">Develop your skills.</h1>
-                            <p>Learning is the eyes of the mind.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            <h1 class="text-uppercase slideT">Help Change The World.</h1>
+                            <p>Shear your knowlege by teaching people around the world.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Join Us as Instructor</a></p>
                         </div>
                     </div>
                 </div>

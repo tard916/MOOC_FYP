@@ -20,7 +20,7 @@
         <!-- this block is for the navbar -->
         <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
             <!-- Navbar content -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand active" href="index.php">
                 <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                 HELP-MOOC
             </a>
@@ -43,7 +43,7 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Become an instrutor <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
                     </li>            
                 </ul>
 
@@ -56,10 +56,10 @@
 
                 <ul class="nav navbar-nav pull-sm-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Log In</a>
+                        <a class="nav-link" href="login.php">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
+                        <a class="nav-link" href="signup.php">Sign Up</a>
                     </li>
                 </ul>
                 
