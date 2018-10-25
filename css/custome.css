@@ -33,6 +33,11 @@ body {
     height: 32rem;
   }
 
+  .slideT{
+    color: black;
+    font-size: 60px;
+  }
+
   .footer{
     background-color: #007bff;
     margin-bottom: 0em;

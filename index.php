@@ -22,7 +22,7 @@
             <!-- Navbar content -->
             <a class="navbar-brand" href="#">
                 <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                Bootstrap
+                HELP-MOOC
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,32 +78,32 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide img-fluid" src="./src/images/bg/bg1.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h1 class="text-uppercase slideT">Inspiration.</h1>
+                <p>Education is the most powerful weapon for changing the world.</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide img-fluid" src="./src/images/bg/bg2.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <h1 class="text-uppercase slideT">Develop your skills.</h1>
+                <p>Learning is the eyes of the mind.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Log In</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide img-fluid" src="./src/images/bg/bg3.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1 class="text-uppercase slideT">Help Change The World.</h1>
+                <p>Shear your knowlege by teaching people around the world.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Become an instrutor</a></p>
               </div>
             </div>
           </div>
@@ -290,7 +290,7 @@
     <p class="float-right ">
         <a class="cprTxt" href="#">Back to top</a>
     </p>
-    <p class="cprTxt"> &copy; HELP-MOOC</p>
+    <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
     
     </div>
 </footer>
