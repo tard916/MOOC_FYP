@@ -78,7 +78,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide img-fluid" src="./src/images/bg/bg1.jpg" alt="First slide">
+            <img class="first-slide img-fluid" src="./src/images/bg/bg5.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1 class="text-uppercase slideT">Inspiration.</h1>
