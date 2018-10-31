@@ -29,7 +29,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav pull-sm-left">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-list-ul"></i>
@@ -45,7 +45,7 @@
 
                 </ul>
 
-                <ul class="navbar-nav mx-auto col-lg-5">
+                <ul class="navbar-nav mx-auto col-lg-4  mt-2 mt-lg-0">
 
                     <div class="input-group">
                       <input type="text" class="form-control" placeholder="Search for Courses" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -55,18 +55,18 @@
                     </div>
                 </ul>
 
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
+                        <a class="btn btn-danger" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav pull-sm-right">
-                    <li class="nav-item">
+                    <li class="nav-item mr-lg-1">
                         <a class="nav-link" href="login.php">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup.php">Sign Up</a>
+                        <a class="btn btn-outline-primary" href="signup.php">Sign Up</a>
                     </li>
                 </ul>
 
