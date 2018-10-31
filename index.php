@@ -18,7 +18,7 @@
 <body>
     <header>
         <!-- this block is for the navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- Navbar content -->
             <a class="navbar-brand active" href="index.php">
                 <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -32,7 +32,7 @@
                 <ul class="nav navbar-nav pull-sm-left">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="navbar-toggler-icon"></span>
+                            <i class="fa fa-list-ul"></i>
                             Categories
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,16 +42,23 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
-                    </li>
+
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for Courses" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                </ul>
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
+                    </li>
                 </ul>
 
                 <ul class="nav navbar-nav pull-sm-right">
