@@ -64,7 +64,7 @@
 
                 <ul class="nav navbar-nav pull-sm-right">
                     <li class="nav-item mr-lg-1">
-                        <a class="nav-link" href="login.php">Log In</a>
+                        <a class="nav-link active" href="login.php">Log In</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-primary" href="signup.php">Sign Up</a>
@@ -102,5 +102,13 @@
         </div>
     </footer>   
     
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
