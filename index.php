@@ -10,13 +10,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/custome.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!--This is the google Arvo font and font-awesome-->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 <body>
-    <header>    
+    <header>
         <!-- this block is for the navbar -->
         <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
             <!-- Navbar content -->
@@ -29,7 +29,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav pull-sm-left">                
+                <ul class="nav navbar-nav pull-sm-left">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
-                    </li>            
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
@@ -62,13 +62,13 @@
                         <a class="nav-link" href="signup.php">Sign Up</a>
                     </li>
                 </ul>
-                
+
             </div>
         </nav>
     </header>
 
 <main role="main">
-    
+
     <!--This part is for the Carousel slide -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -117,7 +117,7 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
-    
+
     <!--This part is for the course content part. -->
     <div class="album py-5 bg-light">
         <div class="container">
@@ -269,7 +269,7 @@
                     <br/>
                     <h5>Rahimi Diallo</h5>
                   <div class="d-flex justify-content-between align-items-center">
-                     
+
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
@@ -291,7 +291,7 @@
         <a class="cprTxt" href="#">Back to top</a>
     </p>
     <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
-    
+
     </div>
 </footer>
 
@@ -303,6 +303,6 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    
+
 </body>
 </html>
