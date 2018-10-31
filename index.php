@@ -45,7 +45,7 @@
 
                 </ul>
 
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto col-lg-5">
 
                     <div class="input-group">
                       <input type="text" class="form-control" placeholder="Search for Courses" aria-label="Recipient's username" aria-describedby="button-addon2">
