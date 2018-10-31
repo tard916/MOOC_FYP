@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/custome.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!--This is the google Arvo font and font-awesome-->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
@@ -73,7 +73,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+                    <img class="d-block w-100" src="src/images/bg/bg4.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption text-left">
                             <h1 class="text-uppercase slideT">Develop your skills.</h1>
