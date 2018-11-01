@@ -1,3 +1,7 @@
+<?
+  include('./backend/classes/DB.php');
+ 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -291,55 +295,55 @@
       </div>
 
       <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalTitle">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <form>
-              <div class="form-group">
-                <div class="input-group mb-3 input-group-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text "><i class="fa fa-user"></i></span>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalTitle">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="POST" action="backend/login.php">
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-at"></i></span>
+                        </div>
+                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
                     </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3 input-group-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
                     </div>
-                    <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-                </div>
-              </div>
-          </form>
-            <button type="button" class="btn btn-success btn-lg btn-block">Login</button>
+                  </div>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Login</button>
+              </form>              
 
-      </div>
-      <div class="modal-footer login-footer">
-          <div>Don't have an account? <a href="#">Sign up</a></div>
+          </div>
+          <div class="modal-footer login-footer">
+              <div>Don't have an account? <a href="#">Sign up</a></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-</main>
+  </main>
 
-<footer class="text-muted footer">
-    <div class="container">
-    <p class="float-right ">
-        <a class="cprTxt" href="#">Back to top</a>
-    </p>
-    <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
+  <footer class="text-muted footer">
+      <div class="container">
+      <p class="float-right ">
+          <a class="cprTxt" href="#">Back to top</a>
+      </p>
+      <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
 
-    </div>
-</footer>
+      </div>
+  </footer>
 
 
 
