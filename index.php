@@ -90,7 +90,7 @@
               <div class="carousel-caption text-left">
                 <h1 class="text-uppercase slideT">Inspiration.</h1>
                 <p>Education is the most powerful weapon for changing the world.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@
               <div class="carousel-caption">
                 <h1 class="text-uppercase slideT">Develop your skills.</h1>
                 <p>Learning is the eyes of the mind.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Log In</a></p>
+                <p><a class="btn btn-lg btn-primary" href="login.php" role="button">Log In</a></p>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
               <div class="carousel-caption text-right">
                 <h1 class="text-uppercase slideT">Help Change The World.</h1>
                 <p>Shear your knowlege by teaching people around the world.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Become an instrutor</a></p>
+                <p><a class="btn btn-lg btn-primary" href="becomeaninstrutor.php" role="button">Become an instrutor</a></p>
               </div>
             </div>
           </div>
