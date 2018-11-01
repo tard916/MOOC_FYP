@@ -48,7 +48,7 @@
                 <ul class="navbar-nav mx-auto col-lg-4  mt-2 mt-lg-0">
 
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for Courses" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <input type="text" class="form-control" placeholder="Search for Courses" aria-label="Search for Courses" aria-describedby="button-addon2">
                       <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
                       </div>
@@ -63,7 +63,7 @@
 
                 <ul class="nav navbar-nav pull-sm-right">
                     <li class="nav-item mr-lg-1">
-                        <a class="nav-link" href="login.php">Log In</a>
+                        <a class="nav-link" data-toggle="modal" href="#loginModal">Log In</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-primary" href="signup.php">Sign Up</a>
@@ -290,6 +290,45 @@
         </div>
       </div>
 
+      <!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+              <div class="form-group">
+                <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text "><i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+              </div>
+          </form>
+            <button type="button" class="btn btn-success btn-lg btn-block">Login</button>
+
+      </div>
+      <div class="modal-footer login-footer">
+          <div>Don't have an account? <a href="#">Sign up</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <footer class="text-muted footer">
@@ -301,6 +340,8 @@
 
     </div>
 </footer>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
