@@ -61,7 +61,7 @@
 
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="btn btn-danger" href="becomeaninstrutor.php">Become an instrutor <span class="sr-only">(current)</span></a>
+                        <a class="btn btn-danger" data-toggle="modal" href="#becomeInstructorModal">Become an instrutor <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
 
@@ -322,12 +322,12 @@
                         <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-block mb-3">Log In</button>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block mb-3">Log In</button>
               </form>
               <div class="text-center">or <a href="#">Forgot Password</a></div>
 
           </div>
-          <div class="modal-footer login-footer">
+          <div class="modal-footer">
 
               <div>Don't have an account? <a data-toggle="modal" data-dismiss="modal" href="#signupModal">Sign up</a></div>
           </div>
@@ -381,17 +381,75 @@
                         <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-block">Sign Up</button>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
               </form>
 
           </div>
-          <div class="modal-footer signup-footer">
+          <div class="modal-footer">
               <div>Already have an account? <a data-toggle="modal" data-dismiss="modal" href="#loginModal">Log In</a></div>
           </div>
         </div>
       </div>
     </div>
     <!-- Signup Modal -->
+
+
+    <!-- BecomeInstructor Modal -->
+    <div class="modal fade" id="becomeInstructorModal" tabindex="-1" role="dialog" aria-labelledby="becomeInstructorModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-white">
+            <h5 class="modal-title" id="becomeInstructorModalTitle">Become an Instructor</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="POST" action="backend/signup.php">
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
+                    </div>
+                  </div>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
+              </form>
+
+          </div>
+          <div class="modal-footer">
+              <div>Already have an account? <a data-toggle="modal" data-dismiss="modal" href="#loginModal">Log In</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BecomeInstructor Modal -->
+
 
 
   </main>
