@@ -298,7 +298,7 @@
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-white">
             <h5 class="modal-title" id="loginModalTitle">Login</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -307,24 +307,24 @@
           <div class="modal-body">
               <form method="POST" action="backend/login.php">
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-envelope"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
                         </div>
                         <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block mb-3">Log In</button>
+                  <button type="submit" name="login" class="btn btn-success btn-block mb-3">Log In</button>
               </form>
-              <div>or <a href="#">Forgot Password</a></div>
+              <div class="text-center">or <a href="#">Forgot Password</a></div>
 
           </div>
           <div class="modal-footer login-footer">
@@ -341,7 +341,7 @@
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-white">
             <h5 class="modal-title" id="signupModalTitle">Sign Up</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -350,38 +350,38 @@
           <div class="modal-body">
               <form method="POST" action="backend/signup.php">
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-user"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
                         </div>
                         <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-envelope"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
                         </div>
                         <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
+                  <button type="submit" name="login" class="btn btn-success btn-block">Sign Up</button>
               </form>
 
           </div>
