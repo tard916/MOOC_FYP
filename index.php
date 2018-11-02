@@ -1,6 +1,6 @@
 <?
   include('./backend/classes/DB.php');
- 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,7 +70,7 @@
                         <a class="nav-link" data-toggle="modal" href="#loginModal">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary" href="signup.php">Sign Up</a>
+                        <a class="btn btn-outline-primary" data-toggle="modal" href="#signupModal">Sign Up</a>
                     </li>
                 </ul>
 
@@ -294,7 +294,7 @@
         </div>
       </div>
 
-      <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
@@ -309,7 +309,7 @@
                   <div class="form-group">
                     <div class="input-group mb-3 input-group-lg">
                         <div class="input-group-prepend">
-                            <span class="input-group-text "><i class="fa fa-at"></i></span>
+                            <span class="input-group-text "><i class="fa fa-envelope"></i></span>
                         </div>
                         <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
                     </div>
@@ -322,16 +322,77 @@
                         <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Login</button>
-              </form>              
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block mb-3">Log In</button>
+              </form>
+              <div>or <a href="#">Forgot Password</a></div>
 
           </div>
           <div class="modal-footer login-footer">
-              <div>Don't have an account? <a href="#">Sign up</a></div>
+
+              <div>Don't have an account? <a data-toggle="modal" data-dismiss="modal" href="#signupModal">Sign up</a></div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Login Modal -->
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalTitle">Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="POST" action="backend/signup.php">
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
+                    </div>
+                  </div>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
+              </form>
+
+          </div>
+          <div class="modal-footer signup-footer">
+              <div>Already have an account? <a data-toggle="modal" data-dismiss="modal" href="#loginModal">Log In</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Signup Modal -->
+
 
   </main>
 

@@ -49,6 +49,10 @@ body {
     color: white;
   }
 
-  .login-footer {
+  .modal-footer {
       justify-content: center;
+  }
+
+  .fa-lock, .fa-user {
+      width: 20px;
   }
