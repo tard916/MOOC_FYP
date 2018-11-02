@@ -405,7 +405,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <form method="POST" action="backend/signup.php">
+              <form method="POST" action="backend/instructorSignup.php">
                   <div class="form-group">
                     <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
