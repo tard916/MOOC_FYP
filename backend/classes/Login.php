@@ -1,5 +1,4 @@
 <?php
-
     class Login {
         
         public static function isLoggedIn() {
