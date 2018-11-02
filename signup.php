@@ -91,6 +91,17 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <h1>Sign Up</h1>
+            <form action="backend/signup.php" method="post">
+                <input type="text" name="FullName" value="" placeholder="Full Name ..."><br />
+                <input type="email" name="email" value="" placeholder="Email ..."><br />
+                <input type="password" name="password" value="" placeholder="Password ..."><br />
+                <input type="password" name="verpassword" value="" placeholder="verify password ..."><br />
+                <input type="submit" name="createaccount" value="create account">
+            </form>
+        </div>
     </main>
      <!-- This part is for the Footer.-->
     <footer class="text-muted footer">
