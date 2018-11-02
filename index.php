@@ -61,7 +61,7 @@
 
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="btn btn-danger" data-toggle="modal" href="#becomeInstructorModal">Become an instrutor <span class="sr-only">(current)</span></a>
+                        <a class="btn btn-danger" data-toggle="modal" href="#becomeInstructorModal">Become an instructor <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
 
@@ -114,7 +114,7 @@
               <div class="carousel-caption text-right">
                 <h1 class="text-uppercase slideT">Help Change The World.</h1>
                 <p>Shear your knowlege by teaching people around the world.</p>
-                <p><a class="btn btn-lg btn-primary" href="becomeaninstrutor.php" role="button">Become an instrutor</a></p>
+                <p><a class="btn btn-lg btn-primary" href="becomeaninstructor.php" role="button">Become an instructor</a></p>
               </div>
             </div>
           </div>
