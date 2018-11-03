@@ -18,11 +18,13 @@
                         $user_id = DB::query('SELECT id FROM admin WHERE email=:email', array(':email'=>$email))[0]['id'];
                         DB::query('INSERT INTO login_tokens VALUES (\'\', :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$user_id));
                         setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
-                        setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
+                        setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);                
                 
-                
-                        echo 'Logged in!';
-                        echo $token;
+                        echo '<script language = "javascript">';
+                        echo 'alert("Logged in successfully!")';
+                        echo '</script>';
+                        echo  "<script> window.location.assign('../index.php'); </script>";
+                       
                     }else{
                         echo 'Incorrect Password!';
                     }
@@ -37,8 +39,10 @@
                     setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
             
             
-                    echo 'Logged in!';
-                    echo $token;
+                    echo '<script language = "javascript">';
+                    echo 'alert("Logged in successfully!")';
+                    echo '</script>';
+                    echo  "<script> window.location.assign('../index.php'); </script>";
                 }else{
                     echo 'Incorrect Password!';
                 }
@@ -53,8 +57,10 @@
                 setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
         
         
-                echo 'Logged in!';
-                echo $token;
+                echo '<script language = "javascript">';
+                echo 'alert("Logged in successfully!")';
+                echo '</script>';
+                echo  "<script> window.location.assign('../index.php'); </script>";
             }else{
                 echo 'Incorrect Password!';
             }
