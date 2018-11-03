@@ -1,6 +1,14 @@
-<?
-  include('./backend/classes/DB.php');
-
+<?php
+  include('./backend/classes/DB.php');  
+  include('./backend/classes/Login.php');
+  if (Login::isLoggedIn()) {
+    //echo 'Logged In!';
+    //echo Login::isLoggedIn();
+    $output  = Login::isLoggedIn();
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}else {
+    echo 'Not logged in!';
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -354,7 +362,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
+                        <input type="text" class="form-control" name="fullName" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
                     </div>
                   </div>
                   <div class="form-group">
@@ -378,10 +386,10 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
+                        <input type="password" class="form-control" name="verpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
+                  <button type="submit" name="createaccount" class="btn btn-success btn-lg btn-block">Sign Up</button>
               </form>
 
           </div>

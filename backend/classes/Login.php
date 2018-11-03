@@ -1,4 +1,5 @@
 <?php
+    //include('DB.php');
     class Login {
         
         public static function isLoggedIn() {
