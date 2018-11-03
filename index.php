@@ -1,14 +1,6 @@
-<?php
-  include('./backend/classes/DB.php');  
-  include('./backend/classes/Login.php');
-  if (Login::isLoggedIn()) {
-    //echo 'Logged In!';
-    //echo Login::isLoggedIn();
-    $output  = Login::isLoggedIn();
-    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
-}else {
-    echo 'Not logged in!';
-}
+<?
+  include('./backend/classes/DB.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -313,13 +305,13 @@
             </button>
           </div>
           <div class="modal-body">
-              <form method="POST" action="backend/login.php">
+              <form method="POST" class="needs-validation" novalidate action="backend/login.php">
                   <div class="form-group">
                     <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
                         </div>
-                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
+                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -327,7 +319,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
+                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
                   <button type="submit" name="login" class="btn btn-success btn-lg btn-block mb-3">Log In</button>
@@ -356,13 +348,13 @@
             </button>
           </div>
           <div class="modal-body">
-              <form method="POST" action="backend/signup.php">
+              <form method="POST" class="needs-validation" novalidate action="backend/signup.php">
                   <div class="form-group">
                     <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" name="fullName" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
+                        <input id="signupName" type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -370,7 +362,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
                         </div>
-                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
+                        <input id="signupEmail" type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -378,7 +370,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
+                        <input id="signupPassword" type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
                   <div class="form-group">
@@ -386,10 +378,10 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="verpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
+                        <input id="signupReenterpassword" type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
-                  <button type="submit" name="createaccount" class="btn btn-success btn-lg btn-block">Sign Up</button>
+                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
               </form>
 
           </div>
@@ -413,13 +405,14 @@
             </button>
           </div>
           <div class="modal-body">
-              <form method="POST" action="backend/instructorSignup.php">
+              <form method="POST" class="needs-validation" novalidate action="backend/instructorSignup.php">
                   <div class="form-group">
                     <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" require>
+                        <input id="instructorSignupName" type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" required>
+
                     </div>
                   </div>
                   <div class="form-group">
@@ -427,7 +420,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
                         </div>
-                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" require>
+                        <input id="instructorSignupEmail" type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
+
                     </div>
                   </div>
                   <div class="form-group">
@@ -435,7 +429,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"  require>
+                        <input id="instructorSignupPassword" type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
                   <div class="form-group">
@@ -443,7 +437,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1"  require>
+                        <input id="instructorSignupReenterpassword" type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
                   <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
@@ -480,8 +474,37 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    <script src="js/ie10-viewport-bug-workaround.js"></script> -->
+
+    <!-- bootstrap-validate -->
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.1.3/dist/bootstrap-validate.js" ></script>
+    <script>
+    bootstrapValidate(['#signupEmail', '#instructorSignupEmail'], 'email:Invalid email address!');
+    bootstrapValidate(['#signupName', '#instructorSignupName',], 'required:Please fill out this field!');
+    bootstrapValidate(['#signupPassword', '#instructorSignupPassword'], 'min:6:Please enter at least 6 characters!');
+    bootstrapValidate('#instructorSignupReenterpassword', 'matches:#instructorSignupPassword:Your passwords should match');
+    bootstrapValidate('#signupReenterpassword', 'matches:#signupPassword:Your passwords should match');
+
+
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false || form.getElementsByClassName('is-invalid').length !== 0) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
 
 </body>
 </html>
