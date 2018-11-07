@@ -12,7 +12,7 @@
 
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-      include('userHeader.php');
+      include('instructorHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
     if ($user == 'STD') {
@@ -282,6 +282,49 @@
       </div>
     </div>
     <!-- Login Modal -->
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-white">
+            <h5 class="modal-title" id="loginModalTitle">Logout of your Account?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="POST" class="needs-validation" novalidate action="backend/login.php">
+                <p>Are you sure you'd like to logout?</p>
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="checkbox" name="alldevices" class="form-control" value="alldevices" aria-label="Email" aria-describedby="basic-addon1" required>Logout of all devices?<br />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required >
+                    </div>
+                  </div>
+                  <button type="submit"  name="confirm" class="btn btn-success btn-lg btn-block mb-3">Log Out</button>
+              </form>
+              <div class="text-center">or <a href="#">Forgot Password</a></div>
+
+          </div>
+          <div class="modal-footer">
+
+              <div>Don't have an account? <a data-toggle="modal" data-dismiss="modal" href="#signupModal">Sign up</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Logout Modal -->
 
 
     <!-- Signup Modal -->

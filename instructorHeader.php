@@ -59,10 +59,10 @@
                             <?php echo $user_Name;?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">My Courses</a>
-                            <a class="dropdown-item" href="#">Help</a>
+                            <a class="dropdown-item" href="#">Create Course</a>
+                            <a class="dropdown-item" href="#">Manage Course</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#logoutModal">Logout</a>
+                            <a class="dropdown-item" href="logout.php">Logout</a>
                         </div>
                     </li>
                 </ul>
