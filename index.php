@@ -344,7 +344,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
                         </div>
-                        <input id="signupName" type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" required>
+                        <input id="signupName" type="text" class="form-control" name="fullName" placeholder="Full Name" aria-label="Full Name" aria-describedby="basic-addon1" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -368,10 +368,10 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white"><i class="fa fa-lock"></i></span>
                         </div>
-                        <input id="signupReenterpassword" type="password" class="form-control" name="reenterpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1" required >
+                        <input id="signupReenterpassword" type="password" class="form-control" name="verpassword" placeholder="Re-enter Password" aria-label="Re-enter Password" aria-describedby="basic-addon1" required >
                     </div>
                   </div>
-                  <button type="submit" name="login" class="btn btn-success btn-lg btn-block">Sign Up</button>
+                  <button type="submit" name="createaccount" class="btn btn-success btn-lg btn-block">Sign Up</button>
               </form>
 
           </div>
