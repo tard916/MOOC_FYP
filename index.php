@@ -12,18 +12,18 @@
 
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-      include('instructorHeader.php');
+      include('./instructor_side/instructorHeader.php');
       
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
-      include('userHeader.php');
+      include('./student_side/userHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
-}else {
-    include('mainHeader.php');
-}
+  }else {
+      include('mainHeader.php');
+  }
 ?>
 
 <main role="main">
@@ -76,6 +76,7 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
+    <!--This part is for the Carousel slide -->
 
     <!--This part is for the course content part. -->
     <div class="album py-5 bg-light">
@@ -240,7 +241,8 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
+    <!--This part is for the course content part. -->
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
@@ -446,7 +448,7 @@
 
 
   </main>
-
+  <!--This part is for the footer section -->
   <footer class="text-muted footer">
       <div class="container">
       <p class="float-right ">
@@ -456,6 +458,7 @@
 
       </div>
   </footer>
+  <!--This part is for the footer section -->
 
 
 

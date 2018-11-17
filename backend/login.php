@@ -26,7 +26,11 @@
                         echo  "<script> window.location.assign('../index.php'); </script>";
                        
                     }else{
-                        echo 'Incorrect Password!';
+                        //echo 'Incorrect Password!';
+                        echo '<script language = "javascript">';
+                        echo 'alert("Incorrect Password!")';
+                        echo '</script>';
+                        echo  "<script> window.location.assign('../index.php'); </script>";
                     }
                 }
             }else{
@@ -44,7 +48,10 @@
                     echo '</script>';
                     echo  "<script> window.location.assign('../index.php'); </script>";
                 }else{
-                    echo 'Incorrect Password!';
+                    echo '<script language = "javascript">';
+                    echo 'alert("Incorrect Password!")';
+                    echo '</script>';
+                    echo  "<script> window.location.assign('../index.php'); </script>";
                 }
             }
         }else{
@@ -62,7 +69,10 @@
                 echo '</script>';
                 echo  "<script> window.location.assign('../index.php'); </script>";
             }else{
-                echo 'Incorrect Password!';
+                echo '<script language = "javascript">';
+                echo 'alert("Incorrect Password!")';
+                echo '</script>';
+                echo  "<script> window.location.assign('../index.php'); </script>";
             }
         }
     }
