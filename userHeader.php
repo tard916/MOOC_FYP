@@ -59,7 +59,8 @@
                             <?php echo $user_Name;?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mycourses.php">My Courses</a>
+                            <a class="dropdown-item" href="studentCourses.php">My Courses</a>
+                            <a class="dropdown-item" href="allCourses.php">Explore Courses</a>
                             <a class="dropdown-item" href="#">Help</a>
                         <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#logoutModal">Logout</a>
