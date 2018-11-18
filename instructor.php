@@ -5,15 +5,15 @@
       //echo 'Logged In!';
       //echo Login::isLoggedIn();
       $outputkey  = Login::isLoggedIn();
-      echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
+     // echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
       list($user, $key) = explode("_", $outputkey);
-      echo "<script>console.log( 'user_type: " . $user . "' );</script>";
+     // echo "<script>console.log( 'user_type: " . $user . "' );</script>";
   
       if ($user == 'INS') {
         $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
   
         include('./instructorHeader.php');
-        echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+        //echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
       }
     }else {
         include('../mainHeader.php');
@@ -93,7 +93,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    
 </body>
 </html>
