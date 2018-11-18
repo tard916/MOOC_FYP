@@ -1,6 +1,6 @@
 <?php
-  include('../backend/classes/DB.php');
-  include('../backend/classes/Login.php');
+  include('./backend/classes/DB.php');
+  include('./backend/classes/Login.php');
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
@@ -14,7 +14,7 @@
       include('userHeader.php');
       echo "<script>console.log( 'Debug user Objects: " . $user_Name . "' );</script>";
       $cwd= getcwd();
-      echo $cwd;
+      //echo $cwd;
       //echo "<script>console.log( 'cwd: " . $cwd . "' );</script>";
     }
   }else {

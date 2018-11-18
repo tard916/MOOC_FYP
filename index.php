@@ -13,12 +13,12 @@
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
 
-      include('./instructor_side/instructorHeader.php');
+      include('./instructorHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
-      include('./student_side/userHeader.php');
+      include('./userHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
   }else {

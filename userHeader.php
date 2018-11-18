@@ -1,7 +1,3 @@
-<?php
-    $cwd= getcwd();
-    
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +59,7 @@
                             <?php echo $user_Name;?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="student_side/mycourses.php">My Courses</a>
+                            <a class="dropdown-item" href="mycourses.php">My Courses</a>
                             <a class="dropdown-item" href="#">Help</a>
                         <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#logoutModal">Logout</a>
