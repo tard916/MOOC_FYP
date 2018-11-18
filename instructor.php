@@ -76,177 +76,72 @@
     </header>
 
     <main role="main" class="container">
-        <h1 class="mt-4 text-center">My Courses</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <h1>C programming</h1>
-                      <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-              <h1>C programming</h1>
-                  <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <h1>C programming</h1>
-                      <br />
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <h1>C programming</h1>
-                  <br/>
-                  <h5>Rahimi Diallo</h5>
-                <div class="d-flex justify-content-between align-items-center">
-
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 class="mt-4">My Courses</h1>
         <hr>
-        <h2 class="my-5 text-center"><a href="newCourse.php">Create New Course</a></h2>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <a href="newCourse.php" class="m-auto text-dark"><i class="fa fa-plus" aria-hidden="true" style="font-size: 100px;"></i></a>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
+                    <div class="card-body pb-0">
+                        <h5 class="card-title mb-4">Learn Photoshop CS6 from Scratch</h5>
+
+                        <h6 class="card-subtitle mb-4 text-muted">Rahimi Diallo</h6>
+                          <p>Rating: 4.3 <small class="text-muted">(174)</small><small class="text-muted pull-right mt-1">14 weeks</small></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
+                    <div class="card-body pb-0">
+                        <h5 class="card-title mb-4">Learn Photoshop CS6 from Scratch</h5>
+
+                        <h6 class="card-subtitle mb-4 text-muted">Rahimi Diallo</h6>
+                          <p>Rating: 4.3 <small class="text-muted">(174)</small><small class="text-muted pull-right mt-1">14 weeks</small></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
+                    <div class="card-body pb-0">
+                        <h5 class="card-title mb-4">Learn Photoshop CS6 from Scratch</h5>
+
+                        <h6 class="card-subtitle mb-4 text-muted">Rahimi Diallo</h6>
+                          <p>Rating: 4.3 <small class="text-muted">(174)</small><small class="text-muted pull-right mt-1">14 weeks</small></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
+                    <div class="card-body pb-0">
+                        <h5 class="card-title mb-4">Learn Photoshop CS6 from Scratch</h5>
+
+                        <h6 class="card-subtitle mb-4 text-muted">Rahimi Diallo</h6>
+                          <p>Rating: 4.3 <small class="text-muted">(174)</small><small class="text-muted pull-right mt-1">14 weeks</small></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
      <!-- This part is for the Footer.-->
-    <footer class="text-muted footer">
-        <div class="container">
-            <p class="float-right ">
-                <a class="cprTxt" href="#">Back to top</a>
-            </p>
-            <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
-        </div>
-    </footer>
+     <footer class="footer py-4 bg-dark text-light">
+         <div class="container">
+         <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
+         </div>
+     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
