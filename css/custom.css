@@ -2,9 +2,6 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body {
-    color: #5a5a5a;
-}
 
 
   /* CUSTOMIZE THE CAROUSEL
@@ -37,12 +34,6 @@ body {
   .slideT{
     color: #007bff;
     font-size: 60px;
-  }
-
-  .footer{
-    background-color: #007bff;
-    height: 2rem;
-    margin-bottom: 0rem;
   }
 
   .cprTxt{

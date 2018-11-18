@@ -123,14 +123,11 @@
 
     </main>
      <!-- This part is for the Footer.-->
-    <footer class="text-muted footer">
-        <div class="container">
-            <p class="float-right ">
-                <a class="cprTxt" href="#">Back to top</a>
-            </p>
-            <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
-        </div>
-    </footer>
+     <footer class="footer py-4 bg-dark text-light">
+         <div class="container">
+         <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
+         </div>
+     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
