@@ -22,8 +22,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- Navbar content -->
             <a class="navbar-brand active" href="index.php">
-                <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                HELP-MOOC
+                <img src="./src/images/logo/logo.png" width="88" height="35" class="d-inline-block align-top" alt="">
+                MOOC
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

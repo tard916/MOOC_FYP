@@ -50,24 +50,24 @@
 
                 <div class="form-group">
                     <label for="startDate">Starts on</label>
-                    <input type="date" class="form-control" id="startDate" required>
+                    <input type="date"  name="date" class="form-control" id="startDate" required>
                 </div>
 
                 <div class="form-group">
                     <label for="duration">Duration (No. of weeks)</label>
-                    <input class="form-control" type="number" min="1" max="14" id="duration" required>
+                    <input class="form-control" name="number" type="number" min="1" max="14" id="duration" required>
                     <small id="DurationHelp" class="form-text text-muted">The course duration should be 1-14 weeks</small>
                 </div>
 
                 <div class="form-group">
                     <label for="coverPic">Cover Picture</label>
-                    <input type="file" class="form-control-file" id="coverPic" accept="image/jpeg, image/png" required>
+                    <input type="file" class="form-control-file" name="file" id="coverPic" accept="image/jpeg, image/png" required>
                 </div>
 
-                <div class="form-group">
+               <!-- <div class="form-group">
                     <label for="description">Description</label>
                     <input type="file" class="form-control-file" id="description" accept=".doc,.docx,.pdf" required>
-                </div>
+                </div>-->
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
