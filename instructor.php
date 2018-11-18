@@ -1,23 +1,20 @@
-<?php 
+<?php
     include('./backend/classes/DB.php');
     include('./backend/classes/Login.php');
     if (Login::isLoggedIn()) {
       //echo 'Logged In!';
       //echo Login::isLoggedIn();
       $outputkey  = Login::isLoggedIn();
-      echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
       list($user, $key) = explode("_", $outputkey);
-      echo "<script>console.log( 'user_type: " . $user . "' );</script>";
-  
+
       if ($user == 'INS') {
         $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-  
+
         include('./instructorHeader.php');
-        echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
       }
     }else {
         include('../mainHeader.php');
-    }  
+    }
 ?>
     <main role="main" class="container">
         <h1 class="mt-4">My Courses</h1>
