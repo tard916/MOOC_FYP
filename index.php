@@ -26,7 +26,7 @@
   }
 ?>
 
-<main role="main">
+  <main role="main">
 
     <!--This part is for the Carousel slide -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -448,6 +448,7 @@
 
 
   </main>
+  
   <!--This part is for the footer section -->
   <footer class="text-muted footer">
       <div class="container">
