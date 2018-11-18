@@ -27,19 +27,25 @@
 
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="e.g. Learn Photoshop CS6 from Scratch" required>
+                    <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelp" placeholder="e.g. Learn Photoshop CS6 from Scratch" required>
                     <small id="titleHelp" class="form-text text-muted">Maximum 50 characters</small>
                 </div>
 
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <select class="form-control" id="category">
-                        <option>IT</option>
-                        <option>Business</option>
-                        <option>Marketing</option>
-                        <option>Music</option>
-                        <option>Lifestyle</option>
+                   
+                    <select class="form-control" id="category" name="category">
+                    <?php
+                        $select_cat = DB::query('SELECT * FROM category');
+                        foreach ($select_cat as $value) {
+                           
+                    ?>
+                        <option value="<?php echo $value['id']?>"><?php echo $value['category_name']?></option>  
+                    <?php
+                        }
+                    ?>                     
                     </select>
+                    
                 </div>
 
                 <div class="form-group">
@@ -68,7 +74,7 @@
 
     </main>
      <!-- This part is for the Footer.-->
-     <footer class="footer py-4 bg-dark text-light">
+     <footer class="footer py-4 bg-dark text-light ">
          <div class="container">
          <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
          </div>
