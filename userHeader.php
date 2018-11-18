@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap core CSS -->
-    <link href="/MOOC/MOOC_FYP/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/MOOC/MOOC_FYP/css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!--This is the google Arvo font and font-awesome-->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
