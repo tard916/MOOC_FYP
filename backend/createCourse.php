@@ -1,37 +1,51 @@
 <?php
        include('./classes/DB.php');
+       include('./classes/Login.php');
 
-       if (isset($_POST['createaccount'])) {
-          $student_name = $_POST['fullName'];
-          $password = $_POST['password'];
-          $Vpassword = $_POST['verpassword'];
-          $email = $_POST['email'];
-          $std_uniquID = uniqid("STD_", true);       
-   
-           if ($password == $Vpassword) {
-              if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                   if (strlen($password) >= 6 && strlen($password) <= 60) {
-                       if (!DB::query('SELECT email FROM student WHERE email=:email', array(':email'=>$email))){
-                           DB::query('INSERT INTO student VALUES (\'\',:std_uniquID, :student_name, :email, :password)', 
-                           array(':std_uniquID'=>$std_uniquID, ':student_name'=> $student_name, ':email'=>$email, ':password'=>password_hash($password, PASSWORD_BCRYPT)));
-                           
-                           echo '<script language = "javascript">';
-                           echo 'alert("Record Added successfully")';
-                           echo '</script>';
-                           echo  "<script> window.location.assign('../index.php'); </script>";
-                       }else{
-                           echo 'Email in Use!';
-                       }
-                   }else{
-                       echo 'Invalid Password!';
-                   }
-               }else{
-                   echo 'Invalid Email!';
-               }                
-            
-           }else {
-               echo 'Invalid Password!';
-           } 
-       }
+       if (isset($_POST['createCourse'])) {
 
+        //$course_image = $_FILES['file']['name'];
+        //echo $course_image;
+
+            if (Login::isLoggedIn()) {
+                $instructorID = Login::isLoggedIn();
+                //echo $instructorID;
+                $crs_uniqueID = uniqid("CRS", true);
+                $course_name = $_POST['title'];
+                $category_ID = $_POST['category'];
+                $starting_date = $_POST['date'];
+                $duration = $_POST['duration'];
+                $pre_requirments = $_POST['Pre-requirment'];
+                $learning_outcomes = $_POST['Learning_Outcome'];
+                $description = $_POST['Description'];
+                $course_path_folder = "../src/courses/".$course_name;
+                $course_image = $_FILES['file']['name'];
+                
+                if (!file_exists($course_path_folder)) {
+                    
+                    if(mkdir($course_path_folder, 0777, true)){
+                        if (move_uploaded_file($_FILES['file']['tmp_name'],$course_path_folder.'/'.$course_image)) {
+                            DB::query('INSERT INTO course VALUES (\'\', :crs_uniqueID, :course_name, :category_id, :starting_date, :duration, :pre_requirments, :learning_outcomes, :descriptions, :instructor_id, :course_path_fol, :course_image)',
+                            array(':crs_uniqueID'=>$crs_uniqueID, ':course_name'=>$course_name, ':category_id'=> $category_ID, ':starting_date'=>$starting_date, ':duration'=>$duration, ':pre_requirments'=>$pre_requirments,
+                            ':learning_outcomes'=>$learning_outcomes, ':descriptions'=>$description, ':instructor_id'=>$instructorID, ':course_path_fol'=>$course_path_folder, ':course_image'=>$course_image));
+                            echo '<script language = "javascript">';
+                            echo 'alert("Record Added successfully")';
+                            echo '</script>';
+                            echo  "<script> window.location.assign('../instructor.php'); </script>";
+                        }
+                    }                    
+                    
+                }else {
+                    if (move_uploaded_file($_FILES['file']['tmp_name'],$course_path_folder.'/'.$course_image)){
+                        DB::query('INSERT INTO course VALUES (\'\', :crs_uniqueID, :course_name, :category_id, :starting_date, :duration, :pre_requirments, :learning_outcomes, :descriptions, :instructor_id, :course_path_fol, :course_image)',
+                        array(':crs_uniqueID'=>$crs_uniqueID, ':course_name'=>$course_name, ':category_id'=> $category_ID, ':starting_date'=>$starting_date, ':duration'=>$duration, ':pre_requirments'=>$pre_requirments,
+                        ':learning_outcomes'=>$learning_outcomes, ':descriptions'=>$description, ':instructor_id'=>$instructorID, ':course_path_fol'=>$course_path_folder, ':course_image'=>$course_image));
+                        echo '<script language = "javascript">';
+                        echo 'alert("Record Added successfully")';
+                        echo '</script>';
+                        echo  "<script> window.location.assign('../instructor.php'); </script>";
+                    }                          
+                }
+        }
+    }
 ?>

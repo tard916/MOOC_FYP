@@ -23,7 +23,7 @@
     <main role="main" class="container">
         <div class="col-md-10 col-lg-8 mx-auto">
             <h1 class="mt-4 text-center">Create New Course</h1>
-            <form class="" action="backend/createCourse.php" method="post">
+            <form class="" action="backend/createCourse.php" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -55,8 +55,26 @@
 
                 <div class="form-group">
                     <label for="duration">Duration (No. of weeks)</label>
-                    <input class="form-control" name="number" type="number" min="1" max="14" id="duration" required>
+                    <input class="form-control" name="duration" type="number" min="1" max="14" id="duration" required>
                     <small id="DurationHelp" class="form-text text-muted">The course duration should be 1-14 weeks</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="Pre-requirment">Pre-requirment</label>
+                    <input type="text" class="form-control" name="Pre-requirment" id="title" aria-describedby="titleHelp" placeholder="e.g. Learn Photoshop CS6 from Scratch" required>
+                    <small id="titleHelp" class="form-text text-muted">Maximum 50 characters</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="Learning_Outcome">Learning Outcome</label>
+                    <input type="text" class="form-control" name="Learning_Outcome" id="title" aria-describedby="titleHelp" placeholder="e.g. Learn Photoshop CS6 from Scratch" required>
+                    <small id="titleHelp" class="form-text text-muted">Maximum 50 characters</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <input type="text" class="form-control" name="Description" id="title" aria-describedby="titleHelp" placeholder="e.g. Learn Photoshop CS6 from Scratch" required>
+                    <small id="titleHelp" class="form-text text-muted">Maximum 50 characters</small>
                 </div>
 
                 <div class="form-group">
@@ -68,7 +86,7 @@
                     <label for="description">Description</label>
                     <input type="file" class="form-control-file" id="description" accept=".doc,.docx,.pdf" required>
                 </div>-->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="createCourse" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
