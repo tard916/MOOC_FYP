@@ -29,20 +29,22 @@
             </div>
 
             <?php
-                $select_course = DB::query('SELECT * FROM course');
-                foreach ($select_course as $value) {                    
+                $select_course = DB::query('SELECT * FROM course WHERE instructor_id =:outputkey', array(':outputkey'=>$outputkey));
+                foreach ($select_course as $value) {  
+                    $imagePath = $value['course_path_fol'].'/'.$value['course_image'];  
+                    //echo $imagePath;               
             ?>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card">
-                        <img class="card-img-top" src="./src/images/sample2.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo $imagePath;?>" alt="Card image cap">
                         <div class="card-body pb-0">
-                            <h5 class="card-title mb-4"><?php echo $value['course_name'];?>Learn Photoshop CS6 from Scratch</h5>
+                            <h5 class="card-title mb-4"><?php echo $value['course_name'];?></h5>
                             <?php
                                 $ins_uniquID = $value['instructor_id']; 
                                 $retrieve_the_instructor = DB::query('SELECT instructor_name FROM instructor where ins_uniquID= :ins_uniquID',array(':ins_uniquID'=>$ins_uniquID))[0]['instructor_name'];
                             ?>
-                            <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?>Rahimi Diallo</h6>
-                            <p>Rating: 4.3 <small class="text-muted">(174)</small><small class="text-muted pull-right mt-1"><?php echo $value['duration'];?> weeks</small></p>
+                            <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?></h6>
+                            <p>Rating: 0.0 <small class="text-muted">(0)</small><small class="text-muted pull-right mt-1"><?php echo $value['duration'];?> weeks</small></p>
 
                         </div>
                     </div>

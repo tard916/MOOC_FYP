@@ -18,7 +18,7 @@
                 $pre_requirments = $_POST['Pre-requirment'];
                 $learning_outcomes = $_POST['Learning_Outcome'];
                 $description = $_POST['Description'];
-                $course_path_folder = "../src/courses/".$course_name;
+                $course_path_folder = "./src/courses/".$course_name;
                 $course_image = $_FILES['file']['name'];
                 
                 if (!file_exists($course_path_folder)) {
