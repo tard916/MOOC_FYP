@@ -63,7 +63,7 @@
                             <a class="dropdown-item" href="allCourses.php">Explore Courses</a>
                             <a class="dropdown-item" href="#">Help</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#logoutModal">Logout</a>
+                            <a class="dropdown-item" href="logout.php">Logout</a>
                         </div>
                     </li>
                 </ul>
