@@ -12,18 +12,18 @@
             DB::query('INSERT INTO enrollment  VALUES (\'\', :course_id, :student_id, :joining_data)', 
             array(':course_id'=>$crs_UniqueID , ':student_id'=>$student_ID, ':joining_data'=>$today_date));
             echo '<script language = "javascript">';
-            echo 'alert("You have successfully joinned the course!")';
+            echo 'alert("You have successfully joined the course!")';
             echo '</script>';
             echo  "<script> window.location.assign('../studentCourses.php'); </script>";
         }else{
             echo '<script language = "javascript">';
-            echo 'alert("You have already joinned this course!")';
+            echo 'alert("You have already joined this course!")';
             echo '</script>';
             echo  "<script> window.location.assign('../studentCourses.php'); </script>";
         }
     }else {
         echo '<script language = "javascript">';
-            echo 'alert("You need to by loged in before joinning any course!")';
+            echo 'alert("You need to by logged in before joining any course!")';
             echo '</script>';
             echo  "<script> window.location.assign('../index.php'); </script>";
     }  
