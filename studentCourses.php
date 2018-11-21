@@ -10,11 +10,7 @@
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('userHeader.php');
-      
-        $myCourses = DB::query('SELECT * FROM enrollment WHERE student_id=:outputkey',array(':outputkey'=>$outputkey));
-        foreach ($myCourses as $courseValue) {
-            $r_Course = $courseValue['course_id'];
-        }
+         
     }
   }else {
       include('../mainHeader.php');
@@ -27,6 +23,9 @@
 
      <div class="row">
         <?php
+         $myCourses = DB::query('SELECT * FROM enrollment WHERE student_id=:outputkey',array(':outputkey'=>$outputkey));
+         foreach ($myCourses as $courseValue) {
+             $r_Course = $courseValue['course_id'];
             $select_course = DB::query('SELECT * FROM course WHERE crs_uniqueID=:r_Course', array(':r_Course'=>$r_Course));
             foreach ($select_course as $value) {  
                 $imagePath = $value['course_path_fol'].'/'.$value['course_image'];  
@@ -49,6 +48,7 @@
         </div>
         <?php
             }
+        }
         ?>  
     </div>
 </main>
