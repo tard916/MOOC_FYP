@@ -1,4 +1,4 @@
-<?php 
+<?php
     include('./backend/classes/DB.php');
     include('./backend/classes/Login.php');
     if (Login::isLoggedIn()) {
@@ -8,16 +8,16 @@
       echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
       list($user, $key) = explode("_", $outputkey);
       echo "<script>console.log( 'user_type: " . $user . "' );</script>";
-  
+
       if ($user == 'INS') {
         $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-  
+
         include('./instructorHeader.php');
         echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
       }
     }else {
         include('../mainHeader.php');
-    }  
+    }
 ?>
 
     <main role="main" class="container">
@@ -33,19 +33,19 @@
 
                 <div class="form-group">
                     <label for="category">Category</label>
-                   
+
                     <select class="form-control" id="category" name="category">
                     <?php
                         $select_cat = DB::query('SELECT * FROM category');
                         foreach ($select_cat as $value) {
-                           
+
                     ?>
-                        <option value="<?php echo $value['id']?>"><?php echo $value['category_name']?></option>  
+                        <option value="<?php echo $value['id']?>"><?php echo $value['category_name']?></option>
                     <?php
                         }
-                    ?>                     
+                    ?>
                     </select>
-                    
+
                 </div>
 
                 <div class="form-group">
@@ -86,7 +86,7 @@
                     <label for="description">Description</label>
                     <input type="file" class="form-control-file" id="description" accept=".doc,.docx,.pdf" required>
                 </div>-->
-                <button type="submit" name="createCourse" class="btn btn-primary">Submit</button>
+                <button type="submit" name="createCourse" class="btn btn-outline-primary btn-block my-5">Continue</button>
             </form>
         </div>
 
