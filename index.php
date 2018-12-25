@@ -78,24 +78,24 @@
     </div>
     <!--This part is for the Carousel slide -->
 
-    
+
     <!--This part is for the course content part. -->
     <div class="album py-5 bg-light">
         <div class="container">
         <div class="row">
         <?php
             $select_course = DB::query('SELECT * FROM course ');
-            foreach ($select_course as $value) {  
-                $imagePath = $value['course_path_fol'].'/'.$value['course_image'];  
-                //echo $imagePath;               
+            foreach ($select_course as $value) {
+                $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
+                //echo $imagePath;
         ?>
-        <div class="col-md-4 col-sm-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
                 <img class="card-img-top" src="<?php echo $imagePath;?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title mb-4"><?php echo $value['course_name'];?></h5>
                     <?php
-                        $ins_uniquID = $value['instructor_id']; 
+                        $ins_uniquID = $value['instructor_id'];
                         $retrieve_the_instructor = DB::query('SELECT instructor_name FROM instructor where ins_uniquID= :ins_uniquID',array(':ins_uniquID'=>$ins_uniquID))[0]['instructor_name'];
                     ?>
                     <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?></h6>
@@ -106,7 +106,7 @@
         </div>
         <?php
             }
-        ?>  
+        ?>
     </div>
         </div>
     </div>

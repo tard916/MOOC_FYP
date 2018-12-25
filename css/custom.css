@@ -59,3 +59,12 @@
     bottom: 0;
     width: 100%;
 }
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    min-height: 72px;
+}
