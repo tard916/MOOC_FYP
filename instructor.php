@@ -16,7 +16,7 @@
         include('../mainHeader.php');
     }
 ?>
-    <main role="main" class="container">
+    <main role="main" class="container my-courses-wrapper">
         <h1 class="mt-4">My Courses</h1>
         <hr>
 
@@ -30,9 +30,9 @@
 
             <?php
                 $select_course = DB::query('SELECT * FROM course WHERE instructor_id =:outputkey', array(':outputkey'=>$outputkey));
-                foreach ($select_course as $value) {  
-                    $imagePath = $value['course_path_fol'].'/'.$value['course_image'];  
-                    //echo $imagePath;               
+                foreach ($select_course as $value) {
+                    $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
+                    //echo $imagePath;
             ?>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card">
@@ -40,7 +40,7 @@
                         <div class="card-body pb-0">
                             <h5 class="card-title mb-4"><?php echo $value['course_name'];?></h5>
                             <?php
-                                $ins_uniquID = $value['instructor_id']; 
+                                $ins_uniquID = $value['instructor_id'];
                                 $retrieve_the_instructor = DB::query('SELECT instructor_name FROM instructor where ins_uniquID= :ins_uniquID',array(':ins_uniquID'=>$ins_uniquID))[0]['instructor_name'];
                             ?>
                             <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?></h6>
@@ -51,7 +51,7 @@
                 </div>
             <?php
                 }
-            ?>            
+            ?>
         </div>
     </main>
      <!-- This part is for the Footer.-->
