@@ -71,3 +71,7 @@
 .my-courses-wrapper{
     min-height: 800px;
 }
+
+.my-courses-wrapper .card {
+    min-height: 393px;
+}
