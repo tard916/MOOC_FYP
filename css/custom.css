@@ -68,7 +68,7 @@
 .card-title {
     min-height: 72px;
 }
-.my-courses-wrapper{
+.my-courses-wrapper, .curriculum-wrapper{
     min-height: 800px;
 }
 

@@ -20,43 +20,81 @@
     }
 ?>
 
-    <main role="main" class="container">
+    <main role="main" class="container curriculum-wrapper">
         <div class="col-md-10 col-lg-8 mx-auto">
             <h1 class="mt-4 text-center">New Course Curriculum</h1>
             <form class="" action="backend/createCourseCurriculum.php" method="post" enctype="multipart/form-data">
 
                 <div id="accordion">
                     <div class="card">
-                      <div class="card-header">
-                        <a class="card-link" data-toggle="collapse" href="#weekOne">Week 1</a>
-                      </div>
-                      <div id="weekOne" class="collapse show">
-                        <div class="card-body">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="card-header">
+                            <a class="card-link d-block text-center" data-toggle="collapse" href="#weekOne">Week 1</a>
                         </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#weekTwo">Week 2</a>
-                      </div>
-                      <div id="weekTwo" class="collapse">
-                        <div class="card-body">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div id="weekOne" class="collapse show">
+                            <div class="card-body pb-0">
+                                <div class="form-row">
+                                    <div class="form-group col-md-7">
+                                        <label for="resourceFile">Resource File</label>
+                                        <input type="file" class="form-control-file" id="resourceFile">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="resourceType">Resource Type</label>
+                                        <select id="resourceType" class="form-control form-control-sm">
+                                            <option selected>Video Lecture</option>
+                                            <option>Quiz</option>
+                                            <option>Article</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#weekThree">Week 3</a>
-                      </div>
-                      <div id="weekThree" class="collapse">
-                        <div class="card-body">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekTwo">Week 2</a>
+                            </div>
+                            <div id="weekTwo" class="collapse">
+                                <div class="card-body pb-0">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-7">
+                                            <label for="resourceFile">Resource File</label>
+                                            <input type="file" class="form-control-file" id="resourceFile">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="resourceType">Resource Type</label>
+                                            <select id="resourceType" class="form-control form-control-sm">
+                                                <option selected>Video Lecture</option>
+                                                <option>Quiz</option>
+                                                <option>Article</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekThree">Week 3</a>
+                            </div>
+                            <div id="weekThree" class="collapse">
+                                <div class="card-body pb-0">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-7">
+                                            <label for="resourceFile">Resource File</label>
+                                            <input type="file" class="form-control-file" id="resourceFile">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="resourceType">Resource Type</label>
+                                            <select id="resourceType" class="form-control form-control-sm">
+                                                <option selected>Video Lecture</option>
+                                                <option>Quiz</option>
+                                                <option>Article</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
                 <button type="submit" name="createCourse" class="btn btn-outline-primary btn-block my-5">Create</button>
             </form>
