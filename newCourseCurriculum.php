@@ -35,9 +35,9 @@
                     ?>
                     <div class="card">
                         <div class="card-header">
-                            <a class="card-link d-block text-center" data-toggle="collapse" href="#weekOne">Week <?php echo $i;?></a>
+                            <a class="card-link d-block text-center" data-toggle="collapse" href="#week<?php echo $i;?>">Week <?php echo $i;?></a>
                         </div>
-                        <div id="weekOne" class="collapse show">
+                        <div id="week<?php echo $i;?>" class="collapse">
                             <div class="card-body">
                                 <div class="form-row align-items-center">
                                     <div class="form-group col-md-7">
@@ -55,6 +55,7 @@
                                 </div>
                                 <a href="#" class="add-resource btn btn-outline-dark btn-block"><i class="fa fa-plus"></i></a>
                             </div>
+                        </div>
                     </div>
                     <?php
                 }?>
