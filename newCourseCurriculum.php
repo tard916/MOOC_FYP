@@ -26,9 +26,16 @@
             <form class="" action="backend/createCourseCurriculum.php" method="post" enctype="multipart/form-data">
 
                 <div id="accordion">
+
+                    <?php
+                        $courseID = $_GET['cid'];
+                        $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
+
+                        for($i = 1; $i<=$courseDuration; $i++){
+                    ?>
                     <div class="card">
                         <div class="card-header">
-                            <a class="card-link d-block text-center" data-toggle="collapse" href="#weekOne">Week 1</a>
+                            <a class="card-link d-block text-center" data-toggle="collapse" href="#weekOne">Week <?php echo $i;?></a>
                         </div>
                         <div id="weekOne" class="collapse show">
                             <div class="card-body">
@@ -48,54 +55,10 @@
                                 </div>
                                 <a href="#" class="add-resource btn btn-outline-dark btn-block"><i class="fa fa-plus"></i></a>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekTwo">Week 2</a>
-                            </div>
-                            <div id="weekTwo" class="collapse">
-                                <div class="card-body">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-7">
-                                            <label for="resourceFile">Resource File</label>
-                                            <input type="file" class="form-control-file" id="resourceFile">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="resourceType">Resource Type</label>
-                                            <select id="resourceType" class="form-control form-control-sm">
-                                                <option selected>Video Lecture</option>
-                                                <option>Quiz</option>
-                                                <option>Article</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekThree">Week 3</a>
-                            </div>
-                            <div id="weekThree" class="collapse">
-                                <div class="card-body">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-7">
-                                            <label for="resourceFile">Resource File</label>
-                                            <input type="file" class="form-control-file" id="resourceFile">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="resourceType">Resource Type</label>
-                                            <select id="resourceType" class="form-control form-control-sm">
-                                                <option selected>Video Lecture</option>
-                                                <option>Quiz</option>
-                                                <option>Article</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <?php
+                }?>
+                </div>
 
                 <button type="submit" name="createCourse" class="btn btn-outline-primary btn-block my-5">Create</button>
             </form>
