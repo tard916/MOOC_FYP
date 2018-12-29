@@ -31,13 +31,13 @@
                             <a class="card-link d-block text-center" data-toggle="collapse" href="#weekOne">Week 1</a>
                         </div>
                         <div id="weekOne" class="collapse show">
-                            <div class="card-body pb-0">
-                                <div class="form-row">
+                            <div class="card-body">
+                                <div class="form-row align-items-center">
                                     <div class="form-group col-md-7">
                                         <label for="resourceFile">Resource File</label>
                                         <input type="file" class="form-control-file" id="resourceFile">
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-3">
                                         <label for="resourceType">Resource Type</label>
                                         <select id="resourceType" class="form-control form-control-sm">
                                             <option selected>Video Lecture</option>
@@ -46,6 +46,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                <a href="#" class="add-resource btn btn-outline-dark btn-block"><i class="fa fa-plus"></i></a>
                             </div>
                         </div>
                         <div class="card">
@@ -53,7 +54,7 @@
                                 <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekTwo">Week 2</a>
                             </div>
                             <div id="weekTwo" class="collapse">
-                                <div class="card-body pb-0">
+                                <div class="card-body">
                                     <div class="form-row">
                                         <div class="form-group col-md-7">
                                             <label for="resourceFile">Resource File</label>
@@ -76,7 +77,7 @@
                                 <a class="collapsed card-link d-block text-center" data-toggle="collapse" href="#weekThree">Week 3</a>
                             </div>
                             <div id="weekThree" class="collapse">
-                                <div class="card-body pb-0">
+                                <div class="card-body">
                                     <div class="form-row">
                                         <div class="form-group col-md-7">
                                             <label for="resourceFile">Resource File</label>
@@ -116,6 +117,45 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var newResourceHTML =
+        '<div class="form-row align-items-center">' +
+            '<div class="form-group col-md-7">' +
+                '<label for="resourceFile">Resource File</label>' +
+                '<input type="file" class="form-control-file" id="resourceFile">' +
+            '</div>' +
+            '<div class="form-group col-md-3">' +
+                '<label for="resourceType">Resource Type</label>' +
+                '<select id="resourceType" class="form-control form-control-sm">' +
+                    '<option selected>Video Lecture</option>' +
+                    '<option>Quiz</option>' +
+                    '<option>Article</option>' +
+                '</select>' +
+            '</div>' +
+            '<div class="form-group offset-md-1 col-md-1">' +
+                '<a href="#" class="remove-resource btn btn-outline-danger pull-right"><i class="fa fa-remove"></i></a>' +
+            '</div>' +
+        '</div>';
+
+        $(".add-resource").click(function(e){
+            e.preventDefault();
+            var formRow =   $(document.createElement("div")).addClass('form-row align-items-center');
+            var formGroup7= $(document.createElement("div")).addClass('form-group col-md-7').appendTo(formRow);
+                            $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(formGroup7);
+                            $(document.createElement("input")).attr({type: "file",id: "resourceFile"}).addClass('form-control-file').appendTo(formGroup7);
+            var formGroup3= $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
+                            $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(formGroup3);
+            var select =    $(document.createElement("select")).attr('id', 'resourceType').addClass('form-control form-control-sm').appendTo(formGroup3);
+                            $(document.createElement("option")).text('Video Lecture').appendTo(select);
+                            $(document.createElement("option")).text('Quiz').appendTo(select);
+                            $(document.createElement("option")).text('Article').appendTo(select);
+            var removerDiv= $(document.createElement("div")).addClass('form-group offset-md-1 col-md-1').appendTo(formRow);
+            var removeBtn = $(document.createElement("a")).attr('href', '#').addClass('remove-resource btn btn-outline-danger pull-right').appendTo(removerDiv).click(function(e){e.preventDefault();$(this).parent().parent().remove();});
+                            $(document.createElement("i")).addClass('fa fa-remove').appendTo(removeBtn);
+            $(this).before(formRow);
+        });
+    });
+    </script>
 </body>
 </html>
