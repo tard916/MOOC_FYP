@@ -21,7 +21,7 @@
             echo '</script>';
             echo  "<script> window.location.assign('../studentCourses.php'); </script>";
         }
-    }else {
+    }else{
         echo '<script language = "javascript">';
             echo 'alert("You need to by logged in before joining any course!")';
             echo '</script>';
