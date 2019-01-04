@@ -1,6 +1,7 @@
 <?php
     include('./backend/classes/DB.php');
     include('./backend/classes/Login.php');
+    $courseID = $_GET['cid'];
     if (Login::isLoggedIn()) {
       //echo 'Logged In!';
       //echo Login::isLoggedIn();
@@ -26,30 +27,32 @@
             <form class="" action="backend/createCourseCurriculum.php" method="post" enctype="multipart/form-data">
 
                 <div id="accordion">
-
+                    <input type="hidden" name="courseID" value="<?php echo $courseID;?>">
                     <?php
-                        $courseID = $_GET['cid'];
                         $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
 
                         for($i = 1; $i<=$courseDuration; $i++){
                     ?>
                     <div class="card">
+                    
                         <div class="card-header">
                             <a class="card-link d-block text-center" data-toggle="collapse" href="#week<?php echo $i;?>">Week <?php echo $i;?></a>
+                            
                         </div>
                         <div id="week<?php echo $i;?>" class="collapse">
                             <div class="card-body">
                                 <div class="form-row align-items-center">
                                     <div class="form-group col-md-7">
                                         <label for="resourceFile">Resource File</label>
-                                        <input type="file" class="form-control-file" id="resourceFile">
+                                        <input type="file" class="form-control-file" id="resourceFile" name="fileName[]">
+                                        <input type="hidden" name="weekID[]" value="<?php echo $i;?>">
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="resourceType">Resource Type</label>
-                                        <select id="resourceType" class="form-control form-control-sm">
-                                            <option selected>Video Lecture</option>
-                                            <option>Quiz</option>
-                                            <option>Article</option>
+                                        <select id="resourceType" class="form-control form-control-sm" name="fileType[]">
+                                            <option value="Video" selected>Video Lecture</option>
+                                            <option value="Quiz">Quiz</option>
+                                            <option value="Article">Article</option>
                                         </select>
                                     </div>
                                 </div>
