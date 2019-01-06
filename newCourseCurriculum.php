@@ -34,23 +34,21 @@
                         for($i = 1; $i<=$courseDuration; $i++){
                     ?>
                     <div class="card">
-                    
                         <div class="card-header">
                             <a class="card-link d-block text-center" data-toggle="collapse" href="#week<?php echo $i;?>">Week <?php echo $i;?></a>
-                            
+                            <input type="hidden" name="weekID<?php echo $i;?>" value="<?php echo $i;?>">
                         </div>
                         <div id="week<?php echo $i;?>" class="collapse">
                             <div class="card-body">
                                 <div class="form-row align-items-center">
                                     <div class="form-group col-md-7">
                                         <label for="resourceFile">Resource File</label>
-                                        <input type="file" class="form-control-file" id="resourceFile" name="fileName[]">
-                                        <input type="hidden" name="weekID[]" value="<?php echo $i;?>">
+                                        <input type="file" class="form-control-file" id="resourceFile" name="fileName<?php echo $i;?>[]">
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="resourceType">Resource Type</label>
-                                        <select id="resourceType" class="form-control form-control-sm" name="fileType[]">
-                                            <option value="Video" selected>Video Lecture</option>
+                                        <select id="resourceType" class="form-control form-control-sm" name="fileType<?php echo $i;?>[]">
+                                            <option value="Video" selected>Video</option>
                                             <option value="Quiz">Quiz</option>
                                             <option value="Article">Article</option>
                                         </select>
@@ -107,14 +105,15 @@
 
         $(".add-resource").click(function(e){
             e.preventDefault();
+            var weekID = $(this).parent().parent().attr('id').replace("week", "");
             var formRow =   $(document.createElement("div")).addClass('form-row align-items-center');
             var formGroup7= $(document.createElement("div")).addClass('form-group col-md-7').appendTo(formRow);
                             $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(formGroup7);
-                            $(document.createElement("input")).attr({type: "file",id: "resourceFile"}).addClass('form-control-file').appendTo(formGroup7);
+                            $(document.createElement("input")).attr({type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(formGroup7);
             var formGroup3= $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
                             $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(formGroup3);
-            var select =    $(document.createElement("select")).attr('id', 'resourceType').addClass('form-control form-control-sm').appendTo(formGroup3);
-                            $(document.createElement("option")).text('Video Lecture').appendTo(select);
+            var select =    $(document.createElement("select")).attr({id: "resourceType", name: "fileType"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(formGroup3);
+                            $(document.createElement("option")).text('Video').appendTo(select);
                             $(document.createElement("option")).text('Quiz').appendTo(select);
                             $(document.createElement("option")).text('Article').appendTo(select);
             var removerDiv= $(document.createElement("div")).addClass('form-group offset-md-1 col-md-1').appendTo(formRow);
