@@ -41,7 +41,11 @@
                         <div id="week<?php echo $i;?>" class="collapse">
                             <div class="card-body">
                                 <div class="form-row align-items-center">
-                                    <div class="form-group col-md-7">
+                                    <div class="form-group col-md-4">
+                                        <label for="resourceTitle">Title</label>
+                                        <input type="text" class="form-control form-control-sm" id="resourceTitle" name="title<?php echo $i;?>[]">
+                                    </div>
+                                    <div class="form-group col-md-4">
                                         <label for="resourceFile">Resource File</label>
                                         <input type="file" class="form-control-file" id="resourceFile" name="fileName<?php echo $i;?>[]">
                                     </div>
@@ -84,39 +88,24 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-        var newResourceHTML =
-        '<div class="form-row align-items-center">' +
-            '<div class="form-group col-md-7">' +
-                '<label for="resourceFile">Resource File</label>' +
-                '<input type="file" class="form-control-file" id="resourceFile">' +
-            '</div>' +
-            '<div class="form-group col-md-3">' +
-                '<label for="resourceType">Resource Type</label>' +
-                '<select id="resourceType" class="form-control form-control-sm">' +
-                    '<option selected>Video Lecture</option>' +
-                    '<option>Quiz</option>' +
-                    '<option>Article</option>' +
-                '</select>' +
-            '</div>' +
-            '<div class="form-group offset-md-1 col-md-1">' +
-                '<a href="#" class="remove-resource btn btn-outline-danger pull-right"><i class="fa fa-remove"></i></a>' +
-            '</div>' +
-        '</div>';
 
         $(".add-resource").click(function(e){
             e.preventDefault();
             var weekID = $(this).parent().parent().attr('id').replace("week", "");
-            var formRow =   $(document.createElement("div")).addClass('form-row align-items-center');
-            var formGroup7= $(document.createElement("div")).addClass('form-group col-md-7').appendTo(formRow);
-                            $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(formGroup7);
-                            $(document.createElement("input")).attr({type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(formGroup7);
-            var formGroup3= $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
-                            $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(formGroup3);
-            var select =    $(document.createElement("select")).attr({id: "resourceType", name: "fileType"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(formGroup3);
+            var formRow =   $(document.createElement("div")).addClass('form-row align-items-center pt-3').css( "border-top", "1px solid #d1d1d1" );
+            var titleGroup= $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
+                            $(document.createElement("label")).attr('for', 'resourceTitle').text('Title').appendTo(titleGroup);
+                            $(document.createElement("input")).attr({type: "text",id: "resourceTitle", name: "title"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(titleGroup);
+            var fileGroup = $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
+                            $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(fileGroup);
+                            $(document.createElement("input")).attr({type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(fileGroup);
+            var typeGroup = $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
+                            $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(typeGroup);
+            var select =    $(document.createElement("select")).attr({id: "resourceType", name: "fileType"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(typeGroup);
                             $(document.createElement("option")).text('Video').appendTo(select);
                             $(document.createElement("option")).text('Quiz').appendTo(select);
                             $(document.createElement("option")).text('Article').appendTo(select);
-            var removerDiv= $(document.createElement("div")).addClass('form-group offset-md-1 col-md-1').appendTo(formRow);
+            var removerDiv= $(document.createElement("div")).addClass('form-group col-md-1').appendTo(formRow);
             var removeBtn = $(document.createElement("a")).attr('href', '#').addClass('remove-resource btn btn-outline-danger pull-right').appendTo(removerDiv).click(function(e){e.preventDefault();$(this).parent().parent().remove();});
                             $(document.createElement("i")).addClass('fa fa-remove').appendTo(removeBtn);
             $(this).before(formRow);
