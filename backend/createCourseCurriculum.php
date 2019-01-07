@@ -48,11 +48,15 @@
         }*/
 
         $courseID = $_POST['courseID'];
-        //$weekID = $_POST['weekID'];
-        
+        $path = '/courseContent';
+        $fileTitles = '';
+        $filenames = '';
+        $fileTypes = '';
         $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
-
+        
         for($i = 1; $i<=$courseDuration; $i++){
+            $fileTitle = array();
+            $fileTitle = $_POST['title'.$i];
             $filename  = array();
             $filename = $_FILES['fileName'.$i]['name'];
             $filenameTMP  = array();
@@ -60,38 +64,28 @@
             $fileType = array();
             $fileType = $_POST['fileType'.$i];
             $weekID = $_POST['weekID'.$i];
-            //echo $_FILES['fileName'.$i]['name'].'<br>';
-            //echo '<prev>';
-            //print_r(array_values($filename)).'<br>';
-            //print_r(array_values($filenameTMP));
-            //echo '</prev>';
 
-            $str = '';
-            $strTMP= '';
-            $strType = '';
-            echo $weekID.'<br>';
-            foreach ($filename as $value) {
-                $str = $value;
-                unset($value);
-                echo $str.'<br>';
-               
-            }
-
-            foreach ($filenameTMP as $value) {
-                $strTMP = $value;
-                unset($value);
-                echo $strTMP.'<br>';
-            }
-
-            foreach ($fileType as $value) {
-                $strType = $value;
-                unset($value);
-                echo $strType.'<br>';
+            $weekArray =  array($weekID, $fileTitle, $filename, $filenameTMP, $fileType,$courseID);
+            $resourceArray = array();
+            $resourceNoByWeek = count($fileTitle);
+            for ($a=0; $a <$resourceNoByWeek ; $a++) { 
+                array_push($resourceArray, $weekID,$fileTitle[$a], $filename[$a], $filenameTMP[$a], $fileType[$a],$courseID);
+                $fileTitles = $fileTitle[$a];
+                $filenames = $filename[$a];
+                $fileTypes = $fileType[$a];
+               DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :course_id)', 
+            array(':week_number'=>$weekID, ':title'=>$fileTitles, ':file_name'=>$filenames, ':type'=>$fileTypes, ':path'=>$path, ':course_id'=>$courseID));
             }
             
+            //echo count($resourceArray);
+            //print_r($resourceArray);
+            echo '<script language = "javascript">';
+            echo 'alert("Record Added successfully")';
+            echo '</script>';
+            echo  "<script> window.location.assign('../instructor.php'); </script>";
 
         }
-
+       
         
             
 
