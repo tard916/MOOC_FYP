@@ -4,7 +4,7 @@
 
     if (isset($_POST['createCourse'])) {
         $courseID = $_POST['courseID'];
-        $path = '/courseContent';
+        $path = '';
         $fileTitles = '';
         $filenames = '';
         $fileTypes = '';
@@ -33,9 +33,7 @@
                 $filenames = $filename[$a];
                 $fileTypes = $fileType[$a];
                 $fileTMP = $filenameTMP[$a];
-                /*DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :course_id)', 
-                array(':week_number'=>$weekID, ':title'=>$fileTitles, ':file_name'=>$filenames, ':type'=>$fileTypes, ':path'=>$path,
-                ':course_id'=>$courseID));*/
+                $path = $coursePath.'/courseContent'.'/'.$filenames;
 
                 if (!file_exists($coursePathContent)) {                
                     if(mkdir($coursePathContent, 0777, true)){
@@ -59,13 +57,6 @@
                         echo  "<script> window.location.assign('../instructor.php'); </script>";
                     }  
                 }
-            
-                //echo count($resourceArray);
-                //print_r($resourceArray);
-                //echo '<script language = "javascript">';
-                //echo 'alert("Record Added successfully")';
-                //echo '</script>';
-                //echo  "<script> window.location.assign('../instructor.php'); </script>";
 
             }
         }
