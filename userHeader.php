@@ -9,6 +9,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- videojs CSS -->
+    <link href="css/video-js.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 

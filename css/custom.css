@@ -75,3 +75,27 @@
 .my-courses-wrapper .card {
     min-height: 393px;
 }
+
+
+
+.video-js .vjs-big-play-button {
+    top: calc(50% - 0.75em);
+    left: calc(50% - 1.5em);
+}
+.curriculum-player-wrapper {
+    max-height: calc(100% - 61px);
+}
+
+.curriculum-player-card {
+    border: 0;
+    border-radius: 0;
+    max-height: calc(100% - 61px);
+    overflow-y: auto;
+}
+.curriculum-player-wrapper .card-header:first-child {
+    border-radius: 0;
+}
+#curriculum-video {
+    height: calc(100% - 61px);
+    width: 100%;
+}
