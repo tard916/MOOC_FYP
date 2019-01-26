@@ -38,7 +38,7 @@
                         <div class="card-header bg-secondary">
                             <a class="card-link d-block text-white" data-toggle="collapse" href="#week2">Week Two</a>
                         </div>
-                        <div id="week2" class="collapse">
+                        <div id="week2" class="collapse show">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">For Bigger Fun</a></li>
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes</a></li>
@@ -48,7 +48,7 @@
                         <div class="card-header bg-secondary">
                             <a class="card-link d-block text-white" data-toggle="collapse" href="#week3">Week Three</a>
                         </div>
-                        <div id="week3" class="collapse">
+                        <div id="week3" class="collapse show">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">For Bigger Joyrides</a></li>
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Elephant Dream</a></li>
@@ -58,7 +58,7 @@
                         <div class="card-header bg-secondary">
                             <a class="card-link d-block text-white" data-toggle="collapse" href="#week4">Week Four</a>
                         </div>
-                        <div id="week4" class="collapse">
+                        <div id="week4" class="collapse show">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">For Bigger Meltdowns</a></li>
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4">Sintel</a></li>
@@ -68,7 +68,7 @@
                         <div class="card-header bg-secondary">
                             <a class="card-link d-block text-white" data-toggle="collapse" href="#week5">Week Five</a>
                         </div>
-                        <div id="week5" class="collapse">
+                        <div id="week5" class="collapse show">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4">Subaru Outback On Street And Dirt</a></li>
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">Tears of Steel</a></li>
