@@ -79,8 +79,7 @@
                 </div>
             </div>
             <div class="col-9 p-0">
-                <video id="curriculum-video" class="video-js" controls preload="auto" data-setup='{}' width="100%" height="100%">
-                  <source id="video-src" src="" type="video/mp4"></source>
+                <video id="curriculum-video" class="video-js d-none" controls preload="auto" data-setup='{"responsive": true}'>
                 </video>
                 <div class="curriculum-article d-none">
                     <embed id="article-src" src="" type="application/pdf" width="100%" height="100%" />
@@ -103,13 +102,14 @@
     <script src="js/video.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            var player = videojs('curriculum-video');
+
             $(".curriculum-link").click(function(e){
                 e.preventDefault();
                 var src = $(this).attr("href");
                 var srcArray = src.split(".");
-                console.log(srcArray[srcArray.length - 1] == "mp4");
                 if (srcArray[srcArray.length - 1] == "mp4") {
-                    $("#video-src").attr("src", src);
+                    player.src({type: "video/mp4", src: src});
                     $("#curriculum-video").removeClass("d-none");
                     $("#article-src").parent().addClass("d-none");
                 } else {
