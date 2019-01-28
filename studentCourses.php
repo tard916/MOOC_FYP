@@ -42,7 +42,7 @@
                     ?>
                     <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?></h6>
                     <p>Rating: 0.0 <small class="text-muted">(0)</small><small class="text-muted pull-right mt-1"><?php echo $value['duration'];?> weeks</small></p>
-                    <a class="btn btn-outline-success btn-block" href="backend/jionCourses.php?crs_UniqueID=<?php echo $value['crs_uniqueID']; ?>" role="button">View &raquo;</a>
+                    <a class="btn btn-outline-success btn-block" href="curriculumPlayer.php?crs_UniqueID=<?php echo $value['crs_uniqueID']; ?>" role="button">View &raquo;</a>
                 </div>
             </div>
         </div>
