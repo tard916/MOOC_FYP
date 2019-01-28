@@ -27,8 +27,8 @@
     top: 0;
     left: 0;
     min-width: 100%;
-    height:auto;
-    margin-top: -150px;
+    margin-top: calc(-32rem / 2);
+    filter: blur(2px);
   }
 
   .slideT{
