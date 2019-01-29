@@ -7,22 +7,20 @@
     //echo Login::isLoggedIn();
     $outputkey  = Login::isLoggedIn();
     list($user, $key) = explode("_", $outputkey);
-
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('userHeader.php');
-         
+
     }
   }else {
       include('../mainHeader.php');
   }
-
 ?>
 
-    <main role="main" class="container-fluid">
-        <div class="curriculum-player-wrapper row">
-            <div class="col-3 p-0">
-                <div id="accordion">
+    <main role="main" class="container-fluid curriculum-player-wrapper">
+        <div class="row">
+            <div class="col-3 p-0 h-100">
+                <div id="accordion-player">
                     <div class="card curriculum-player-card">
 
                         <?php
@@ -32,22 +30,22 @@
                         <div class="card-header bg-secondary">
                             <a class="card-link d-block text-white" data-toggle="collapse" href="#week<?php echo $i;?>">Week <?php echo $i;?></a>
                         </div>
-                            
+
                         <div id="week<?php echo $i;?>" class="collapse show">
                             <ul class="list-group list-group-flush">
-                                <?php    
+                                <?php
                                     $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
-                                    foreach ($crriculum as $value) { 
+                                    foreach ($crriculum as $value) {
                                 ?>
                                 <li class="list-group-item"><a class="curriculum-link text-dark" href="<?php echo $value['path']?>"><?php echo $value['title'];?></a></li>
-                                    <?php 
+                                    <?php
                                         }
                                     ?>
                             </ul>
-                        </div> 
-                        <?php                            
+                        </div>
+                        <?php
                             }
-                        ?>                       
+                        ?>
                     </div>
                 </div>
             </div>
@@ -55,7 +53,7 @@
                 <video id="curriculum-video" class="video-js d-none" controls preload="auto" data-setup='{"responsive": true}'>
                 </video>
                 <div class="curriculum-article d-none">
-                    <embed id="article-src" src="" type="application/pdf" width="100%" height="100%" />
+                    <embed id="article-src" src="" type="application/pdf" />
                 </div>
             </div>
         </div>
@@ -74,7 +72,6 @@
     <script type="text/javascript">
         $(document).ready(function(){
             var player = videojs('curriculum-video');
-
             $(".curriculum-link").click(function(e){
                 e.preventDefault();
                 var src = $(this).attr("href");

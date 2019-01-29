@@ -2,7 +2,9 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-
+html, body{
+	height: 100%;
+}
 
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
@@ -82,20 +84,45 @@
     top: calc(50% - 0.75em);
     left: calc(50% - 1.5em);
 }
+
 .curriculum-player-wrapper {
-    max-height: calc(100% - 61px);
+    height: calc(100% - 56px);
+	overflow: hidden;
+}
+
+.curriculum-player-wrapper .row {
+	height: 100%;
+}
+
+#accordion-player {
+	height: 100%;
 }
 
 .curriculum-player-card {
     border: 0;
     border-radius: 0;
-    max-height: calc(100% - 61px);
+    height: 100%;
     overflow-y: auto;
 }
-.curriculum-player-wrapper .card-header:first-child {
+.curriculum-player-card .card-header:first-child {
     border-radius: 0;
 }
 #curriculum-video {
-    height: calc(100% - 61px);
+    height: 100%;
     width: 100%;
+}
+
+.curriculum-article {
+	height: 100%;
+}
+
+#article-src {
+	width: 100%;
+	height:100%;
+}
+
+.course-jumbotron {
+    background-image: linear-gradient(rgb(80,80,80) ,rgb(50,50,50) ,rgb(40,40,40) ,rgb(50,50,50) , rgb(80,80,80));
+    color: rgb(200,200,200);
+    border-radius: 0;
 }
