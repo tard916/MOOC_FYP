@@ -126,3 +126,24 @@ html, body{
     color: rgb(200,200,200);
     border-radius: 0;
 }
+
+#course-sections.list-group {
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+#course-sections .list-group-item {
+	margin-bottom: 50px;
+    border-radius: 0;
+}
+
+#course-sections .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.course-section {
+	margin-bottom: 50px;
+}
