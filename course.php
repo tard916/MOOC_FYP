@@ -31,12 +31,15 @@
     <!--This part is for the Carousel slide -->
     <div class="course-jumbotron jumbotron m-0 p-sm-5">
         <h1 class="display-4 text-center mb-3">Learn Advanced C++ Programming</h1>
-        <p class="lead text-center px-sm-3 px-md-5">
-            <span class="pull-left"><i class="fa fa-star-o" aria-hidden="true"></i> 4.50/5.00 <small>(100)</small></span>
-            <span class=""><i class="fa fa-user-o" aria-hidden="true"></i> Thierno Abdoul Rahimi Diallo</span>
-            <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 14 Weeks</span>
+        <div class="row lead text-center">
+            <div class="col-md-4 ">
+                <input class="course-rating rating-loading" value="3.75">
+                <small>(100)</small>
+            </div>
+            <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> Thierno Abdoul Rahimi Diallo</div>
+            <div class="col-md-4"><i class="fa fa-clock-o" aria-hidden="true"></i> 14 Weeks</div>
 
-        </p>
+        </div>
     </div>
     <!--This part is for the Carousel slide -->
     <!-- List group -->
@@ -125,8 +128,45 @@
                 </div>
             </div>
             <div class="tab-pane fade py-4" id="review" role="tabpanel">
-                <h2 class="text-center">Rating: 4.50/5.00  <small class="text-muted">(100)</small></h2>
-                <hr>
+                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button">Write Your Review</button>
+
+
+                <div class="review-row row">
+                    <div class="col-md-3">
+                        <h5>Mehrab Kamrani</h5>
+                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <p class="text-muted mt-1">5 days ago</p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="review-row row">
+                    <div class="col-md-3">
+                        <h5>Mehrab Kamrani</h5>
+                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <p class="text-muted mt-1">5 days ago</p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="review-row row">
+                    <div class="col-md-3">
+                        <h5>Mehrab Kamrani</h5>
+                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <p class="text-muted mt-1">5 days ago</p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                    </div>
+                    <hr>
+                </div>
+
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
               Irure enim occaecat labore sit qui aliquip reprehenderit amet velit. Deserunt ullamco ex elit nostrud ut dolore nisi officia magna sit occaecat laboris sunt dolor. Nisi eu minim cillum occaecat aute est cupidatat aliqua labore aute occaecat ea aliquip sunt amet. Aute mollit dolor ut exercitation irure commodo non amet consectetur quis amet culpa. Quis ullamco nisi amet qui aute irure eu. Magna labore dolor quis ex labore id nostrud deserunt dolor eiusmod eu pariatur culpa mollit in irure.
@@ -149,9 +189,28 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/star-rating.min.js"></script>
+    <script src="js/theme.min.js"></script>
+    <script>
+        $(document).on('ready', function () {
+            $('.course-rating').rating({
+                theme: 'krajee-fa',
+                displayOnly: true,
+                defaultCaption: '{rating}',
+                size: 'sm',
+            });
+            $('.individual-rating').rating({
+                theme: 'krajee-fa',
+                displayOnly: true,
+                showCaption: false,
+                size: 'sm',
+            });
+        });
+    </script>
+
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
     <script src="js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
