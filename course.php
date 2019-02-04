@@ -128,13 +128,43 @@
                 </div>
             </div>
             <div class="tab-pane fade py-4" id="review" role="tabpanel">
-                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button">Write Your Review</button>
 
+                <!-- Button trigger review modal  -->
+                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#reviewModal">Write Review</button>
+
+                <!-- Review modal -->
+                <form class="" action="index.html" method="post">
+                    <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="reviewModalLongTitle">Submit Review</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body text-center">
+                              <input name="submitRating" type="number" class="rating-loading submit-rating">
+                              <div class="form-group">
+                                <textarea required style="resize: none;" class="form-control" id="review-input" rows="6" placeholder=
+                                "Describe your experience, what you got out of the course, and other helpful highlights.
+
+What did the instructor do well, and what could use some improvement?"></textarea>
+                              </div>
+                              <p class="text-danger review-validation d-none">Please fill up above fields</p>
+                              <button type="submit" class="btn btn-outline-success btn-block submit-review">Submit</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </form>
 
                 <div class="review-row row">
                     <div class="col-md-3">
                         <h5>Mehrab Kamrani</h5>
-                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <input class="rating-loading individual-rating" value="3.5">
                         <p class="text-muted mt-1">5 days ago</p>
                     </div>
                     <div class="col-md-9">
@@ -146,7 +176,7 @@
                 <div class="review-row row">
                     <div class="col-md-3">
                         <h5>Mehrab Kamrani</h5>
-                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <input class="rating-loading individual-rating" value="3.5">
                         <p class="text-muted mt-1">5 days ago</p>
                     </div>
                     <div class="col-md-9">
@@ -158,7 +188,7 @@
                 <div class="review-row row">
                     <div class="col-md-3">
                         <h5>Mehrab Kamrani</h5>
-                        <input class="display-rating rating-loading individual-rating" value="3.5">
+                        <input class="rating-loading individual-rating" value="3.5">
                         <p class="text-muted mt-1">5 days ago</p>
                     </div>
                     <div class="col-md-9">
@@ -207,6 +237,33 @@
                 showCaption: false,
                 size: 'sm',
             });
+            $('.submit-rating').rating({
+                theme: 'krajee-fa',
+                size: 'xl',
+                starCaptions: {
+                    0.5: 'Terrible',
+                    1: 'Aweful',
+                    1.5: 'Bad',
+                    2: 'Poor',
+                    2.5: 'Average',
+                    3: 'Fair',
+                    3.5: 'Good',
+                    4: 'Great',
+                    4.5: 'Excellent',
+                    5: 'Phenomenal'
+                }
+            });
+            function validateReviewSubmit() {
+                return !(!$.trim($("#review-input").val())) && !(!$('.submit-rating').val())
+            }
+            $(".submit-review").click(function(e){
+                if (!validateReviewSubmit()) {
+                    $(".review-validation").removeClass("d-none");
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            });
+
         });
     </script>
 

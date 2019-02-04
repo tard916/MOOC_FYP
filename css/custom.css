@@ -6,6 +6,12 @@ html, body{
 	height: 100%;
 }
 
+.form-control:focus {
+	border-color: #6c757d;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+}
+
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
 
@@ -165,4 +171,9 @@ html, body{
 	border-top: 1px solid lightgray;
 	padding-top: 20px;
 	padding-bottom: 10px;
+}
+
+#reviewModal .caption {
+	display: block;
+	margin: 10px auto 20px;
 }
