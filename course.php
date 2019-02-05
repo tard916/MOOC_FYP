@@ -1,6 +1,7 @@
 <?php
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
+   $courseID = $_GET['crs_UniqueID'];
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
@@ -24,19 +25,29 @@
   }else {
       include('mainHeader.php');
   }
+
+  $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
+  
+
 ?>
 
 <main role="main">
 
     <!--This part is for the Carousel slide -->
     <div class="course-jumbotron jumbotron m-0 p-sm-5">
-        <h1 class="display-4 text-center mb-3">Learn Advanced C++ Programming</h1>
+    <?php 
+        foreach ($courseResult as $value) {
+            $instructorId = $value['instructor_id'];
+            $intructorName = DB::query('SELECT * FROM instructor WHERE  ins_uniquID =:ins_uniquID', array(':ins_uniquID'=>$instructorId))[0]['instructor_name'];
+    ?>
+        <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
         <p class="lead text-center px-sm-3 px-md-5">
             <span class="pull-left"><i class="fa fa-star-o" aria-hidden="true"></i> 4.50/5.00 <small>(100)</small></span>
-            <span class=""><i class="fa fa-user-o" aria-hidden="true"></i> Thierno Abdoul Rahimi Diallo</span>
-            <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 14 Weeks</span>
+            <span class=""><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></span>
+            <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $value['duration'];?> Weeks</span>
 
         </p>
+   
     </div>
     <!--This part is for the Carousel slide -->
     <!-- List group -->
@@ -54,74 +65,47 @@
                 <div class="course-section">
                     <h4>Description</h4>
                     <hr>
-                    <p>This course is for experienced C programmers who want to program in C++. The examples and exercises require a basic understanding of algorithms and object-oriented software.</p>
+                    <p><?php echo $value['descriptions'];?></p>
                 </div>
                 <div class="course-section">
                     <h4>Learning Outcome</h4>
                     <hr>
-                    <p>This course is for experienced C programmers who want to program in C++. The examples and exercises require a basic understanding of algorithms and object-oriented software.</p>
+                    <p><?php echo $value['learning_outcomes'];?></p>
                 </div>
                 <div class="course-section">
                     <h4>Requirements</h4>
                     <hr>
-                    <p>This course is for experienced C programmers who want to program in C++. The examples and exercises require a basic understanding of algorithms and object-oriented software.</p>
+                    <p><?php echo $value['pre_requirments'];?></p>
                 </div>
             </div>
-
+    <?php
+        }
+    ?>
             <div class="tab-pane fade py-4" id="syllabus" role="tabpanel">
                 <div class="course-curriculum-section">
 
-                    <h5 class="">Week 1</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 1</a></li>
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Intro to MVC</a></li>
-                    </ul>
+                <?php
+                    $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
+                    for($i = 1; $i<=$courseDuration; $i++){
+                ?>
 
-                    <h5 class="">Week 2</h5>
+                    <h5 class="">Week <?php echo $i;?></h5>
                     <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 2 and 3</a></li>
-                    </ul>
-
-                    <h5 class="">Week 3</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 4</a></li>
-                    </ul>
-
-                    <h5 class="">Week 4</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 5</a></li>
-                    </ul>
-
-                    <h5 class="">Week 5</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 6</a></li>
-                    </ul>
-
-                    <h5 class="">Week 6</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 7</a></li>
-                    </ul>
-
-                    <h5 class="">Week 7</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 8</a></li>
-                    </ul>
-
-                    <h5 class="">Week 8</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 9</a></li>
-                    </ul>
-
-                    <h5 class="">Week 9</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 10</a></li>
-                    </ul>
-
-                    <h5 class="">Week 10</h5>
-                    <ul class="list-unstyled mb-5">
-                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP pdf</a></li>
-                    </ul>
-
+                    <?php
+                        $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
+                        foreach ($crriculum as $value) {
+                    ?>
+                   
+                    <li class=""><a class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> <?php echo $value['title'];?></a></li>
+                        <?php
+                            }
+                        ?>
+                        <!--<li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 1</a></li>
+                        <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Intro to MVC</a></li>-->
+                    </ul>                   
+                <?php
+                    }
+                ?>
                 </div>
             </div>
             <div class="tab-pane fade py-4" id="review" role="tabpanel">
