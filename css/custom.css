@@ -6,6 +6,12 @@ html, body{
 	height: 100%;
 }
 
+.form-control:focus {
+	border-color: #6c757d;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+}
+
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
 
@@ -133,7 +139,7 @@ html, body{
 }
 
 #course-sections .list-group-item {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
     border-radius: 0;
 }
 
@@ -146,4 +152,28 @@ html, body{
 
 .course-section {
 	margin-bottom: 50px;
+}
+
+.rating-container{
+	display: inline;
+}
+
+.rating-container .filled-stars {
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+.rating-container .star {
+    margin: 0 4px 0 0;
+}
+
+.review-row {
+	border-top: 1px solid lightgray;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+#reviewModal .caption {
+	display: block;
+	margin: 10px auto 20px;
 }
