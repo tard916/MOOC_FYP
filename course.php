@@ -40,22 +40,22 @@
             $instructorId = $value['instructor_id'];
             $intructorName = DB::query('SELECT * FROM instructor WHERE  ins_uniquID =:ins_uniquID', array(':ins_uniquID'=>$instructorId))[0]['instructor_name'];
     ?>
-        <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
+        <!--<h1 class="display-4 text-center mb-3"></h1>
         <p class="lead text-center px-sm-3 px-md-5">
             <span class="pull-left"><i class="fa fa-star-o" aria-hidden="true"></i> 4.50/5.00 <small>(100)</small></span>
             <span class=""><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></span>
-            <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $value['duration'];?> Weeks</span>
+            <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> </span>
 
-        </p>
+        </p>-->
    
-        <h1 class="display-4 text-center mb-3">Learn Advanced C++ Programming</h1>
+        <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
         <div class="row lead text-center">
             <div class="col-md-4 ">
                 <input class="course-rating rating-loading" value="3.75">
                 <small>(100)</small>
             </div>
-            <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> Thierno Abdoul Rahimi Diallo</div>
-            <div class="col-md-4"><i class="fa fa-clock-o" aria-hidden="true"></i> 14 Weeks</div>
+            <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></div>
+            <div class="col-md-4"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $value['duration'];?> Weeks</div>
 
         </div>
     </div>
