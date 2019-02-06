@@ -27,7 +27,7 @@
   }
 
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
-  
+
 
 ?>
 
@@ -35,7 +35,7 @@
 
     <!--This part is for the Carousel slide -->
     <div class="course-jumbotron jumbotron m-0 p-sm-5">
-    <?php 
+    <?php
         foreach ($courseResult as $value) {
             $instructorId = $value['instructor_id'];
             $intructorName = DB::query('SELECT * FROM instructor WHERE  ins_uniquID =:ins_uniquID', array(':ins_uniquID'=>$instructorId))[0]['instructor_name'];
@@ -47,7 +47,7 @@
             <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> </span>
 
         </p>-->
-   
+
         <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
         <div class="row lead text-center">
             <div class="col-md-4 ">
@@ -105,14 +105,14 @@
                         $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
                         foreach ($crriculum as $value) {
                     ?>
-                   
+
                     <li class=""><a class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> <?php echo $value['title'];?></a></li>
                         <?php
                             }
                         ?>
                         <!--<li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 1</a></li>
                         <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Intro to MVC</a></li>-->
-                    </ul>                   
+                    </ul>
                 <?php
                     }
                 ?>
@@ -144,12 +144,10 @@ What did the instructor do well, and what could use some improvement?"></textare
                               </div>
                               <p class="text-danger review-validation d-none">Please fill up above fields</p>
                               <button type="submit" class="btn btn-outline-success btn-block submit-review">Submit</button>
-
                           </div>
                         </div>
                       </div>
                     </div>
-
                 </form>
 
                 <div class="review-row row">
@@ -190,7 +188,56 @@ What did the instructor do well, and what could use some improvement?"></textare
 
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
-              Irure enim occaecat labore sit qui aliquip reprehenderit amet velit. Deserunt ullamco ex elit nostrud ut dolore nisi officia magna sit occaecat laboris sunt dolor. Nisi eu minim cillum occaecat aute est cupidatat aliqua labore aute occaecat ea aliquip sunt amet. Aute mollit dolor ut exercitation irure commodo non amet consectetur quis amet culpa. Quis ullamco nisi amet qui aute irure eu. Magna labore dolor quis ex labore id nostrud deserunt dolor eiusmod eu pariatur culpa mollit in irure.
+
+                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#questionModal">Ask Question</button>
+                <!-- Review modal -->
+                <form class="" action="index.html" method="post">
+                    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="questionModalLongTitle">Ask Question</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body text-center">
+                              <div class="form-group">
+                                <textarea required style="resize: none;" class="form-control" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-outline-success btn-block submit-question">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+
+
+                <a class="question-link text-dark" href="#">
+                    <div class="question-row my-4 p-4">
+                        <h6>Mehrab Kamrani</h6>
+                        <p class="text-muted">5 days ago</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                    </div>
+                </a>
+                <a class="question-link text-dark" href="#">
+                    <div class="question-row my-4 p-4">
+                        <h6>Mehrab Kamrani</h6>
+                        <p class="text-muted">5 days ago</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                    </div>
+                </a>
+                <a class="question-link text-dark" href="#">
+                    <div class="question-row my-4 p-4">
+                        <h6>Mehrab Kamrani</h6>
+                        <p class="text-muted">5 days ago</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                    </div>
+                </a>
+
             </div>
         </div>
     </div>

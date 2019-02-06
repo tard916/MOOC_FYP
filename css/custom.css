@@ -177,3 +177,16 @@ html, body{
 	display: block;
 	margin: 10px auto 20px;
 }
+
+.question-row {
+	border: 1px solid lightgray;
+	border-radius: .25rem;
+}
+
+.question-row:hover {
+	border: 1px solid gray;
+}
+
+.question-link:hover {
+	text-decoration: none;
+}
