@@ -190,7 +190,7 @@ What did the instructor do well, and what could use some improvement?"></textare
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
 
                 <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#questionModal">Ask Question</button>
-                <!-- Review modal -->
+                <!-- question modal -->
                 <form class="" action="index.html" method="post">
                     <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalTitle" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -213,7 +213,7 @@ What did the instructor do well, and what could use some improvement?"></textare
                 </form>
 
 
-                <a class="question-link text-dark" href="#">
+                <a class="question-link text-dark" href="question.php">
                     <div class="question-row my-4 p-4">
                         <h6>Mehrab Kamrani</h6>
                         <p class="text-muted">5 days ago</p>
@@ -221,7 +221,7 @@ What did the instructor do well, and what could use some improvement?"></textare
                         <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
                     </div>
                 </a>
-                <a class="question-link text-dark" href="#">
+                <a class="question-link text-dark" href="question.php">
                     <div class="question-row my-4 p-4">
                         <h6>Mehrab Kamrani</h6>
                         <p class="text-muted">5 days ago</p>
@@ -229,7 +229,7 @@ What did the instructor do well, and what could use some improvement?"></textare
                         <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
                     </div>
                 </a>
-                <a class="question-link text-dark" href="#">
+                <a class="question-link text-dark" href="question.php">
                     <div class="question-row my-4 p-4">
                         <h6>Mehrab Kamrani</h6>
                         <p class="text-muted">5 days ago</p>

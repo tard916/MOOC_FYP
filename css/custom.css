@@ -76,7 +76,7 @@ html, body{
 .card-title {
     min-height: 72px;
 }
-.my-courses-wrapper, .curriculum-wrapper{
+.my-courses-wrapper, .curriculum-wrapper, .question-page{
     min-height: 800px;
 }
 
@@ -178,7 +178,7 @@ html, body{
 	margin: 10px auto 20px;
 }
 
-.question-row {
+.question-row, .response-row {
 	border: 1px solid lightgray;
 	border-radius: .25rem;
 }
