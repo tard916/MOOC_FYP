@@ -76,7 +76,7 @@ html, body{
 .card-title {
     min-height: 72px;
 }
-.my-courses-wrapper, .curriculum-wrapper, .question-page{
+.my-courses-wrapper, .curriculum-wrapper, .question-page, .course-page{
     min-height: 800px;
 }
 
@@ -129,7 +129,6 @@ html, body{
 
 .course-jumbotron {
     background-image: linear-gradient(rgb(80,80,80) ,rgb(50,50,50) ,rgb(40,40,40) ,rgb(50,50,50) , rgb(80,80,80));
-    color: rgb(200,200,200);
     border-radius: 0;
 }
 
