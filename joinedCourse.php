@@ -139,7 +139,7 @@
                           <div class="modal-body text-center">
                               <input name="submitRating" type="number" class="rating-loading submit-rating">
                               <div class="form-group">
-                                <textarea required style="resize: none;" class="form-control" id="review-input" rows="6" placeholder=
+                                <textarea required class="form-control noresize" id="review-input" rows="6" placeholder=
                                 "Describe your experience, what you got out of the course, and other helpful highlights.
 
 What did the instructor do well, and what could use some improvement?"></textarea>
@@ -205,7 +205,7 @@ What did the instructor do well, and what could use some improvement?"></textare
                           </div>
                           <div class="modal-body text-center">
                               <div class="form-group">
-                                <textarea required style="resize: none;" class="form-control" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
+                                <textarea required class="form-control noresize" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
                               </div>
                               <button type="submit" class="btn btn-outline-success btn-block submit-question">Submit</button>
                           </div>

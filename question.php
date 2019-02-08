@@ -58,7 +58,7 @@
                   </div>
                   <div class="modal-body text-center">
                       <div class="form-group">
-                        <textarea required style="resize: none;" class="form-control" id="answer-input" rows="6" placeholder="Add your answer"></textarea>
+                        <textarea required class="form-control noresize" id="answer-input" rows="6" placeholder="Add your answer"></textarea>
                       </div>
                       <button type="submit" class="btn btn-outline-success btn-block submit-answer">Submit</button>
                   </div>

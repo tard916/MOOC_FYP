@@ -23,49 +23,86 @@
 
     <main role="main" class="container curriculum-wrapper">
         <div class="col-md-10 col-lg-8 mx-auto">
-            <h1 class="mt-4 text-center">New Course Curriculum</h1>
-            <form class="" action="backend/createCourseCurriculum.php" method="post" enctype="multipart/form-data">
+            <h1 class="mt-4 text-center">Add Quiz</h1>
 
-                <div id="accordion">
-                    <input type="hidden" name="courseID" value="<?php echo $courseID;?>">
-                    <?php
-                        $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
+            <form class="" action="" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                   <label for="week">Select Week</label>
+                   <select class="form-control" id="week">
+                     <option>Week 1</option>
+                     <option>Week 2</option>
+                     <option>Week 3</option>
+                     <option>Week 4</option>
+                     <option>Week 5</option>
+                     <option>Week 6</option>
+                     <option>Week 7</option>
+                     <option>Week 8</option>
+                     <option>Week 9</option>
+                     <option>Week 10</option>
+                   </select>
+                 </div>
 
-                        for($i = 1; $i<=$courseDuration; $i++){
-                    ?>
+                 <div class="form-group">
+                    <label for="numOfQuestions">Number of Questions</label>
+                    <select class="form-control" id="numOfQuestions">
+                      <option>5 Questions</option>
+                      <option>6 Questions</option>
+                      <option>7 Questions</option>
+                      <option>8 Questions</option>
+                      <option>9 Questions</option>
+                      <option>10 Questions</option>
+                      <option>11 Questions</option>
+                      <option>12 Questions</option>
+                      <option>13 Questions</option>
+                      <option>14 Questions</option>
+                      <option>15 Questions</option>
+                      <option>16 Questions</option>
+                      <option>17 Questions</option>
+                      <option>18 Questions</option>
+                      <option>19 Questions</option>
+                      <option>20 Questions</option>
+                    </select>
+                  </div>
+                <div id="quiz-accordion">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <a class="card-link d-block text-center text-secondary" data-toggle="collapse" href="#week<?php echo $i;?>">Week <?php echo $i;?></a>
-                            <input type="hidden" name="weekID<?php echo $i;?>" value="<?php echo $i;?>">
+                            <a class="card-link d-block text-center text-secondary" data-toggle="collapse" href="#question1">Question 1</a>
                         </div>
-                        <div id="week<?php echo $i;?>" class="collapse">
+                        <div id="question1" class="collapse">
                             <div class="card-body">
-                                <div class="form-row align-items-center">
-                                    <div class="form-group col-md-4">
-                                        <label for="resourceTitle">Title</label>
-                                        <input type="text" class="form-control form-control-sm" id="resourceTitle" name="title<?php echo $i;?>[]">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="resourceFile">Resource File</label>
-                                        <input type="file" class="form-control-file" id="resourceFile" name="fileName<?php echo $i;?>[]">
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="resourceType">Resource Type</label>
-                                        <select id="resourceType" class="form-control form-control-sm" name="fileType<?php echo $i;?>[]">
-                                            <option value="Video" selected>Video</option>
-                                            <option value="Quiz">Quiz</option>
-                                            <option value="Article">Article</option>
-                                        </select>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="questionTitle">Question Title</label>
+                                    <textarea class="form-control noresize" id="questionTitle" rows="2"></textarea>
                                 </div>
-                                <a href="#" class="add-resource btn btn-outline-dark btn-block"><i class="fa fa-plus"></i></a>
+                                <div class="form-group row">
+                                  <label for="answer1" class="col-2 col-form-label">A.</label>
+                                  <div class="col-10">
+                                    <input type="text" class="form-control" id="answer1">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="answer2" class="col-2 col-form-label">B.</label>
+                                  <div class="col-10">
+                                    <input type="text" class="form-control" id="answer2">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="answer3" class="col-2 col-form-label">C.</label>
+                                  <div class="col-10">
+                                    <input type="text" class="form-control" id="answer3">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="answer4" class="col-2 col-form-label">D.</label>
+                                  <div class="col-10">
+                                    <input type="text" class="form-control" id="answer4">
+                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <?php
-                }?>
                 </div>
-                <a class="btn btn-outline-primary btn-block mt-5 mb-2" href="addQuiz.php" role="button">Add Quiz</a>
+                <a class="btn btn-outline-primary btn-block mt-5 mb-2" href="addQuiz.php" role="button">Add Another Quiz</a>
                 <!--
                 I don't know in which way you wanna create the quiz (submit button or href) so I create both for now
                 <button type="submit" name="addQuiz" class="btn btn-outline-primary btn-block mt-5 mb-2">Add Quiz</button>

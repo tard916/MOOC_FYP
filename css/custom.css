@@ -12,6 +12,10 @@ html, body{
     box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
 }
 
+.noresize {
+  resize: none;
+}
+
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
 
