@@ -2,6 +2,7 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
    $courseID = $_GET['crs_UniqueID'];
+   //$courseID = "CRS5c4eb123cbbbe9.91086078";
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
@@ -100,7 +101,7 @@
                 <div class="course-curriculum-section">
 
                 <?php
-                    $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
+                   $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
                     for($i = 1; $i<=$courseDuration; $i++){
                 ?>
 
@@ -111,7 +112,8 @@
                         foreach ($crriculum as $value) {
                     ?>
 
-                    <li class=""><div class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> <?php echo $value['title'];?></div></li>
+                    <li class=""><div class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> 
+                    <?php if(!empty($value['title']) ){ echo $value['title']; }else{ echo 'Loading...';}?></div></li>
                         <?php
                             }
                         ?>
