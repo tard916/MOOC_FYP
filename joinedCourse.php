@@ -29,6 +29,22 @@
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
 
 
+  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
+  
+
+  $valOfRatings = DB::query('SELECT rating_value FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
+  $sumOfRatings = 0;
+  foreach ($valOfRatings as  $valuert) {
+    $sumOfRatings =  $sumOfRatings + (float)$valuert['rating_value'];
+  }
+  
+
+  if ($countOfRatings >= 0 && $sumOfRatings >= 0) {
+      $avRating = $sumOfRatings / $countOfRatings;
+      echo $avRating;
+  }
+
+
 ?>
 
 <main role="main" class="course-page">
@@ -52,8 +68,8 @@
             <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
             <div class="row lead text-center">
                 <div class="col-md-4 ">
-                    <input class="course-rating rating-loading" value="3.75">
-                    <small>(100)</small>
+                    <input class="course-rating rating-loading" value="<?php echo $avRating; ?>">
+                    <small>(<?php echo $countOfRatings; ?>)</small>
                 </div>
                 <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></div>
                 <div class="col-md-4"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $value['duration'];?> Weeks</div>
@@ -126,7 +142,7 @@
                 <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#reviewModal">Write Review</button>
 
                 <!-- Review modal -->
-                <form class="" action="index.html" method="post">
+                <form class="" action="backend/submitRating.php?courseID=<?php echo $courseID;?>" method="post">
                     <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalTitle" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -137,57 +153,49 @@
                             </button>
                           </div>
                           <div class="modal-body text-center">
-                              <input name="submitRating" type="number" class="rating-loading submit-rating">
+                              <input name="submitRating" type="text" class="rating-loading submit-rating">
                               <div class="form-group">
-                                <textarea required class="form-control noresize" id="review-input" rows="6" placeholder=
+                                <textarea required name="ratingArea" class="form-control noresize" id="review-input" rows="6" placeholder=
                                 "Describe your experience, what you got out of the course, and other helpful highlights.
-
-What did the instructor do well, and what could use some improvement?"></textarea>
+                                What did the instructor do well, and what could use some improvement?"></textarea>
                               </div>
                               <p class="text-danger review-validation d-none">Please fill up above fields</p>
-                              <button type="submit" class="btn btn-outline-success btn-block submit-review">Submit</button>
+                              <button type="submit" name="submitRatingForm" class="btn btn-outline-success btn-block submit-review">Submit</button>
                           </div>
                         </div>
                       </div>
                     </div>
                 </form>
-
+                
+                <?php
+                    $ratings = DB::query('SELECT * FROM rating WHERE course_id= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
+                    foreach ($ratings as  $value) {
+                    
+                    $studentId = $value['student_ID'];
+                    $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+                ?>
                 <div class="review-row row">
                     <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
+                    <?php
+                        foreach ($studentsID as $valuestd) {
+                            
+                    ?>
+                        <h5><?php echo $valuestd['student_name'];?></h5>
+                    <?php 
+                        }
+                    ?>
+                        <input class="rating-loading individual-rating" value="<?php echo $value['rating_value'];?>">
+                        <p class="text-muted mt-1"><?php echo $value['date'];?></p>
                     </div>
                     <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                        <p><?php echo $value['rating_Content'];?></p>
                     </div>
                     <hr>
                 </div>
 
-                <div class="review-row row">
-                    <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
-                    </div>
-                    <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                    </div>
-                    <hr>
-                </div>
-
-                <div class="review-row row">
-                    <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
-                    </div>
-                    <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                    </div>
-                    <hr>
-                </div>
-
+                <?php 
+                    }
+                ?>
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
 
@@ -306,8 +314,6 @@ What did the instructor do well, and what could use some improvement?"></textare
 
         });
     </script>
-
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
     <script src="js/ie10-viewport-bug-workaround.js"></script> -->
 </body>

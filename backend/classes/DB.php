@@ -16,6 +16,13 @@
                 return $data;
             }
         }
+
+        public static function returnRowCount($query , $params = array()){
+            $statement = self::connect()->prepare($query);
+            $statement->execute($params);
+            $count = $statement->rowCount();
+            return $count;
+        }
             
     }
     
