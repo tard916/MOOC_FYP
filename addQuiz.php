@@ -29,78 +29,43 @@
                 <div class="form-group">
                    <label for="week">Select Week</label>
                    <select class="form-control" id="week">
-                     <option>Week 1</option>
-                     <option>Week 2</option>
-                     <option>Week 3</option>
-                     <option>Week 4</option>
-                     <option>Week 5</option>
-                     <option>Week 6</option>
-                     <option>Week 7</option>
-                     <option>Week 8</option>
-                     <option>Week 9</option>
-                     <option>Week 10</option>
+                     <option value="week1">Week 1</option>
+                     <option value="week2">Week 2</option>
+                     <option value="week3">Week 3</option>
+                     <option value="week4">Week 4</option>
+                     <option value="week5">Week 5</option>
+                     <option value="week6">Week 6</option>
+                     <option value="week7">Week 7</option>
+                     <option value="week8">Week 8</option>
+                     <option value="week9">Week 9</option>
+                     <option value="week10">Week 10</option>
                    </select>
                  </div>
 
                  <div class="form-group">
                     <label for="numOfQuestions">Number of Questions</label>
                     <select class="form-control" id="numOfQuestions">
-                      <option>5 Questions</option>
-                      <option>6 Questions</option>
-                      <option>7 Questions</option>
-                      <option>8 Questions</option>
-                      <option>9 Questions</option>
-                      <option>10 Questions</option>
-                      <option>11 Questions</option>
-                      <option>12 Questions</option>
-                      <option>13 Questions</option>
-                      <option>14 Questions</option>
-                      <option>15 Questions</option>
-                      <option>16 Questions</option>
-                      <option>17 Questions</option>
-                      <option>18 Questions</option>
-                      <option>19 Questions</option>
-                      <option>20 Questions</option>
+                      <option value="5">5 Questions</option>
+                      <option value="6">6 Questions</option>
+                      <option value="7">7 Questions</option>
+                      <option value="8">8 Questions</option>
+                      <option value="9">9 Questions</option>
+                      <option value="10">10 Questions</option>
+                      <option value="11">11 Questions</option>
+                      <option value="12">12 Questions</option>
+                      <option value="13">13 Questions</option>
+                      <option value="14">14 Questions</option>
+                      <option value="15">15 Questions</option>
+                      <option value="16">16 Questions</option>
+                      <option value="17">17 Questions</option>
+                      <option value="18">18 Questions</option>
+                      <option value="19">19 Questions</option>
+                      <option value="20">20 Questions</option>
                     </select>
                   </div>
                 <div id="quiz-accordion">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <a class="card-link d-block text-center text-secondary" data-toggle="collapse" href="#question1">Question 1</a>
-                        </div>
-                        <div id="question1" class="collapse">
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="questionTitle">Question Title</label>
-                                    <textarea class="form-control noresize" id="questionTitle" rows="2"></textarea>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="answer1" class="col-2 col-form-label">A.</label>
-                                  <div class="col-10">
-                                    <input type="text" class="form-control" id="answer1">
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="answer2" class="col-2 col-form-label">B.</label>
-                                  <div class="col-10">
-                                    <input type="text" class="form-control" id="answer2">
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="answer3" class="col-2 col-form-label">C.</label>
-                                  <div class="col-10">
-                                    <input type="text" class="form-control" id="answer3">
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="answer4" class="col-2 col-form-label">D.</label>
-                                  <div class="col-10">
-                                    <input type="text" class="form-control" id="answer4">
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
                 <a class="btn btn-outline-primary btn-block mt-5 mb-2" href="addQuiz.php" role="button">Add Another Quiz</a>
                 <!--
@@ -129,28 +94,51 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
 
-        $(".add-resource").click(function(e){
-            e.preventDefault();
-            var weekID = $(this).parent().parent().attr('id').replace("week", "");
-            var formRow =   $(document.createElement("div")).addClass('form-row align-items-center pt-3').css( "border-top", "1px solid #d1d1d1" );
-            var titleGroup= $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
-                            $(document.createElement("label")).attr('for', 'resourceTitle').text('Title').appendTo(titleGroup);
-                            $(document.createElement("input")).attr({type: "text",id: "resourceTitle", name: "title"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(titleGroup);
-            var fileGroup = $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
-                            $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(fileGroup);
-                            $(document.createElement("input")).attr({type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(fileGroup);
-            var typeGroup = $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
-                            $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(typeGroup);
-            var select =    $(document.createElement("select")).attr({id: "resourceType", name: "fileType"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(typeGroup);
-                            $(document.createElement("option")).text('Video').appendTo(select);
-                            $(document.createElement("option")).text('Quiz').appendTo(select);
-                            $(document.createElement("option")).text('Article').appendTo(select);
-            var removerDiv= $(document.createElement("div")).addClass('form-group col-md-1').appendTo(formRow);
-            var removeBtn = $(document.createElement("a")).attr('href', '#').addClass('remove-resource btn btn-outline-danger pull-right').appendTo(removerDiv).click(function(e){e.preventDefault();$(this).parent().parent().remove();});
-                            $(document.createElement("i")).addClass('fa fa-remove').appendTo(removeBtn);
-            $(this).before(formRow);
+    $(document).ready(function(){
+        $('#numOfQuestions').change(function(){
+            var questionContent = "";
+            for (var i = 1; i <= this.value; i++) {
+                questionContent +=
+                    '<div class="card mb-4">'+
+                    '    <div class="card-header">'+
+                    '        <a class="card-link d-block text-center text-secondary" data-toggle="collapse" href="#question'+i+'">Question '+i+'</a>'+
+                    '    </div>'+
+                    '    <div id="question'+i+'" class="collapse">'+
+                    '        <div class="card-body">'+
+                    '            <div class="form-group">'+
+                    '                <label for="questionTitleQ'+i+'">Question Title</label>'+
+                    '                <textarea class="form-control noresize" id="questionTitleQ'+i+'" rows="2"></textarea>'+
+                    '            </div>'+
+                    '            <div class="form-group row">'+
+                    '              <label for="answer1'+i+'" class="col-2 col-form-label">A.</label>'+
+                    '              <div class="col-10">'+
+                    '                <input type="text" class="form-control" id="answer1'+i+'">'+
+                    '              </div>'+
+                    '            </div>'+
+                    '            <div class="form-group row">'+
+                    '              <label for="answer2'+i+'" class="col-2 col-form-label">B.</label>'+
+                    '              <div class="col-10">'+
+                    '                <input type="text" class="form-control" id="answer2'+i+'">'+
+                    '              </div>'+
+                    '            </div>'+
+                    '            <div class="form-group row">'+
+                    '              <label for="answer3'+i+'" class="col-2 col-form-label">C.</label>'+
+                    '              <div class="col-10">'+
+                    '                <input type="text" class="form-control" id="answer3'+i+'">'+
+                    '              </div>'+
+                    '            </div>'+
+                    '            <div class="form-group row">'+
+                    '              <label for="answer4'+i+'" class="col-2 col-form-label">D.</label>'+
+                    '              <div class="col-10">'+
+                    '                <input type="text" class="form-control" id="answer4'+i+'">'+
+                    '              </div>'+
+                    '            </div>'+
+                    '        </div>'+
+                    '    </div>'+
+                    '</div>';
+            }
+            $("#quiz-accordion").html(questionContent);
         });
     });
     </script>
