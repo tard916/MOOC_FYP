@@ -31,11 +31,11 @@
                    <select class="form-control" id="week" required>
                         <option value="" disabled selected>Which week do you want to add this quiz to?</option>
                    <?php
-                        $duration = 
+                        $duration =
                         $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
 
                         for($i = 1; $i<=$courseDuration; $i++){
-                   ?>                   
+                   ?>
                      <option value="<?php echo $i;?>">Week <?php echo $i;?></option>
                    <?php
                         }
@@ -134,6 +134,18 @@
                     '              <label for="answer4'+i+'" class="col-2 col-form-label">D.</label>'+
                     '              <div class="col-10">'+
                     '                <input type="text" class="form-control" id="answer4'+i+'">'+
+                    '              </div>'+
+                    '            </div>'+
+                    '            <div class="form-group row">'+
+                    '              <label for="correctAns'+i+'" class="col-4 col-form-label">Answer</label>'+
+                    '              <div class="col-8">'+
+                    '                <select class="form-control" id="correctAns'+i+'" required>'+
+                    '                    <option value="" disabled selected>Select the correct answer</option>'+
+                    '                    <option value="A">A</option>'+
+                    '                    <option value="B">B</option>'+
+                    '                    <option value="C">C</option>'+
+                    '                    <option value="D">D</option>'+
+                    '                 </select>'+
                     '              </div>'+
                     '            </div>'+
                     '        </div>'+
