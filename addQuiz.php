@@ -25,7 +25,7 @@
         <div class="col-md-10 col-lg-8 mx-auto">
             <h1 class="mt-4 text-center">Add Quiz</h1>
 
-            <form class="" action="backend/adduiz.php?cid<?php echo $courseID;?>" method="post" enctype="multipart/form-data">
+            <form class="" action="backend/addQuiz.php?cid=<?php echo $courseID;?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                    <label for="week">Select Week</label>
                    <select class="form-control" name="selectedWeek" id="week" required>
@@ -47,6 +47,7 @@
                     <label for="numOfQuestions">Number of Questions</label>
                     <select class="form-control" name="nunOfestion" id="numOfQuestions" required>
                         <option value="" disabled selected>How many question would you like to have?</option>
+                        <option value="2">2 Questions</option>
                         <option value="5">5 Questions</option>
                         <option value="6">6 Questions</option>
                         <option value="7">7 Questions</option>
@@ -75,7 +76,7 @@
                 <button type="submit" name="addQuiz" class="btn btn-outline-primary btn-block mt-5 mb-2">Add Quiz</button>
                 -->
                 <p class="text-muted text-center mb-2">Or</p>
-                <button type="submit" name="createCourse" class="btn btn-outline-success btn-block mb-5">Create</button>
+                <button type="submit" name="createQuiz" class="btn btn-outline-success btn-block mb-5">Create</button>
             </form>
         </div>
 
@@ -110,36 +111,36 @@
                     '        <div class="card-body">'+
                     '            <div class="form-group">'+
                     '                <label for="questionTitleQ'+i+'">Question Title</label>'+
-                    '                <textarea class="form-control name="uestionTitle'+i+'[]" noresize" id="questionTitleQ'+i+'" rows="2"></textarea>'+
+                    '                <textarea class="form-control  noresize" name="questionTitle'+i+'" id="questionTitleQ'+i+'" rows="2"></textarea>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer1'+i+'" class="col-2 col-form-label">A.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" name="option_A'+i+'[]" id="answer1'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_A'+i+'" id="answer1'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer2'+i+'" class="col-2 col-form-label">B.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" name="option_B'+i+'[]" id="answer2'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_B'+i+'" id="answer2'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer3'+i+'" class="col-2 col-form-label">C.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" name="option_C'+i+'[]" id="answer3'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_C'+i+'" id="answer3'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer4'+i+'" class="col-2 col-form-label">D.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" name="option_D'+i+'[]" id="answer4'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_D'+i+'" id="answer4'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="correctAns'+i+'" class="col-4 col-form-label">Answer</label>'+
                     '              <div class="col-8">'+
-                    '                <select class="form-control" id="correctAns'+i+'" required>'+
+                    '                <select class="form-control" name="correct_Answer'+i+'" id="correctAns'+i+'" required>'+
                     '                    <option value="" disabled selected>Select the correct answer</option>'+
                     '                    <option value="A">A</option>'+
                     '                    <option value="B">B</option>'+
