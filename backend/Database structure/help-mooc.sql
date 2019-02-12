@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2019 at 10:56 AM
+-- Generation Time: Feb 12, 2019 at 05:05 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -101,7 +101,8 @@ INSERT INTO `course` (`id`, `crs_uniqueID`, `course_name`, `category_id`, `start
 (10, 'CRS5c21e7b6ecb710.15500033', 'Statistics for Data Science and Business Analysis', 10, '2019-01-01', 14, '      Absolutely no experience is required. We will start from the basics and gradually build up your knowledge. Everything is in the course.     A willingness to learn and practice', '    Understand the fundamentals of statistics     Learn how to work with different types of data     How to plot different types of data     Calculate the measures of central tendency, asymmetry, and variability     Calculate correlation and covariance   ', 'Is statistics a driving force in the industry you want to enter? Do you want to work as a Marketing Analyst, a Business Intelligence Analyst, a Data Analyst, or a Data Scientist?  Well then, you’ve come to the right place!    Statistics for Data Science and Business Analysis is here for you with TEMPLATES in Excel included!    This is where you start. And it is the perfect beginning!    In no time, you will acquire the fundamental skills that will enable you to understand complicated statistical analysis directly applicable to real-life situations. We have created a course that is:         Easy to understand        Comprehensive        Practical        To the point        Packed with plenty of exercises and resources          Data-driven        Introduces you to the statistical scientific lingo        Teaches you about data visualization        Shows you the main pillars of quant research     It is no secret that a lot of these topics have been explained online. Thousands of times. However, it is next to impossible to find a structured program that gives you an understanding of why certain statistical tests are being used so often. Modern software packages and programming languages are automating most of these activities, but this course gives you something more valuable – critical thinking abilities. Computers and programming languages are like ships at sea. They are fine vessels that will carry you to the desired destination, but it is up to you, the aspiring data scientist or BI analyst, to navigate and point them in the right direction.     Teaching is our passion    We worked hard for over four months to create the best possible Statistics course which would deliver the most value to you. We want you to succeed, which is why the course aims to be as engaging as possible. High-quality animations, superb course materials, quiz questions, handouts and course notes, as well as a glossary with all new terms you will learn, are just some of the perks you will get by subscribing.     What makes this course different from the rest of the Statistics courses out there?        High-quality production – HD video and animations (This isn’t a collection of boring lectures!)        Knowledgeable instructor (An adept mathematician and statistician who has competed at an international level)           Complete training – we will cover all major statistical topics and skills you need to become a marketing analyst, a business intelligence analyst, a data analyst, or a data scientist        Extensive Case Studies that will help you reinforce everything you’ve learned        Excellent support - if you don’t understand a concept or you simply want to drop us a line, you’ll receive an answer within 1 business day        Dynamic - we don’t want to waste your time! The instructor sets a very good pace throughout the whole course  Why do you need these skills?        Salary/Income – careers in the field of data science are some of the most popular in the corporate world today. And, given that most businesses are starting to realize the advantages of working with the data at their disposal, this trend will only continue to grow        Promotions – If you understand Statistics well, you will be able to back up your business ideas with quantitative evidence, which is an easy path to career growth        Secure Future – as we said, the demand for people who understand numbers and data, and can interpret it, is growing exponentially; you’ve probably heard of the number of jobs that will be automated soon, right? Well, data science careers are the ones doing the automating, not getting automated        Growth - this isn’t a boring job. Every day, you will face different challenges that will test your existing skills and require you to learn something new      Please bear in mind that the course comes with Udemy’s 30-day unconditional money-back guarantee. And why not give such a guarantee? We are certain this course will provide a ton of value for you.    Let\'s start learning together now!   Who this course is for:      People who want a career in Data Science     People who want a career in Business Intelligence     Business analysts     Business executives     Individuals who are passionate about numbers and quant analysis     Anyone who wants to learn the subtleties of Statistics and how it is used in the business world     People who want to start learning statistics     People who want to learn the fundamentals of statistics', 'INS_5bdbe6b61428f9.96761451', './src/courses/Statistics for Data Science and Business Analysis', 'statistics.png'),
 (11, 'CRS5c233bf2c55cd2.54458570', 'Java Programming Masterclass for Software Developers', 10, '2019-01-01', 12, 'A computer with either Windows, Mac or Linux to install all the free software and tools needed to build your new apps (I provide specific videos on installations for each platform). A strong work ethic, willingness to learn, and plenty of excitement about', 'Learn the core Java skills needed to apply for Java developer positions in just 14 hours. Be able to sit for and pass the Oracle Java Certificate exam if you choose. Be able to demonstrate your understanding of Java to future employers. Learn industry \"be', 'You’ve just stumbled upon the most complete, in-depth Java programming course online. With over 260,000 students enrolled and tens of thousands of 5 star reviews to date, these comprehensive java tutorials cover everything you’ll ever need.  Whether you want to:  - build the skills you need to get your first Java programming job  - move to a more senior software developer position  - pass the oracle java certification exam  - or just learn java to be able to create your own java apps quickly.  ...this complete Java Masterclass is the course you need to do all of this, and more.   Are you aiming to get your first Java Programming job but struggling to find out what skills employers want and which course will give you those skills?  This course is designed to give you the Java skills you need to get a job as a Java developer.  By the end of the course you will understand Java extremely well and be able to build your own Java apps and be productive as a software developer.  Lots of students have been success with getting their first job or a promotion after going through the course.  Here is just one example of a student who lost her job and despite having never coded in her life previously, got a full time software developer position in just a few months after starting this course.  She didn\'t even complete the course!   \"Three months ago I lost my job, came to a turning point in my life, and finally made the drastic decision to completely change course.   I decided to switch career path and go into coding. My husband found and gave me your Complete Java Masterclass at Udemy as a gift, and I wholeheartedly dove into it as a life line. Following your course has been absolutely enjoyable (still working on it, not yet finished), and has been a great way of keeping on course, dedicated and motivated.  Yesterday, three months after starting the course and honestly to my surprise, I received (and accepted!) a job offer as a full-time developer. I wanted to just drop you a line to say thank you for doing this work, for being such a dedicated teacher, and for putting all this knowledge available out there in such an approachable way. It has, literally, been life changing. With gratitude,  Laura\"   The course is a whopping 76 hours long.  Perhaps you have looked at the size of the course and are feeling a little overwhelmed at the prospect of finding time to complete it.   Maybe you are wondering if you need to go through it all?  Firstly, Laura\'s story above shows that you do not have to complete the entire course - she was yet to complete the course when she accepted her developer job offer.  Secondly, the course is designed as a one stop shop for Java.  The core java material you need to learn java development is covered in the first seven sections (around 14 hours in total).  The Java Basics are covered in those sections. The rest of the course covers intermediate, advanced and optional material you do not technically need to go through.  For example section 13 is a whopping 10 hours just by itself and is aimed at those students who want to build desktop applications with graphical user interfaces.  JavaFX (which is the technology used in this section) is something that most java developers will rarely or never need to work on.  So you could skip that section entirely.  But if you are one of the few that need to build user interfaces, then the content is there and ready for you.   And there are other sections you can completely avoid if you wish.  If you want to know absolutely everything about Java, then you can go through the entire course if you wish, but it\'s not necessary to do so if you are just looking to learn the essential information to get a java developer position.  Why would you choose to learn Java?  The reality is that there is a lot of computer languages out there.  It\'s in the hundreds.  Why would you choose the Java language?  The number one reason is its popularity.  According to many official websites that track popularity of languages, Java is either #1 or in the top 3.  Popularity means more companies and their staff are using it, so there are more career opportunities available for you if you are skilled in the language.  The last thing you want to do is pick a language that is not in mainstream use.  Java came out in the 1990\'s and is still very popular today.  What version of Java should you learn?  Generally speaking you would want to learn the very latest version of a computer programming language, but thats not necessarily the case with Java.  Until recently Java releases were infrequent (one major release in 3 years was common).  Companies standardised on specific versions of Java.  Right now most companies are still focused on Java 8, which is a relatively old version, dating back to 2015.  Oracle (the owners of Java) are now releasing new versions of Java every six months, and when the new version comes out the old version is no longer supported.  But to cater for most companies who tend to stick to specific versions of Java for a long time, they have marked the current version of Java - Java 11 as LTS - or Long Term support. That means that they guarantee to support this version for the long term - for a number of years at least.  Companies will stick to versions of Java that are supported in the long term. For career purposes you should learn the appropriate versions of Java that your future employer will likely be using.  Right now thats Java 8 and Java 11 (Java 9 and Java 10 have been released and already been marked obsolete and are no longer supported).  The good news is that this course is focused on Java 8, and has recently been updated for Java 11.   Will this course give me core java skills?  Yes it will.  Core Java is the fundamental parts of the java jdk (the java development kit) that programmers need to learn to move onto other more advanced technologies.  Why should you take this course?  It\'s been a best seller since it\'s release on Udemy, you would be joining over 260,000 students who are already enrolled in the course.  There are close to 60,000 reviews left by students.  It\'s rated as the best course to learn Java for beginners.  What makes this course a bestseller?  Like you, thousands of others were frustrated and fed up with fragmented Youtube tutorials or incomplete or outdated courses which assume you already know a bunch of stuff, as well as thick, college-like textbooks able to send even the most caffeine-fuelled coder to sleep.  Like you, they were tired of low-quality lessons, poorly explained topics and all-round confusing info presented in the wrong way. That’s why so many find success in this complete Java developer course. It’s designed with simplicity and seamless progression in mind through its content.  This course assumes no previous coding experience and takes you from absolute beginner core concepts, like showing you the free tools you need to download and install, to writing your very first Java program.  You will learn the core java skills you need to become employable in around 14 hours, and if you choose to, can take advantage of all the additional content in the course. It\'s a one stop shop to learn java. If you want to go beyond the core content you can do so at any time.  Here’s just some of what you’ll learn  (It’s okay if you don’t understand all this yet, you will in the course)      All the essential Java keywords, operators, statements, and expressions needed to fully understand exactly what you’re coding and why - making programming easy to grasp and less frustrating      You will learn the answers to questions like What is a Java class, What is polymorphism and inheritance and to apply them to your java apps.      How to safely download and install all necessary coding tools with less time and no frustrating installations or setups      Complete chapters on object-oriented programming and many aspects of the Java API (the protocols and tools for building applications) so you can code for all platforms and derestrict your program’s user base (and potential sales)      How to develop powerful Java applications using one of the most powerful Integrated Development Environments on the market, IntelliJ IDEA! - Meaning you can code functional programs easier.  IntelliJ has both a FREE and PAID version, and you can use either in this course.  (Don’t worry if you’re used to using Eclipse, NetBeans or some other IDE. You’re free to use any IDE and still get the most out of this course)      Learn Java to a sufficient level to be a be to transition to core Java technologies like Android development, the Spring framework, Java EE (Enterprise edition) in general as well as and other technologies. In order to progress to these technologies you need to first learn core Java - the fundamental building blocks.  That\'s what this course will help you to achieve.  “AP-what?”  Don\'t worry if none of that made sense. I go into great detail explaining each and every core concept, programming term, and buzzwords you need to create your own Java programs.  This truly is Java for complete beginners.  By the end of this comprehensive course, you’ll master Java programming no matter what level of experience you’re at right now. You’ll understand what you are doing, and why you are doing it. This isn’t a recipe book, you’ll use your own creativity to make unique, intuitive programs.  Not only do these HD videos show you how to become a programmer in great detail, but this course includes a unique challenge feature. Each time a core concept is taught, a video presents a challenge for you to help you understand what you have just learned in a real world scenario.  You’ll go and complete the challenge on your own, then come back and see the answers which I then explain in detail in a video, allowing you to check your results and identify any areas you need to go back and work on.  This is a proven way to help you understand Java faster and ensure you reach your goal of becoming a Java Developer in record time. Remember doing those old past exam papers in high school or college? It’s the same concept, and it works.  As your instructor, I have over 35 years experience as a software developer and teacher and have been using Java since the year 2000. Yes, over 18 years (I’ve taught students younger than that). Meaning not only can I teach this content with great simplicity, but I can make it fun too!  It’s no surprise my previous students have amazing results...  See what your fellow students have to say:  \"This course was a guiding light in my \"Becoming a developer\" path from the first step. It helped me become a much more educated developer comparing to my friend who learned to code from trial/error. It\'s still a guide for me. every now and then I will come back to this course to learn something new or to improve what I\'ve learned somewhere else. A BIG Thanks to \"Tim Buchalka\" my Master.\" - Sina Jz  \"I was an absolute beginner when I started this course, and now I can write some good small advanced clean codes. I wrote a code and showed it to a programmer, and he was shocked, he told me that I\'m more than ready to start a programming career.\" - Amirreza Moeini  \"I am taking this class in conjunction with a Java 101 college class. I have learned more in one afternoon of videos from this class than I have in 4 weeks of college class. Tim actually explains what things are and why they do what they do, as opposed to my college instructor that mainly said \"go make a program that does *whatever*\" and then I had to figure out a program that would meet those requirements but not actually learning why it worked.\" - Stacy Harris  It’s safe to say my students are thrilled with this course, and more importantly, their results, and you can be too…  This complete Java course will teach you everything you need to know in order to code awesome, profitable projects,  Is the course updated?  It’s no secret how technology is advancing at a rapid rate. New, more powerful hardware and software are being released every day, meaning it’s crucial to stay on top with the latest knowledge.  A lot of other courses on Udemy get released once, and never get updated.  Learning an older version of Java can be counter productive - you could will be learning the \"old way\" of doing things, rather than using current technology.  Make sure you check the last updated date on the page of any course you plan to buy - you will be shocked to see some have not been updated for years.   That’s why I’m always adding new, up-to-date content to this course at no extra charge. Buy this course once, and you’ll have lifetime access to it and any future updates (which are on the way as we speak).  I\'ve continued to do this since the original version of the course came out, and recently have been updating it to Java 11.  With this complete Java Masterclass, you will always have updated, relevant content.  What if I have questions?  As if this course wasn’t complete enough, I offer full support, answering any questions you have 7 days a week (whereas many instructors answer just once per week, or not at all).  This means you’ll never find yourself stuck on one lesson for days on end. With my hand-holding guidance, you’ll progress smoothly through this course without any major roadblocks.  That’s just one reason why I was voted top 10 in the  Udemy instructor awards (out of a whopping 18,000 instructors), and quickly became a top-rated, bestselling instructor on the Udemy site.    Student Quote: “This course is a great place to ask questions if you have them or find help if you become stuck in areas.” - Blake S.  There’s no risk either!  This course comes with a full 30 day money-back guarantee. Meaning if you are not completely satisfied with the course or your progress, simply let me know and I’ll refund you 100%, every last penny no questions asked.  You either end up with Java skills, go on to develop great programs and potentially make an awesome career for yourself, or you try the course and simply get all your money back if you don’t like it…  You literally can’t lose.  Ready to get started, developer?  Enrol now using the “Add to Cart” button on the right, and get started on your way to creative, advanced Java brilliance. Or, take this course for a free spin using the preview feature, so you know you’re 100% certain this course is for you.  See you on the inside (hurry, Java class is waiting!) Who this course is for:      This course is perfect for absolute beginners with no previous coding experience, to intermediates looking to sharpen their skills to the expert level.     Those looking to build creative and advanced Java apps for either personal use or for high-paying clients as a self-employed contractor.     Those who love letting their own creative genius shine, whilst getting paid handsome amounts to do so.', 'INS_5bdbe6b61428f9.96761451', './src/courses/Java Programming Masterclass for Software Developers', 'java.jpg'),
 (12, 'CRS5c329be62eb699.50944317', ' fcnbln kv nkv nnvknm;nnb nktemlnzn ngvni', 1, '2190-04-09', 3, 'fncbn dgmhnbnmgnr onm i4h krmcgvw hkmdsfhvnbothfub 4 vrhfucnkaifbvencbc hbtgbfcngbbhas ;uf;vhdvbf bhdgbcvhbuhgbvhadndfbhhfda', 'vbmsblbnvb bfnbadnvugebdg sokehfabvd ejcbnkvsofhvbsnlksphkzbvga', 'vgbgjhuvndbhgvhd bahfsiohfufgdhv h gusb kiv f', 'INS_5bdbe6b61428f9.96761451', './src/courses/ fcnbln kv nkv nnvknm;nnb nktemlnzn ngvni', 'instagram.png'),
-(13, 'CRS5c3bdfaf4b4cd8.86009674', 'fc bnmlgvmla', 1, '2019-02-03', 10, 'nsdbbvknkvds', 'bfc vn knwvsj', 'dvnkbndx', 'INS_5c3bdd8aa1c4d4.93420482', './src/courses/fc bnmlgvmla', '224tech1.png');
+(13, 'CRS5c3bdfaf4b4cd8.86009674', 'fc bnmlgvmla', 1, '2019-02-03', 10, 'nsdbbvknkvds', 'bfc vn knwvsj', 'dvnkbndx', 'INS_5c3bdd8aa1c4d4.93420482', './src/courses/fc bnmlgvmla', '224tech1.png'),
+(14, 'CRS5c4eb123cbbbe9.91086078', 'Model View Controler (MVC) with PHP', 10, '2019-02-01', 10, 'None', 'Able to use MVC with php', 'Model View Controler (MVC) with PHP ', 'INS_5bdbe6b61428f9.96761451', './src/courses/Model View Controler (MVC) with PHP', 'mvcphp.png');
 
 -- --------------------------------------------------------
 
@@ -124,9 +125,17 @@ CREATE TABLE `course_cirriculum` (
 --
 
 INSERT INTO `course_cirriculum` (`id`, `week_number`, `title`, `file_name`, `type`, `path`, `course_id`) VALUES
-(1, 1, 'Intro', '2017-06-08 21-38-58.flv', 'Video', '/courseContent', 'CRS5c3bdfaf4b4cd8.86009674'),
-(2, 2, 'Chapter 1', 'Bulugh Al-Maram.pdf', 'Article', './src/courses/fc bnmlgvmla/courseContent/Bulugh Al-Maram.pdf', 'CRS5c3bdfaf4b4cd8.86009674'),
-(3, 4, 'nn, hlgekfmgl', '33 ways of developing khusoo.pdf', 'Article', './src/courses/fc bnmlgvmla/courseContent/33 ways of developing khusoo.pdf', 'CRS5c3bdfaf4b4cd8.86009674');
+(1, 1, 'Model View Controler (MVC) with PHP part 1', 'New Social Network - Part 1 - Getting Started.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 1 - Getting Started.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(2, 1, 'Intro to MVC', 'Anttonen_Jevgeni.pdf', 'Article', './src/courses/Model View Controler (MVC) with PHP/courseContent/Anttonen_Jevgeni.pdf', 'CRS5c4eb123cbbbe9.91086078'),
+(3, 2, 'Model View Controler (MVC) with PHP part 2 and 3', 'New Social Network - Part 2 - Creating Accounts.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 2 - Creating Accounts.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(4, 3, 'Model View Controler (MVC) with PHP part 4', 'New Social Network - Part 4 - Logging in Users.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 4 - Logging in Users.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(5, 4, 'Model View Controler (MVC) with PHP part 5', 'New Social Network - Part 5 - Login Tokens.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 5 - Login Tokens.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(6, 5, 'Model View Controler (MVC) with PHP part 6', 'New Social Network - Part 6 - Token Swap & Email Check.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 6 - Token Swap & Email Check.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(7, 6, 'Model View Controler (MVC) with PHP part 7', 'New Social Network - Part 7 - Logging out.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 7 - Logging out.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(8, 7, 'Model View Controler (MVC) with PHP part 8', 'New Social Network - Part 8 - Changing Passwords.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 8 - Changing Passwords.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(9, 8, 'Model View Controler (MVC) with PHP part 9', 'New Social Network - Part 9 - Forgot Passwords.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 9 - Forgot Passwords.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(10, 9, 'Model View Controler (MVC) with PHP part 10', 'New Social Network - Part 10 - Following Users.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 10 - Following Users.mp4', 'CRS5c4eb123cbbbe9.91086078'),
+(11, 10, 'Model View Controler (MVC) with PHP pdf', 'Pro PHP MVC.pdf', 'Article', './src/courses/Model View Controler (MVC) with PHP/courseContent/Pro PHP MVC.pdf', 'CRS5c4eb123cbbbe9.91086078');
 
 -- --------------------------------------------------------
 
@@ -152,7 +161,12 @@ INSERT INTO `enrollment` (`id`, `course_id`, `student_id`, `joining_data`) VALUE
 (4, 'CRS5bf3b262b8e250.64245568', 'STD_5bf59a439d0ac3.43736015', '2018-11-22 00:00:00'),
 (5, 'CRS5bf3b262b8e250.64245568', 'STD_5bf58233577018.44407051', '2018-11-22 00:00:00'),
 (6, 'CRS5bf3b262b8e250.64245568', 'INS_5c3bdcba6cbac2.89353987', '2019-01-14 00:00:00'),
-(7, 'CRS5bf3b262b8e250.64245568', 'INS_5c3bdd8aa1c4d4.93420482', '2019-01-18 00:00:00');
+(7, 'CRS5bf3b262b8e250.64245568', 'INS_5c3bdd8aa1c4d4.93420482', '2019-01-18 00:00:00'),
+(8, 'CRS5bf3b262b8e250.64245568', 'STD_0000001', '2019-01-28 00:00:00'),
+(9, 'CRS5bf3b262b8e250.64245568', 'INS_5bdbe6b61428f9.96761451', '2019-01-28 00:00:00'),
+(10, 'CRS5bf3b262b8e250.64245568', 'STD_5c4e937529d734.97040917', '2019-01-28 00:00:00'),
+(11, 'CRS5c4eb123cbbbe9.91086078', 'STD_5c4e937529d734.97040917', '2019-01-28 00:00:00'),
+(12, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', '2019-01-28 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -213,7 +227,82 @@ INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
 (24, 'fc0349e3466839201fc4bc5b911d1ec428c6d75a', 'INS_5bf59a9b237236.61314317'),
 (28, '0beb5070fc144c5afa30dff6cdf8f6e607d8cc19', 'INS_5bdbe6b61428f9.96761451'),
 (35, '17a283d74da81c8c3819a07955bcb7f90ff87a9f', 'INS_5c3bdd8aa1c4d4.93420482'),
-(36, '09d8751a82decc996aa93b7ca812203ba5477aad', 'INS_5bdbe6b61428f9.96761451');
+(38, '1ca11c89cc8f99c68a8895b7cea4568e35c5dbd2', 'STD_5c4e937529d734.97040917'),
+(50, '0c12d963e126db0fcf069881fd8f5572f47097af', 'STD_0000001');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `question`
+--
+
+CREATE TABLE `question` (
+  `id` int(11) NOT NULL,
+  `qst_UniqueID` varchar(100) NOT NULL,
+  `question_Content` text NOT NULL,
+  `crs_UniqueID` varchar(100) NOT NULL,
+  `student_ID` varchar(100) NOT NULL,
+  `nun_Responses` int(11) NOT NULL DEFAULT '0',
+  `create_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `question`
+--
+
+INSERT INTO `question` (`id`, `qst_UniqueID`, `question_Content`, `crs_UniqueID`, `student_ID`, `nun_Responses`, `create_date`) VALUES
+(1, 'QTS_5c622034660e26.16011388', 'I would like to know how to create a Route for the MVC?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 0, '2019-02-12 09:24:04'),
+(2, 'QTS_5c622b7db7e835.30141038', 'Is it true that PHP is going to die soon?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 1, '2019-02-12 10:12:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rating`
+--
+
+CREATE TABLE `rating` (
+  `id` int(11) NOT NULL,
+  `rating_ID` varchar(100) NOT NULL,
+  `rating_value` varchar(12) NOT NULL,
+  `rating_Content` text NOT NULL,
+  `student_ID` varchar(100) NOT NULL,
+  `date` datetime NOT NULL,
+  `course_ID` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating`
+--
+
+INSERT INTO `rating` (`id`, `rating_ID`, `rating_value`, `rating_Content`, `student_ID`, `date`, `course_ID`) VALUES
+(1, 'RTG_5c60fb186d7bb5.42096488', '5', 'Both approaches therefore may become unreliable - in particular when switching between development setups and/or production servers. Which is why output buffering is widely considered just a crutch / strictly a workaround.', 'STD_0000001', '2019-02-11 12:33:28', 'CRS5c4eb123cbbbe9.91086078'),
+(2, 'RTG_5c60fc89a94b88.81821020', '5', 'Angela is one of the best dev teachers anywhere — clear, simple explanations, gorgeously made fun slides, enthusiastic presentation style, and a wonderfully easy-to-listen-to voice. This class is awesome! Buddha with you, Cloud Monk', 'STD_0000001', '2019-02-11 12:39:37', 'CRS5c4eb123cbbbe9.91086078'),
+(3, 'RTG_5c60fce5d387c8.48400962', '4.5', 'I\'ve been a programmer for over 30 years (we\'re always learning) and this is one of the best programming courses I\'ve taken. Angela is well organized and has obviously put a lot of effort into structuring the course material so that you a learn and build confidence with each new chapter. She\'s smart, fun and witty and her personality really shines through as well. If you want to learn Swift and iOS development, look no further. This is your starting point.', 'STD_0000001', '2019-02-11 12:41:09', 'CRS5c4eb123cbbbe9.91086078'),
+(4, 'RTG_5c6224de35b316.40276297', '3', 'I loving this..', 'STD_0000001', '2019-02-12 09:43:58', 'CRS5c4eb123cbbbe9.91086078'),
+(5, 'RTG_5c622503771541.08407146', '1', 'The is not well structured.', 'STD_0000001', '2019-02-12 09:44:35', 'CRS5c4eb123cbbbe9.91086078'),
+(6, 'RTG_5c624405b12522.83768045', '2', 'Very bad teacher', 'STD_0000001', '2019-02-12 11:56:53', 'CRS5c4eb123cbbbe9.91086078');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `response`
+--
+
+CREATE TABLE `response` (
+  `id` int(11) NOT NULL,
+  `response_uniqueID` varchar(100) NOT NULL,
+  `response_Content` text NOT NULL,
+  `student_ID` varchar(100) NOT NULL,
+  `question_ID` varchar(100) NOT NULL,
+  `create_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `response`
+--
+
+INSERT INTO `response` (`id`, `response_uniqueID`, `response_Content`, `student_ID`, `question_ID`, `create_date`) VALUES
+(1, 'RQTS_5c623d89b68820.13605107', 'So it\'s dying in popularity, no doubt.\r\n\r\nBut will it die?\r\n\r\nAlmost certainly not. COBOL isn\'t completely dead. Delphi isn\'t completely dead. Smalltalk isn\'t completely dead. There are very few languages that go away entirely after achieving serious market penetration.\r\n\r\nBut should you learn it?\r\n\r\nNo. Not in 2018. When a language is in the decline like this you always end up with a surplus of developers. If you want to be able to get a job, you shouldn\'t choose a domain that has shrinking popularity.\r\n\r\nYou could argue that making projects with PHP isn\'t a bad idea, because you can probably find developers at a discount. That said, eventually the market will even out and prices will rebound for anyone who sticks with PHP, so any discount now will be at the expense of being able to find PHP developers in the future at a good price. COBOL developers are quite expensive today.\r\n\r\nThis also means it is a good time to find a new stack if all you know is PHP. Other stacks provide more performance anyway, so it\'s a win!', 'STD_0000001', 'QTS_5c622b7db7e835.30141038', '2019-02-12 11:29:13');
 
 -- --------------------------------------------------------
 
@@ -245,7 +334,8 @@ INSERT INTO `student` (`id`, `std_uniquID`, `student_name`, `email`, `password`)
 (9, 'STD_5bf0996ea11f17.90853588', 'Virago', 'ema@virago.com', '$2y$10$3I6lZEPOVa5Wzni.iImE3e5XnzPSpUbm7J5hj/G92SVi0qeVWEsAm'),
 (10, 'STD_5bf4ddde111374.26322502', 'Saikou Sall ', 'saikou@helpmooc.com', '$2y$10$m4cO0N7gwec3R6TbQilYze/rTYrYMj.jIcL03fYpYck0TvzzxF74W'),
 (11, 'STD_5bf58233577018.44407051', 'Kvin Wong', 'kw@helpmooc.com', '$2y$10$nOMY27XgfPJdVHmzychPKO6Vk5S7UfkYqHJiyNhVEtAXjMysedeji'),
-(12, 'STD_5bf59a439d0ac3.43736015', 'Alpha', 'alpha@hlp.com', '$2y$10$Pn7WO0HX.D4MAkF7UD.LAudWqZTTpeHDiQ/KSkvBckFYW5sQf0RZe');
+(12, 'STD_5bf59a439d0ac3.43736015', 'Alpha', 'alpha@hlp.com', '$2y$10$Pn7WO0HX.D4MAkF7UD.LAudWqZTTpeHDiQ/KSkvBckFYW5sQf0RZe'),
+(13, 'STD_5c4e937529d734.97040917', 'Thierno Abdoul Rahimi Diallo', 'tard@helpMooc.com', '$2y$10$j6RMr9bj29aEfqFS/OOC..I6d2FusOwIYV1q86.wDEHr5/VXH3eby');
 
 --
 -- Indexes for dumped tables
@@ -301,6 +391,26 @@ ALTER TABLE `login_tokens`
   ADD UNIQUE KEY `token` (`token`);
 
 --
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `qst_UniqueID` (`qst_UniqueID`);
+
+--
+-- Indexes for table `rating`
+--
+ALTER TABLE `rating`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `rating_ID` (`rating_ID`);
+
+--
+-- Indexes for table `response`
+--
+ALTER TABLE `response`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
@@ -328,19 +438,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `course_cirriculum`
 --
 ALTER TABLE `course_cirriculum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `instructor`
@@ -352,13 +462,31 @@ ALTER TABLE `instructor`
 -- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `question`
+--
+ALTER TABLE `question`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `rating`
+--
+ALTER TABLE `rating`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `response`
+--
+ALTER TABLE `response`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

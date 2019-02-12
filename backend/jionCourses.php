@@ -6,7 +6,7 @@
     if (Login::isLoggedIn()) {
         $crs_UniqueID = $_GET['crs_UniqueID'];
         $student_ID = Login::isLoggedIn();
-	    $today_date=date("Y-m-d");
+	    $today_date=date("Y-m-d H:i:s");
 
         if (!DB::query('SELECT course_id, student_id FROM enrollment WHERE course_id =:crs_UniqueID and student_id=:student_ID',array(':crs_UniqueID'=>$crs_UniqueID, ':student_ID'=>$student_ID))) {
             DB::query('INSERT INTO enrollment  VALUES (\'\', :course_id, :student_id, :joining_data)', 
