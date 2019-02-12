@@ -1,7 +1,7 @@
 <?php
     include('./backend/classes/DB.php');
     include('./backend/classes/Login.php');
-    //$courseID = $_GET['cid'];
+    $courseID = $_GET['cid'];
     if (Login::isLoggedIn()) {
       //echo 'Logged In!';
       //echo Login::isLoggedIn();
@@ -25,21 +25,21 @@
         <div class="col-md-10 col-lg-8 mx-auto">
             <h1 class="mt-4 text-center">Add Quiz</h1>
 
-            <form class="" action="" method="post" enctype="multipart/form-data">
+            <form class="" action="backend/adduiz.php?cid<?php echo $courseID;?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                    <label for="week">Select Week</label>
-                   <select class="form-control" id="week">
-                     <option value="week1">Week 1</option>
-                     <option value="week2">Week 2</option>
-                     <option value="week3">Week 3</option>
-                     <option value="week4">Week 4</option>
-                     <option value="week5">Week 5</option>
-                     <option value="week6">Week 6</option>
-                     <option value="week7">Week 7</option>
-                     <option value="week8">Week 8</option>
-                     <option value="week9">Week 9</option>
-                     <option value="week10">Week 10</option>
-                   </select>
+                   <select class="form-control" name="seletedWeek" id="week">
+                   <?php
+                        $duration = 
+                        $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
+
+                        for($i = 1; $i<=$courseDuration; $i++){
+                   ?>                   
+                     <option value="<?php echo $i;?>">Week <?php echo $i;?></option>
+                   <?php
+                        }
+                    ?>
+                    </select>
                  </div>
 
                  <div class="form-group">

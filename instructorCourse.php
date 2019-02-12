@@ -1,7 +1,8 @@
 <?php
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
-   $courseID = $_GET['crs_UniqueID'];
+  // $courseID = $_GET['crs_UniqueID'];
+   $courseID = 'CRS5c4eb123cbbbe9.91086078';
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();

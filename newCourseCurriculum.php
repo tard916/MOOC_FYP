@@ -65,7 +65,7 @@
                     <?php
                 }?>
                 </div>
-                <a class="btn btn-outline-primary btn-block mt-5 mb-2" href="addQuiz.php" role="button">Add Quiz</a>
+                <a class="btn btn-outline-primary btn-block mt-5 mb-2" href="addQuiz.php?cid=<?php echo $courseID;?>" role="button">Add Quiz</a>
                 <!--
                 I don't know in which way you wanna create the quiz (submit button or href) so I create both for now
                 <button type="submit" name="addQuiz" class="btn btn-outline-primary btn-block mt-5 mb-2">Add Quiz</button>
