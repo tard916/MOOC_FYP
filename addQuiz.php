@@ -25,42 +25,44 @@
         <div class="col-md-10 col-lg-8 mx-auto">
             <h1 class="mt-4 text-center">Add Quiz</h1>
 
-            <form class="" action="" method="post" enctype="multipart/form-data">
+            <form class="" action="index.html" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                   <label for="week">Select Week</label>
-                   <select class="form-control" id="week">
-                     <option value="week1">Week 1</option>
-                     <option value="week2">Week 2</option>
-                     <option value="week3">Week 3</option>
-                     <option value="week4">Week 4</option>
-                     <option value="week5">Week 5</option>
-                     <option value="week6">Week 6</option>
-                     <option value="week7">Week 7</option>
-                     <option value="week8">Week 8</option>
-                     <option value="week9">Week 9</option>
-                     <option value="week10">Week 10</option>
-                   </select>
+                    <label for="week">Select Week</label>
+                    <select class="form-control" id="week" required>
+                        <option value="" disabled selected>Which week do you want to add this quiz to?</option>
+                        <option value="week1">Week 1</option>
+                        <option value="week2">Week 2</option>
+                        <option value="week3">Week 3</option>
+                        <option value="week4">Week 4</option>
+                        <option value="week5">Week 5</option>
+                        <option value="week6">Week 6</option>
+                        <option value="week7">Week 7</option>
+                        <option value="week8">Week 8</option>
+                        <option value="week9">Week 9</option>
+                        <option value="week10">Week 10</option>
+                    </select>
                  </div>
 
                  <div class="form-group">
                     <label for="numOfQuestions">Number of Questions</label>
-                    <select class="form-control" id="numOfQuestions">
-                      <option value="5">5 Questions</option>
-                      <option value="6">6 Questions</option>
-                      <option value="7">7 Questions</option>
-                      <option value="8">8 Questions</option>
-                      <option value="9">9 Questions</option>
-                      <option value="10">10 Questions</option>
-                      <option value="11">11 Questions</option>
-                      <option value="12">12 Questions</option>
-                      <option value="13">13 Questions</option>
-                      <option value="14">14 Questions</option>
-                      <option value="15">15 Questions</option>
-                      <option value="16">16 Questions</option>
-                      <option value="17">17 Questions</option>
-                      <option value="18">18 Questions</option>
-                      <option value="19">19 Questions</option>
-                      <option value="20">20 Questions</option>
+                    <select class="form-control" id="numOfQuestions" required>
+                        <option value="" disabled selected>How many question would you like to have?</option>
+                        <option value="5">5 Questions</option>
+                        <option value="6">6 Questions</option>
+                        <option value="7">7 Questions</option>
+                        <option value="8">8 Questions</option>
+                        <option value="9">9 Questions</option>
+                        <option value="10">10 Questions</option>
+                        <option value="11">11 Questions</option>
+                        <option value="12">12 Questions</option>
+                        <option value="13">13 Questions</option>
+                        <option value="14">14 Questions</option>
+                        <option value="15">15 Questions</option>
+                        <option value="16">16 Questions</option>
+                        <option value="17">17 Questions</option>
+                        <option value="18">18 Questions</option>
+                        <option value="19">19 Questions</option>
+                        <option value="20">20 Questions</option>
                     </select>
                   </div>
                 <div id="quiz-accordion">
