@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2019 at 06:25 AM
+-- Generation Time: Feb 12, 2019 at 05:05 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -233,6 +233,30 @@ INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `question`
+--
+
+CREATE TABLE `question` (
+  `id` int(11) NOT NULL,
+  `qst_UniqueID` varchar(100) NOT NULL,
+  `question_Content` text NOT NULL,
+  `crs_UniqueID` varchar(100) NOT NULL,
+  `student_ID` varchar(100) NOT NULL,
+  `nun_Responses` int(11) NOT NULL DEFAULT '0',
+  `create_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `question`
+--
+
+INSERT INTO `question` (`id`, `qst_UniqueID`, `question_Content`, `crs_UniqueID`, `student_ID`, `nun_Responses`, `create_date`) VALUES
+(1, 'QTS_5c622034660e26.16011388', 'I would like to know how to create a Route for the MVC?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 0, '2019-02-12 09:24:04'),
+(2, 'QTS_5c622b7db7e835.30141038', 'Is it true that PHP is going to die soon?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 1, '2019-02-12 10:12:13');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rating`
 --
 
@@ -253,7 +277,32 @@ CREATE TABLE `rating` (
 INSERT INTO `rating` (`id`, `rating_ID`, `rating_value`, `rating_Content`, `student_ID`, `date`, `course_ID`) VALUES
 (1, 'RTG_5c60fb186d7bb5.42096488', '5', 'Both approaches therefore may become unreliable - in particular when switching between development setups and/or production servers. Which is why output buffering is widely considered just a crutch / strictly a workaround.', 'STD_0000001', '2019-02-11 12:33:28', 'CRS5c4eb123cbbbe9.91086078'),
 (2, 'RTG_5c60fc89a94b88.81821020', '5', 'Angela is one of the best dev teachers anywhere — clear, simple explanations, gorgeously made fun slides, enthusiastic presentation style, and a wonderfully easy-to-listen-to voice. This class is awesome! Buddha with you, Cloud Monk', 'STD_0000001', '2019-02-11 12:39:37', 'CRS5c4eb123cbbbe9.91086078'),
-(3, 'RTG_5c60fce5d387c8.48400962', '4.5', 'I\'ve been a programmer for over 30 years (we\'re always learning) and this is one of the best programming courses I\'ve taken. Angela is well organized and has obviously put a lot of effort into structuring the course material so that you a learn and build confidence with each new chapter. She\'s smart, fun and witty and her personality really shines through as well. If you want to learn Swift and iOS development, look no further. This is your starting point.', 'STD_0000001', '2019-02-11 12:41:09', 'CRS5c4eb123cbbbe9.91086078');
+(3, 'RTG_5c60fce5d387c8.48400962', '4.5', 'I\'ve been a programmer for over 30 years (we\'re always learning) and this is one of the best programming courses I\'ve taken. Angela is well organized and has obviously put a lot of effort into structuring the course material so that you a learn and build confidence with each new chapter. She\'s smart, fun and witty and her personality really shines through as well. If you want to learn Swift and iOS development, look no further. This is your starting point.', 'STD_0000001', '2019-02-11 12:41:09', 'CRS5c4eb123cbbbe9.91086078'),
+(4, 'RTG_5c6224de35b316.40276297', '3', 'I loving this..', 'STD_0000001', '2019-02-12 09:43:58', 'CRS5c4eb123cbbbe9.91086078'),
+(5, 'RTG_5c622503771541.08407146', '1', 'The is not well structured.', 'STD_0000001', '2019-02-12 09:44:35', 'CRS5c4eb123cbbbe9.91086078'),
+(6, 'RTG_5c624405b12522.83768045', '2', 'Very bad teacher', 'STD_0000001', '2019-02-12 11:56:53', 'CRS5c4eb123cbbbe9.91086078');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `response`
+--
+
+CREATE TABLE `response` (
+  `id` int(11) NOT NULL,
+  `response_uniqueID` varchar(100) NOT NULL,
+  `response_Content` text NOT NULL,
+  `student_ID` varchar(100) NOT NULL,
+  `question_ID` varchar(100) NOT NULL,
+  `create_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `response`
+--
+
+INSERT INTO `response` (`id`, `response_uniqueID`, `response_Content`, `student_ID`, `question_ID`, `create_date`) VALUES
+(1, 'RQTS_5c623d89b68820.13605107', 'So it\'s dying in popularity, no doubt.\r\n\r\nBut will it die?\r\n\r\nAlmost certainly not. COBOL isn\'t completely dead. Delphi isn\'t completely dead. Smalltalk isn\'t completely dead. There are very few languages that go away entirely after achieving serious market penetration.\r\n\r\nBut should you learn it?\r\n\r\nNo. Not in 2018. When a language is in the decline like this you always end up with a surplus of developers. If you want to be able to get a job, you shouldn\'t choose a domain that has shrinking popularity.\r\n\r\nYou could argue that making projects with PHP isn\'t a bad idea, because you can probably find developers at a discount. That said, eventually the market will even out and prices will rebound for anyone who sticks with PHP, so any discount now will be at the expense of being able to find PHP developers in the future at a good price. COBOL developers are quite expensive today.\r\n\r\nThis also means it is a good time to find a new stack if all you know is PHP. Other stacks provide more performance anyway, so it\'s a win!', 'STD_0000001', 'QTS_5c622b7db7e835.30141038', '2019-02-12 11:29:13');
 
 -- --------------------------------------------------------
 
@@ -342,11 +391,24 @@ ALTER TABLE `login_tokens`
   ADD UNIQUE KEY `token` (`token`);
 
 --
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `qst_UniqueID` (`qst_UniqueID`);
+
+--
 -- Indexes for table `rating`
 --
 ALTER TABLE `rating`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `rating_ID` (`rating_ID`);
+
+--
+-- Indexes for table `response`
+--
+ALTER TABLE `response`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `student`
@@ -403,10 +465,22 @@ ALTER TABLE `login_tokens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
+-- AUTO_INCREMENT for table `question`
+--
+ALTER TABLE `question`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `response`
+--
+ALTER TABLE `response`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `student`

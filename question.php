@@ -2,6 +2,7 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
    //$courseID = $_GET['crs_UniqueID'];
+   $qst_UniqueID = $_GET['qts_ID'];
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
@@ -26,8 +27,16 @@
       include('mainHeader.php');
   }
 
-  //$courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
+  $questiondetail = DB::query('SELECT * FROM question WHERE qst_UniqueID =:qst_UniqueID', array(':qst_UniqueID'=>$qst_UniqueID));
+  foreach ($questiondetail as  $value) {
+      $qts_Content =  $value['question_Content'];
+      $student_ID = $value['student_ID'];
+      $nun_Of_Responses = $value['nun_Responses'];
+      $courseID = $value['crs_UniqueID'];
+  }
 
+  $courseName = DB::query('SELECT * FROM course WHERE crs_uniqueID =:crs_uniqueID', array(':crs_uniqueID'=>$courseID))[0]['course_name'];
+  $studentName = DB::query('SELECT * FROM student WHERE std_uniquID =:std_uniquID', array(':std_uniquID'=>$student_ID))[0]['student_name'];
 
 ?>
 
@@ -35,18 +44,18 @@
 
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container">
-            <h6 class="text-center"><a class="text-dark" href="#">Model View Controler (MVC) with PHP</a></h6>
-            <p class="lead question"><strong>Is it true that PHP is going to die soon? 😂</strong></p>
+            <h6 class="text-center"><a class="text-dark" href="#"><?php echo $courseName;?>.</a></h6>
+            <p class="lead question"><strong><?php echo $qts_Content;?> 😂</strong></p>
             <div class="row">
-                <p class="col-6"><small>Asked by: </small>Mehrab Kamrani</p>
-                <p class="col-6 text-muted text-right"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                <p class="col-6"><small>Asked by: </small><?php echo $studentName;?></p>
+                <p class="col-6 text-muted text-right"><i class="fa fa-reply" aria-hidden="true"></i> <?php echo $nun_Of_Responses;?> Responses</p>
             </div>
         </div>
     </div>
     <div class="container responses-section">
         <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#answerModal">Answer</button>
         <!-- answer modal -->
-        <form class="" action="index.html" method="post">
+        <form class="" action="backend/responseQuestion.php?qts_ID=<?php echo $qst_UniqueID;?>" method="post">
             <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -58,27 +67,36 @@
                   </div>
                   <div class="modal-body text-center">
                       <div class="form-group">
-                        <textarea required class="form-control noresize" id="answer-input" rows="6" placeholder="Add your answer"></textarea>
+                        <textarea required name="responseContent" class="form-control noresize" id="answer-input" rows="6" placeholder="Add your answer"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-outline-success btn-block submit-answer">Submit</button>
+                      <button type="submit" name="submitResponseFrom" class="btn btn-outline-success btn-block submit-answer">Submit</button>
                   </div>
                 </div>
               </div>
             </div>
         </form>
 
+        <?php
+            $responses = DB::query('SELECT * FROM response WHERE question_ID= :question_ID ORDER BY id DESC', array(':question_ID'=>$qst_UniqueID));
+            foreach ($responses as  $valuesRP) {
+            
+            $studentId = $valuesRP['student_ID'];
+            $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+        ?>
+
         <div class="response-row my-4 p-4">
-            <h6>Mehrab Kamrani</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+        <?php
+            foreach ($studentsID as $valuestd) {
+        ?>
+            <h6><?php echo $valuestd['student_name'];?></h6>
+        <?php
+            }
+        ?>
+            <p><?php echo $valuesRP['response_Content'];?></p>
         </div>
-        <div class="response-row my-4 p-4">
-            <h6>Mehrab Kamrani</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-        </div>
-        <div class="response-row my-4 p-4">
-            <h6>Mehrab Kamrani</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-        </div>
+        <?php
+            }
+        ?>
     </div>
 
 </main>

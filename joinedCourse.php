@@ -28,20 +28,16 @@
 
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
 
-
-  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
-  
+  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));  
 
   $valOfRatings = DB::query('SELECT rating_value FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
   $sumOfRatings = 0;
   foreach ($valOfRatings as  $valuert) {
     $sumOfRatings =  $sumOfRatings + (float)$valuert['rating_value'];
-  }
-  
+  } 
 
   if ($countOfRatings >= 0 && $sumOfRatings >= 0) {
-      $avRating = $sumOfRatings / $countOfRatings;
-      echo $avRating;
+      $avRating = $sumOfRatings / $countOfRatings;      
   }
 
 
@@ -201,7 +197,7 @@
 
                 <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#questionModal">Ask Question</button>
                 <!-- question modal -->
-                <form class="" action="index.html" method="post">
+                <form class="" action="backend/submitQuestion.php?courseID=<?php echo $courseID;?>" method="post">
                     <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalTitle" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -213,41 +209,40 @@
                           </div>
                           <div class="modal-body text-center">
                               <div class="form-group">
-                                <textarea required class="form-control noresize" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
+                                <textarea required class="form-control noresize" name="qtsContent" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
                               </div>
-                              <button type="submit" class="btn btn-outline-success btn-block submit-question">Submit</button>
+                              <button type="submit" name="submitQuestionFrom" class="btn btn-outline-success btn-block submit-question">Submit</button>
                           </div>
                         </div>
                       </div>
                     </div>
                 </form>
 
-
-                <a class="question-link text-dark" href="question.php">
+                <?php
+                    $questions = DB::query('SELECT * FROM question WHERE crs_UniqueID= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
+                    foreach ($questions as  $valuesQT) {
+                    
+                    $studentId = $valuesQT['student_ID'];
+                    $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+                ?>
+                <a class="question-link text-dark" href="question.php?qts_ID=<?php echo $valuesQT['qst_UniqueID'];?>">
                     <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                    <?php
+                        foreach ($studentsID as $valuestd) {
+                            
+                    ?>
+                        <h6><?php echo $valuestd['student_name'];?></h6>
+                    <?php 
+                         }
+                    ?>
+                        <p class="text-muted"><?php echo $valuesQT['create_date'];?></p>
+                        <p><?php echo $valuesQT['question_Content'];?></p>
+                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> <?php echo $valuesQT['nun_Responses'];?> Responses</p>
                     </div>
                 </a>
-                <a class="question-link text-dark" href="question.php">
-                    <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
-                    </div>
-                </a>
-                <a class="question-link text-dark" href="question.php">
-                    <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
-                    </div>
-                </a>
-
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
