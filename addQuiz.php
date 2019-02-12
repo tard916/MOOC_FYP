@@ -28,7 +28,7 @@
             <form class="" action="backend/adduiz.php?cid<?php echo $courseID;?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                    <label for="week">Select Week</label>
-                   <select class="form-control" id="week" required>
+                   <select class="form-control" name="selectedWeek" id="week" required>
                         <option value="" disabled selected>Which week do you want to add this quiz to?</option>
                    <?php
                         $duration = 
@@ -45,7 +45,7 @@
 
                  <div class="form-group">
                     <label for="numOfQuestions">Number of Questions</label>
-                    <select class="form-control" id="numOfQuestions" required>
+                    <select class="form-control" name="nunOfestion" id="numOfQuestions" required>
                         <option value="" disabled selected>How many question would you like to have?</option>
                         <option value="5">5 Questions</option>
                         <option value="6">6 Questions</option>
@@ -110,30 +110,30 @@
                     '        <div class="card-body">'+
                     '            <div class="form-group">'+
                     '                <label for="questionTitleQ'+i+'">Question Title</label>'+
-                    '                <textarea class="form-control noresize" id="questionTitleQ'+i+'" rows="2"></textarea>'+
+                    '                <textarea class="form-control name="uestionTitle'+i+'[]" noresize" id="questionTitleQ'+i+'" rows="2"></textarea>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer1'+i+'" class="col-2 col-form-label">A.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" id="answer1'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_A'+i+'[]" id="answer1'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer2'+i+'" class="col-2 col-form-label">B.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" id="answer2'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_B'+i+'[]" id="answer2'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer3'+i+'" class="col-2 col-form-label">C.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" id="answer3'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_C'+i+'[]" id="answer3'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '            <div class="form-group row">'+
                     '              <label for="answer4'+i+'" class="col-2 col-form-label">D.</label>'+
                     '              <div class="col-10">'+
-                    '                <input type="text" class="form-control" id="answer4'+i+'">'+
+                    '                <input type="text" class="form-control" name="option_D'+i+'[]" id="answer4'+i+'">'+
                     '              </div>'+
                     '            </div>'+
                     '        </div>'+
