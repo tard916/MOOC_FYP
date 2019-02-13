@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2019 at 05:05 AM
+-- Generation Time: Feb 13, 2019 at 02:51 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -228,7 +228,7 @@ INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
 (28, '0beb5070fc144c5afa30dff6cdf8f6e607d8cc19', 'INS_5bdbe6b61428f9.96761451'),
 (35, '17a283d74da81c8c3819a07955bcb7f90ff87a9f', 'INS_5c3bdd8aa1c4d4.93420482'),
 (38, '1ca11c89cc8f99c68a8895b7cea4568e35c5dbd2', 'STD_5c4e937529d734.97040917'),
-(50, '0c12d963e126db0fcf069881fd8f5572f47097af', 'STD_0000001');
+(55, '8670db6d7df240fb26681539e6722b272bc57c75', 'INS_5bdbe6b61428f9.96761451');
 
 -- --------------------------------------------------------
 
@@ -253,6 +253,59 @@ CREATE TABLE `question` (
 INSERT INTO `question` (`id`, `qst_UniqueID`, `question_Content`, `crs_UniqueID`, `student_ID`, `nun_Responses`, `create_date`) VALUES
 (1, 'QTS_5c622034660e26.16011388', 'I would like to know how to create a Route for the MVC?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 0, '2019-02-12 09:24:04'),
 (2, 'QTS_5c622b7db7e835.30141038', 'Is it true that PHP is going to die soon?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 1, '2019-02-12 10:12:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quiz`
+--
+
+CREATE TABLE `quiz` (
+  `id` int(11) NOT NULL,
+  `quiz_UniqueID` varchar(100) NOT NULL,
+  `week_ID` int(11) NOT NULL,
+  `course_ID` varchar(100) NOT NULL,
+  `created_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `quiz`
+--
+
+INSERT INTO `quiz` (`id`, `quiz_UniqueID`, `week_ID`, `course_ID`, `created_date`) VALUES
+(1, 'QIZ_5c62a03b97e840.94699445', 3, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:30:19'),
+(2, 'QIZ_5c62a0b3abd7c4.04395045', 3, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:32:19'),
+(3, 'QIZ_5c62a0f514e137.31326324', 3, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:33:25'),
+(4, 'QIZ_5c62a1412d0f54.80206397', 3, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:34:41'),
+(5, 'QIZ_5c62a2013530d9.40641576', 7, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:37:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quizquestion`
+--
+
+CREATE TABLE `quizquestion` (
+  `id` int(11) NOT NULL,
+  `qq_UniqueID` varchar(100) NOT NULL,
+  `question_Title` text NOT NULL,
+  `option_A` text NOT NULL,
+  `option_B` text NOT NULL,
+  `option_C` text NOT NULL,
+  `option_D` text NOT NULL,
+  `correct_Option` varchar(5) NOT NULL,
+  `quiz_ID` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `quizquestion`
+--
+
+INSERT INTO `quizquestion` (`id`, `qq_UniqueID`, `question_Title`, `option_A`, `option_B`, `option_C`, `option_D`, `correct_Option`, `quiz_ID`) VALUES
+(1, 'QIZ_Q5c62a1415095d0.11123170', 'Salut?', 'q', 'q', 'q', 'q', 'A', 'QIZ_5c62a1412d0f54.80206397'),
+(2, 'QIZ_Q5c62a1416d8353.76848079', 'qqqqqqqsdax?', 'w', 'qw', 'wq', 'qa', 'D', 'QIZ_5c62a1412d0f54.80206397'),
+(3, 'QIZ_Q5c62a2015786e6.98717130', 'true or false/?', 'true', 'false', 'false', 'false', 'A', 'QIZ_5c62a2013530d9.40641576'),
+(4, 'QIZ_Q5c62a201604b43.59307247', 'd is right', 'wrong', 'wrong', 'wrong', 'correct', 'D', 'QIZ_5c62a2013530d9.40641576');
 
 -- --------------------------------------------------------
 
@@ -398,6 +451,20 @@ ALTER TABLE `question`
   ADD UNIQUE KEY `qst_UniqueID` (`qst_UniqueID`);
 
 --
+-- Indexes for table `quiz`
+--
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `quiz_UniqueID` (`quiz_UniqueID`);
+
+--
+-- Indexes for table `quizquestion`
+--
+ALTER TABLE `quizquestion`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `qq_UniueID` (`qq_UniqueID`);
+
+--
 -- Indexes for table `rating`
 --
 ALTER TABLE `rating`
@@ -462,13 +529,25 @@ ALTER TABLE `instructor`
 -- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `quiz`
+--
+ALTER TABLE `quiz`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `quizquestion`
+--
+ALTER TABLE `quizquestion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `rating`
