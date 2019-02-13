@@ -18,11 +18,11 @@
       include('./instructorHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
-    if ($user == 'STD') {
+    /*if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('./userHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
-    }
+    }*/
   }else {
       include('mainHeader.php');
   }
