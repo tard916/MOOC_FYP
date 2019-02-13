@@ -33,9 +33,10 @@
                 foreach ($select_course as $value) {
                     $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
                     //echo $imagePath;
+                    //newCourseCurriculum.php?cid=<?php echo $value['crs_uniqueID'];
             ?>
                 <div class="col-md-4 col-sm-6 mb-4">
-                    <a href="newCourseCurriculum.php?cid=<?php echo $value['crs_uniqueID'];?>">
+                    <a href="instructorCourse.php?cid=<?php echo $value['crs_uniqueID']?>">
                         <div class="card">
                             <img class="card-img-top" src="<?php echo $imagePath;?>" alt="Card image cap">
                             <div class="card-body pb-0">

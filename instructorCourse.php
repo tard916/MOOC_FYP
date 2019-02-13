@@ -1,8 +1,8 @@
 <?php
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
-  // $courseID = $_GET['crs_UniqueID'];
-   $courseID = 'CRS5c4eb123cbbbe9.91086078';
+   $courseID = $_GET['cid'];
+  // $courseID = 'CRS5c4eb123cbbbe9.91086078';
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
@@ -97,7 +97,9 @@
             <div class="tab-pane fade py-4" id="syllabus" role="tabpanel">
                 <div class="course-curriculum-section">
 
-                    <a class="btn btn btn-outline-primary btn-block mb-5" href="manageCurriculum.php" role="button">Manage Curriculum</a>
+                    <a class="btn btn btn-outline-primary btn-block mb-2" href="newCourseCurriculum.php?cid=<?php echo $courseID;?>" role="button">Add Curriculum</a>
+                    <p class="text-muted text-center mb-2">Or</p>
+                    <a class="btn btn btn-outline-primary btn-block mb-5" href="manageCurriculum.php?cid=<?php echo $courseID;?>" role="button">Manage Curriculum</a>
 
                     <?php
                         $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
