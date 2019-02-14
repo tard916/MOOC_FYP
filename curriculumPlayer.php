@@ -49,11 +49,178 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 p-0">
+            <div class="col-9 p-0 h-100">
                 <video id="curriculum-video" class="video-js d-none" controls preload="auto" data-setup='{"responsive": true}'>
                 </video>
                 <div class="curriculum-article d-none">
                     <embed id="article-src" src="" type="application/pdf" />
+                </div>
+                <div class="curriculum-quiz p-md-5 p-sm-3 p-1 h-100">
+                    <form class="" action="" method="post">
+                        <div class="card mb-5">
+                          <div class="card-header">
+                            Question 1
+                          </div>
+                          <div class="card-body">
+                            <h6 class="mb-4">Here is the question, here is the question here is the question?</h6>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question1" id="AQ1" value="A" required>
+                              <label class="form-check-label" for="AQ1">
+                                  This is the answer A for first question. This is the answer A for first question. This is the answer A for first question. This is the answer A for first question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question1" id="BQ1" value="B">
+                              <label class="form-check-label" for="BQ1">
+                                  This is the answer B for first question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question1" id="CQ1" value="C">
+                              <label class="form-check-label" for="CQ1">
+                                  This is the answer C for first question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question1" id="DQ1" value="D">
+                              <label class="form-check-label" for="DQ1">
+                                  This is the answer C for first question
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-5">
+                          <div class="card-header">
+                            Question 2
+                          </div>
+                          <div class="card-body">
+                            <h6 class="mb-4">Here is the question, here is the question here is the question?</h6>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question2" id="AQ2" value="A" required>
+                              <label class="form-check-label" for="AQ2">
+                                  This is the answer A for second question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question2" id="BQ2" value="B">
+                              <label class="form-check-label" for="BQ2">
+                                  This is the answer B for second question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question2" id="CQ2" value="C">
+                              <label class="form-check-label" for="CQ2">
+                                  This is the answer C for second question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question2" id="DQ2" value="D">
+                              <label class="form-check-label" for="DQ2">
+                                  This is the answer C for second question
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-5">
+                          <div class="card-header">
+                            Question 3
+                          </div>
+                          <div class="card-body">
+                            <h6 class="mb-4">Here is the question, here is the question here is the question?</h6>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="AQ3" value="A" required>
+                              <label class="form-check-label" for="AQ3">
+                                  This is the answer A for third question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="BQ3" value="B">
+                              <label class="form-check-label" for="BQ3">
+                                  This is the answer B for third question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="CQ3" value="C">
+                              <label class="form-check-label" for="CQ3">
+                                  This is the answer C for third question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="DQ3" value="D">
+                              <label class="form-check-label" for="DQ3">
+                                  This is the answer C for third question
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-5">
+                          <div class="card-header">
+                            Question 4
+                          </div>
+                          <div class="card-body">
+                            <h6 class="mb-4">Here is the question, here is the question here is the question?</h6>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="AQ4" value="A" required>
+                              <label class="form-check-label" for="AQ4">
+                                  This is the answer A for fourth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="BQ4" value="B">
+                              <label class="form-check-label" for="BQ4">
+                                  This is the answer B for fourth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="CQ4" value="C">
+                              <label class="form-check-label" for="CQ4">
+                                  This is the answer C for fourth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question4" id="DQ4" value="D">
+                              <label class="form-check-label" for="DQ4">
+                                  This is the answer C for fourth question
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-5">
+                          <div class="card-header">
+                            Question 5
+                          </div>
+                          <div class="card-body">
+                            <h6 class="mb-4">Here is the question, here is the question here is the question?</h6>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question5" id="AQ5" value="A" required>
+                              <label class="form-check-label" for="AQ5">
+                                  This is the answer A for fifth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question5" id="BQ5" value="B">
+                              <label class="form-check-label" for="BQ5">
+                                  This is the answer B for fifth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question5" id="CQ5" value="C">
+                              <label class="form-check-label" for="CQ5">
+                                  This is the answer C for fifth question
+                              </label>
+                            </div>
+                            <div class="form-check my-3">
+                              <input class="form-check-input" type="radio" name="question5" id="DQ5" value="D">
+                              <label class="form-check-label" for="DQ5">
+                                  This is the answer C for fifth question
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-success btn-block">Submit</button>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -80,10 +247,17 @@
                     player.src({type: "video/mp4", src: src});
                     $("#curriculum-video").removeClass("d-none");
                     $("#article-src").parent().addClass("d-none");
-                } else {
+                    $(".curriculum-quiz").addClass("d-none");
+                } else if (srcArray[srcArray.length - 1] == "pdf") {
                     $("#article-src").attr("src", src);
                     $("#article-src").parent().removeClass("d-none");
                     $("#curriculum-video").addClass("d-none");
+                    $(".curriculum-quiz").addClass("d-none");
+                } else {
+                    $(".curriculum-quiz").removeClass("d-none");
+                    $("#curriculum-video").addClass("d-none");
+                    $("#article-src").parent().addClass("d-none");
+
                 }
             });
         });

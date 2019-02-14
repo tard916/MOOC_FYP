@@ -97,7 +97,6 @@ html, body{
 
 .curriculum-player-wrapper {
     height: calc(100% - 56px);
-	overflow: hidden;
 }
 
 .curriculum-player-wrapper .row {
@@ -124,6 +123,11 @@ html, body{
 
 .curriculum-article {
 	height: 100%;
+	overflow: hidden;
+}
+
+.curriculum-quiz {
+	overflow-y: auto;
 }
 
 #article-src {
