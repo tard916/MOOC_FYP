@@ -69,6 +69,7 @@
       <a class="list-group-item list-group-item-action" data-toggle="list" href="#syllabus" role="tab">Syllabus</a>
       <a class="list-group-item list-group-item-action" data-toggle="list" href="#review" role="tab">Review</a>
       <a class="list-group-item list-group-item-action" data-toggle="list" href="#qa" role="tab">Q&A</a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#studentProgress" role="tab">Student Progress</a>
     </div>
 
     <!-- Tab panes -->
@@ -192,6 +193,102 @@
                 </a>
 
             </div>
+            <div class="tab-pane fade py-4" id="studentProgress" role="tabpanel">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Progress</th>
+                      <th scope="col">At Risk?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mehrab Kamrani</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100">71%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Hassan Saleem</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Thierno Abdoul Rahimi Diallo</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Umar Adkhamov</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mehrab Kamrani</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100">71%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Hassan Saleem</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Thierno Abdoul Rahimi Diallo</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Umar Adkhamov</td>
+                      <td>
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                          </div>
+                      </td>
+                      <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+            </div>
         </div>
     </div>
 
@@ -228,6 +325,14 @@
                 showCaption: false,
                 size: 'sm',
             });
+
+            // if there's a tick for at risk, the row will have red background
+            $('.at-risk').each(function(){
+                if ($(this).hasClass('fa-check')) {
+                    $(this).parent().parent().addClass('table-danger');
+                }
+            });
+
         });
     </script>
 
