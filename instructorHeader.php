@@ -73,7 +73,7 @@
                             <a class="dropdown-item" href="instructor.php">My Courses</a>
                             <a class="dropdown-item" href="#">Manage Course</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="logout.php">Logout</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -81,3 +81,28 @@
             </div>
         </nav>
     </header>
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>Are you sure you'd like to logout?</p>
+              <form action="logout.php" method="post">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="alldevices" name="alldevices" id="alldevices">
+                      <label class="form-check-label" for="alldevices">
+                           Logout of all devices?
+                      </label>
+                  </div>
+                  <button type="submit" name="confirm" class="btn btn-primary btn-block mt-4">Confirm</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
