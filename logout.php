@@ -8,7 +8,7 @@
         echo  "<script> window.location.assign('index.php'); </script>";
     }
     if (isset($_POST['confirm'])) {
-        
+
         if (isset($_POST['alldevices'])) {
             DB::query('DELETE FROM login_tokens WHERE user_id=:userid', array(':userid'=>Login::isLoggedIn()));
             echo '<script language = "javascript">';
@@ -28,9 +28,3 @@
         }
     }
 ?>
-<h1>Logout of your Account?</h1>
-<p>Are you sure you'd like to logout?</p>
-<form action="logout.php" method="post">
-    <input type="checkbox" name="alldevices" value="alldevices"> Logout of all devices?<br />
-    <input type="submit" name="confirm" value="Confirm">
-</form> 
