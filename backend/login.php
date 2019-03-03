@@ -15,7 +15,7 @@
                     if(password_verify($password, DB::query('SELECT password FROM admin WHERE email=:email', array(':email'=>$email))[0]['password'])){
                         $cstrong = TRUE;
                         $token = bin2hex(openssl_random_pseudo_bytes(64, $cstrong));
-                        $user_id = DB::query('SELECT id FROM admin WHERE email=:email', array(':email'=>$email))[0]['id'];
+                        $user_id = DB::query('SELECT adm_uniqueID FROM admin WHERE email=:email', array(':email'=>$email))[0]['adm_uniqueID'];
                         DB::query('INSERT INTO login_tokens VALUES (\'\', :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$user_id));
                         setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
                         setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);                
@@ -23,7 +23,7 @@
                         echo '<script language = "javascript">';
                         echo 'alert("Logged in successfully!")';
                         echo '</script>';
-                        echo  "<script> window.location.assign('../index.php'); </script>";
+                        echo  "<script> window.location.assign('../admin.php'); </script>";
                        
                     }else{
                         //echo 'Incorrect Password!';

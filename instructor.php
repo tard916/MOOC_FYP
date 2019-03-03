@@ -29,7 +29,9 @@
             </div>
 
             <?php
-                $select_course = DB::query('SELECT * FROM course WHERE instructor_id =:outputkey', array(':outputkey'=>$outputkey));
+                $status = 'rejected';
+                $select_course = DB::query('SELECT * FROM course WHERE instructor_id =:outputkey AND status !=:status', 
+                array(':outputkey'=>$outputkey, ':status'=>$status));
                 foreach ($select_course as $value) {
                     $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
                     //echo $imagePath;

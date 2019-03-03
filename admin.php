@@ -7,10 +7,10 @@
       $outputkey  = Login::isLoggedIn();
       list($user, $key) = explode("_", $outputkey);
 
-      if ($user == 'INS') {
-        $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
+      if ($user == 'ADM') {
+        $user_Name = DB::query('SELECT name FROM admin WHERE adm_uniqueID=:outputkey', array(':outputkey'=>$outputkey))[0]['name'];
 
-        include('./instructorHeader.php');
+        include('./adminHeader.php');
       }
     }else {
         include('../mainHeader.php');
@@ -23,7 +23,8 @@
         <div class="row">
 
             <?php
-                $select_course = DB::query('SELECT * FROM course WHERE instructor_id =:outputkey', array(':outputkey'=>$outputkey));
+                $status = "pending";
+                $select_course = DB::query('SELECT * FROM course WHERE status =:status', array(':status'=>$status));
                 foreach ($select_course as $value) {
                     $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
                     //echo $imagePath;

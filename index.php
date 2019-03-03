@@ -2,24 +2,22 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
   if (Login::isLoggedIn()) {
-    //echo 'Logged In!';
-    //echo Login::isLoggedIn();
-    $outputkey  = Login::isLoggedIn();
-    echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
+    $outputkey  = Login::isLoggedIn();   
     list($user, $key) = explode("_", $outputkey);
-    echo "<script>console.log( 'user_type: " . $user . "' );</script>";
-
-
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
 
       include('./instructorHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
-    if ($user == 'STD') {
+    else if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('./userHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+    }
+    else if ($user == 'ADM') {
+      header("Location: admin.php"); /* Redirect browser */
+      exit();     
     }
   }else {
       include('mainHeader.php');
@@ -84,10 +82,11 @@
         <div class="container">
         <div class="row">
         <?php
-            $select_course = DB::query('SELECT * FROM course ');
-            foreach ($select_course as $value) {
-                $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
-                //echo $imagePath;
+          $status= 'approved';
+          $select_course = DB::query('SELECT * FROM course WHERE status =:status', array(':status'=>$status));
+          foreach ($select_course as $value) {
+              $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
+              //echo $imagePath;
         ?>
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">

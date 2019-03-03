@@ -7,27 +7,20 @@
     //echo 'Logged In!';
     //echo Login::isLoggedIn();
     $outputkey  = Login::isLoggedIn();
-    echo "<script>console.log( 'Debug Objects: " . $outputkey . "' );</script>";
     list($user, $key) = explode("_", $outputkey);
-    echo "<script>console.log( 'user_type: " . $user . "' );</script>";
 
+    if ($user == 'ADM') {
+      $user_Name = DB::query('SELECT name FROM admin WHERE adm_uniqueID=:outputkey', array(':outputkey'=>$outputkey))[0]['name'];
 
-    if ($user == 'INS') {
-      $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-
-      include('./instructorHeader.php');
-      echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+      include('./adminHeader.php');
     }
-    /*if ($user == 'STD') {
-      $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
-      include('./userHeader.php');
-      echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
-    }*/
   }else {
-      include('mainHeader.php');
+      include('../mainHeader.php');
   }
 
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
+
+  $courseRName = DB::query('SELECT course_name FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['course_name'];
 
 
 ?>
@@ -57,10 +50,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <a class="btn btn-outline-success btn-block mt-5" href="" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve</a>
+                    <a class="btn btn-outline-success btn-block mt-5" href="#"  data-toggle="modal" data-target="#approveModal" role="button"><i class="fa fa-check" aria-hidden="true"></i> Approve</a>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-outline-danger btn-block mt-5" href="" role="button"><i class="fa fa-times" aria-hidden="true"></i> Reject</a>
+                    <a class="btn btn-outline-danger btn-block mt-5" href="#"  data-toggle="modal" data-target="#rejectModal" role="button"><i class="fa fa-times" aria-hidden="true"></i> Reject</a>
                 </div>
             </div>
         </div>
@@ -123,6 +116,60 @@
                 </div>
             </div>
         </div>
+    </div>
+
+     <!-- Approve Modal -->
+     <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="approveModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="approveModalLabel">Approve Course</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>You are about to Approve this course:</p>
+              <h4><?php echo $courseRName;?></h4>
+              <form action="backend/approve.php?courseID=<?php echo $courseID;?>" method="post">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="check" name="checked" id="alldevices" >
+                      <label class="form-check-label" for="alldevices">
+                           Are you sure you want to proceed? This action cannot be reversed.
+                      </label>
+                  </div>
+                  <button type="submit" name="confirm" class="btn btn-primary btn-block mt-4">Confirm</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reject Modal -->
+    <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="rejectModalLabel">Reject Course</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>You are about to reject this course:</p>
+              <h4><?php echo $courseRName;?></h4>
+              <form action="backend/reject.php?courseID=<?php echo $courseID;?>" method="post">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="check" name="checked" id="alldevices" >
+                      <label class="form-check-label" for="alldevices">
+                           Are you sure you want to proceed? This action cannot be reversed.
+                      </label>
+                  </div>
+                  <button type="submit" name="confirm" class="btn btn-primary btn-block mt-4">Confirm</button>
+              </form>
+          </div>
+        </div>
+      </div>
     </div>
 
 
