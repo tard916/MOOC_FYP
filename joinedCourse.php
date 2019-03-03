@@ -172,16 +172,16 @@
                 ?>
                 <div class="review-row row">
                     <div class="col-md-3">
-                    <?php
-                        foreach ($studentsID as $valuestd) {
-                            
-                    ?>
-                        <h5><?php echo $valuestd['student_name'];?></h5>
-                    <?php 
-                        }
-                    ?>
-                        <input class="rating-loading individual-rating" value="<?php echo $value['rating_value'];?>">
-                        <p class="text-muted mt-1"><?php echo $value['date'];?></p>
+                        <?php
+                            foreach ($studentsID as $valuestd) {
+                                
+                        ?>
+                            <h5><?php echo $valuestd['student_name'];?></h5>
+                        <?php 
+                            }
+                        ?>
+                            <input class="rating-loading individual-rating" value="<?php echo $value['rating_value'];?>">
+                            <p class="text-muted mt-1"><?php echo $value['date'];?></p>
                     </div>
                     <div class="col-md-9">
                         <p><?php echo $value['rating_Content'];?></p>

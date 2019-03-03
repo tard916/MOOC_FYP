@@ -26,6 +26,18 @@
 
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
 
+  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));  
+
+  $valOfRatings = DB::query('SELECT rating_value FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
+  $sumOfRatings = 0;
+  foreach ($valOfRatings as  $valuert) {
+    $sumOfRatings =  $sumOfRatings + (float)$valuert['rating_value'];
+  } 
+
+  if ($countOfRatings >= 0 && $sumOfRatings >= 0) {
+      $avRating = $sumOfRatings / $countOfRatings;      
+  }
+
 
 ?>
 
@@ -50,8 +62,8 @@
             <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
             <div class="row lead text-center">
                 <div class="col-md-4 ">
-                    <input class="course-rating rating-loading" value="3.75">
-                    <small>(100)</small>
+                    <input class="course-rating rating-loading" value="<?php echo $avRating; ?>">
+                    <small>(<?php echo $countOfRatings; ?>)</small>
                 </div>
                 <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></div>
                 <div class="col-md-4"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $value['duration'];?> Weeks</div>
@@ -125,69 +137,62 @@
             </div>
             <div class="tab-pane fade py-4" id="review" role="tabpanel">
 
+                <?php
+                    $ratings = DB::query('SELECT * FROM rating WHERE course_id= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
+                    foreach ($ratings as  $value) {                    
+                        $studentId = $value['student_ID'];
+                        $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+                ?>
+
                 <div class="review-row row">
-                    <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
+                <div class="col-md-3">
+                        <?php
+                            foreach ($studentsID as $valuestd) {
+                                
+                        ?>
+                            <h5><?php echo $valuestd['student_name'];?></h5>
+                        <?php 
+                            }
+                        ?>
+                            <input class="rating-loading individual-rating" value="<?php echo $value['rating_value'];?>">
+                            <p class="text-muted mt-1"><?php echo $value['date'];?></p>
                     </div>
                     <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
+                        <p><?php echo $value['rating_Content'];?></p>
                     </div>
                     <hr>
                 </div>
-
-                <div class="review-row row">
-                    <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
-                    </div>
-                    <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                    </div>
-                    <hr>
-                </div>
-
-                <div class="review-row row">
-                    <div class="col-md-3">
-                        <h5>Mehrab Kamrani</h5>
-                        <input class="rating-loading individual-rating" value="3.5">
-                        <p class="text-muted mt-1">5 days ago</p>
-                    </div>
-                    <div class="col-md-9">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                    </div>
-                    <hr>
-                </div>
-
+                <?php 
+                    }
+                ?>
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
 
-                <a class="question-link text-dark" href="question.php">
+            <?php
+                $questions = DB::query('SELECT * FROM question WHERE crs_UniqueID= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
+                foreach ($questions as  $valuesQT) {
+                
+                $studentId = $valuesQT['student_ID'];
+                $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+            ?>
+                <a class="question-link text-dark" href="question.php?qts_ID=<?php echo $valuesQT['qst_UniqueID'];?>">
                     <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
+                    <?php
+                        foreach ($studentsID as $valuestd) {
+                            
+                    ?>
+                        <h6><?php echo $valuestd['student_name'];?></h6>
+                    <?php 
+                         }
+                    ?>
+                        <p class="text-muted"><?php echo $valuesQT['create_date'];?></p>
+                        <p><?php echo $valuesQT['question_Content'];?></p>
+                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> <?php echo $valuesQT['nun_Responses'];?> Responses</p>
                     </div>
                 </a>
-                <a class="question-link text-dark" href="question.php">
-                    <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
-                    </div>
-                </a>
-                <a class="question-link text-dark" href="question.php">
-                    <div class="question-row my-4 p-4">
-                        <h6>Mehrab Kamrani</h6>
-                        <p class="text-muted">5 days ago</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, tortor vitae tristique dignissim, augue tellus hendrerit quam, vel laoreet leo ligula vitae diam. Sed sagittis augue ultrices molestie scelerisque. Integer massa justo, ornare at gravida sit amet, bibendum sagittis erat. Phasellus id molestie massa. Aenean ornare finibus lorem, quis dignissim purus interdum a. Proin non urna nisl. Cras condimentum velit massa, nec sollicitudin risus scelerisque sed. Mauris condimentum arcu ac gravida pharetra. Nullam vel tellus sapien.</p>
-                        <p class="text-muted m-0"><i class="fa fa-reply" aria-hidden="true"></i> 2 Responses</p>
-                    </div>
-                </a>
+                <?php
+                    }
+                ?>
 
             </div>
             <div class="tab-pane fade py-4" id="studentProgress" role="tabpanel">
