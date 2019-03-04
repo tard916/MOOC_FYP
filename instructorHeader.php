@@ -25,6 +25,11 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <!--Datatable styles -->
+    <link rel="stylesheet" type="text/css" href="dataTable/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+ 
+
 </head>
 <body>
     <header>

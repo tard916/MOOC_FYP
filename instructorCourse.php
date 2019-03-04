@@ -61,7 +61,7 @@
 
             <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
             <div class="row lead text-center">
-                <div class="col-md-4 ">
+            <div class="col-md-4 ">
                     <input class="course-rating rating-loading" value="<?php echo $avRating; ?>">
                     <small>(<?php echo $countOfRatings; ?>)</small>
                 </div>
@@ -197,7 +197,139 @@
             </div>
             <div class="tab-pane fade py-4" id="studentProgress" role="tabpanel">
 
-                <table class="table">
+                <table id="example" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Progress</th>
+                            <th scope="col">At Risk?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mehrab Kamrani</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100">71%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Hassan Saleem</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Thierno Abdoul Rahimi Diallo</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Umar Adkhamov</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mehrab Kamrani</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100">71%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Hassan Saleem</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Thierno Abdoul Rahimi Diallo</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Umar Adkhamov</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Hassan Saleem</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Thierno Abdoul Rahimi Diallo</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Umar Adkhamov</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Progress</th>
+                            <th scope="col">At Risk?</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!--<table class="table">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -288,7 +420,7 @@
                       <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
                     </tr>
                   </tbody>
-                </table>
+                </table>-->
 
             </div>
         </div>
@@ -313,6 +445,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/star-rating.min.js"></script>
     <script src="js/theme.min.js"></script>
+    
     <script>
         $(document).on('ready', function () {
             $('.course-rating').rating({
@@ -336,7 +469,14 @@
             });
 
         });
-    </script>
+    </script>      
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    
+    </script>  
+   <script type="text/javascript" src="dataTable/datatables.min.js"></script>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
