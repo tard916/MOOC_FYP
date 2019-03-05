@@ -197,3 +197,24 @@ html, body{
 .question-link:hover {
 	text-decoration: none;
 }
+
+.card-columns {
+    margin-top: 15px;
+}
+
+.my-courses-wrapper .card, .card-Column-Size{
+    min-height: 90px;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.weeklyContent{
+  margin-top: 15px;
+}
