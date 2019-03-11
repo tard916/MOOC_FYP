@@ -12,6 +12,7 @@
     }
     else if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
+      $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];
       include('./userHeader.php');
       echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
@@ -338,6 +339,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/eventsubmiter.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
     <script src="js/ie10-viewport-bug-workaround.js"></script> -->
 

@@ -4,6 +4,9 @@
     if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $today_date=date("Y-m-d H:i:s");
+        
 
        // echo $email."<br/>".$password;
 
@@ -18,7 +21,7 @@
                         $user_id = DB::query('SELECT adm_uniqueID FROM admin WHERE email=:email', array(':email'=>$email))[0]['adm_uniqueID'];
                         DB::query('INSERT INTO login_tokens VALUES (\'\', :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$user_id));
                         setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
-                        setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);                
+                        //setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);                
                 
                         echo '<script language = "javascript">';
                         echo 'alert("Logged in successfully!")';
@@ -40,7 +43,7 @@
                     $user_id = DB::query('SELECT ins_uniquID FROM instructor WHERE email=:email', array(':email'=>$email))[0]['ins_uniquID'];
                     DB::query('INSERT INTO login_tokens VALUES (\'\', :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$user_id));
                     setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
-                    setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
+                    // setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
             
             
                     echo '<script language = "javascript">';
@@ -61,7 +64,7 @@
                 $user_id = DB::query('SELECT std_uniquID FROM student WHERE email=:email', array(':email'=>$email))[0]['std_uniquID'];
                 DB::query('INSERT INTO login_tokens VALUES (\'\', :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$user_id));
                 setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
-                setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
+                // setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
         
         
                 echo '<script language = "javascript">';

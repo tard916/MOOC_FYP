@@ -118,12 +118,19 @@
                     <?php
                         $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
                         foreach ($crriculum as $value) {
+                                                          
                     ?>
 
                     <li class=""><a class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> <?php echo $value['title'];?></a></li>
-                        <?php
-                            }
-                        ?>
+                    <?php 
+                        $selectQuiz = DB::query('SELECT * FROM quiz WHERE week_ID= :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
+                        foreach ($selectQuiz as $valueQyiz) {
+                    ?>
+                    <li class=""><a class="curriculum-link text-dark" href="takeQuiz.php?crs_UniqueID=<?php echo $courseID;?>&quizID=<?php echo $valueQyiz['quiz_UniqueID'];?>"><i class="fa fa-question-circle" aria-hidden="true"></i> <?php echo "Week".$valueQyiz['week_ID']." Quiz"?></a></li>
+                        <?php }?>
+                    <?php
+                        }
+                    ?>
                         <!--<li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i> Model View Controler (MVC) with PHP part 1</a></li>
                         <li class=""><a class="curriculum-link text-dark" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Intro to MVC</a></li>-->
                     </ul>

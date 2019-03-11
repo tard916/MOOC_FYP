@@ -33,8 +33,8 @@
   foreach ($valOfRatings as  $valuert) {
     $sumOfRatings =  $sumOfRatings + (float)$valuert['rating_value'];
   } 
-
-  if ($countOfRatings >= 0 && $sumOfRatings >= 0) {
+  $avRating= 0.0;
+  if ($countOfRatings > 0 && $sumOfRatings > 0) {
       $avRating = $sumOfRatings / $countOfRatings;      
   }
 
@@ -62,7 +62,7 @@
             <h1 class="display-4 text-center mb-3"><?php echo $value['course_name'];?></h1>
             <div class="row lead text-center">
             <div class="col-md-4 ">
-                    <input class="course-rating rating-loading" value="<?php echo $avRating; ?>">
+                    <input class="course-rating rating-loading" value="<?php echo $avRating;?>">
                     <small>(<?php echo $countOfRatings; ?>)</small>
                 </div>
                 <div class="col-md-4"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $intructorName;?></div>

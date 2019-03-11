@@ -23,6 +23,7 @@
             $fileType = array();
             $fileType = $_POST['fileType'.$i];
             $weekID = $_POST['weekID'.$i];
+            $status = "pending";
 
             $weekArray =  array($weekID, $fileTitle, $filename, $filenameTMP, $fileType,$courseID);
             $resourceArray = array();
@@ -38,9 +39,9 @@
                 if (!file_exists($coursePathContent)) {                
                     if(mkdir($coursePathContent, 0777, true)){
                         if (move_uploaded_file($fileTMP,$coursePathContent.'/'.$filenames)) {
-                            DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :course_id)', 
+                            DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :status ,:course_id)', 
                             array(':week_number'=>$weekID, ':title'=>$fileTitles, ':file_name'=>$filenames, ':type'=>$fileTypes, ':path'=>$path,
-                            ':course_id'=>$courseID));echo '<script language = "javascript">';
+                            ':status'=>$status,':course_id'=>$courseID));echo '<script language = "javascript">';
                             echo 'alert("Record Added successfully")';
                             echo '</script>';
                             echo  "<script> window.location.assign('../instructor.php'); </script>";
@@ -49,9 +50,9 @@
                     
                 }else {
                     if (move_uploaded_file($fileTMP,$coursePathContent.'/'.$filenames)){
-                        DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :course_id)', 
+                        DB::query('INSERT INTO course_cirriculum VALUES (\'\', :week_number, :title, :file_name, :type, :path, :status ,:course_id)', 
                         array(':week_number'=>$weekID, ':title'=>$fileTitles, ':file_name'=>$filenames, ':type'=>$fileTypes, ':path'=>$path,
-                        ':course_id'=>$courseID));echo '<script language = "javascript">';
+                        ':status'=>$status,':course_id'=>$courseID));echo '<script language = "javascript">';
                         echo 'alert("Record Added successfully")';
                         echo '</script>';
                         echo  "<script> window.location.assign('../instructor.php'); </script>";

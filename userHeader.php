@@ -25,6 +25,7 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
+    
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-list-ul"></i>
                             Categories
                         </a>
@@ -63,22 +64,27 @@
                       </div>
                     </div>
                 </ul>
+                <form id="loginEvent">
+                    <?php if(isset($user_ID)) {?>                
+                        <input type="hidden" name="std_ID" value="<?php echo $user_ID;?>">
+                    <?php }?>
+                    <ul class="nav navbar-nav pull-sm-right">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-outline-primary" type="submit" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $user_Name;?></button>
+                            <!-- <a class="btn btn-outline-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                            </a> -->
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="studentCourses.php">My Courses</a>
+                                <a class="dropdown-item" href="allCourses.php">Explore Courses</a>
+                                <a class="dropdown-item" href="#">Help</a>
+                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
 
-                <ul class="nav navbar-nav pull-sm-right">
-                    <li class="nav-item dropdown">
-                        <a class="btn btn-outline-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php echo $user_Name;?>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="studentCourses.php">My Courses</a>
-                            <a class="dropdown-item" href="allCourses.php">Explore Courses</a>
-                            <a class="dropdown-item" href="#">Help</a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
-                        </div>
-                    </li>
-                </ul>
-
+                </form>
             </div>
         </nav>
     </header>
