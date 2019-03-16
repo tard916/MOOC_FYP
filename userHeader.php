@@ -64,7 +64,7 @@
                       </div>
                     </div>
                 </ul>
-                <form id="loginEvent">
+                <form id="loginEvent" onclick="navbarDropdown()">
                     <?php if(isset($user_ID)) {?>                
                         <input type="hidden" name="std_ID" value="<?php echo $user_ID;?>">
                     <?php }?>
