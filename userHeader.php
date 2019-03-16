@@ -25,7 +25,7 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
-    
+
 </head>
 <body>
     <header>
@@ -64,15 +64,15 @@
                       </div>
                     </div>
                 </ul>
-                <form id="loginEvent" onclick="navbarDropdown()">
-                    <?php if(isset($user_ID)) {?>                
-                        <input type="hidden" name="std_ID" value="<?php echo $user_ID;?>">
+                <form id="loginEvent"v>
+                    <?php if(isset($user_ID)) {?>
+                        <input type="hidden" name="std_ID" id="userIDValue" value="<?php echo $user_ID;?>">
                     <?php }?>
                     <ul class="nav navbar-nav pull-sm-right">
                         <li class="nav-item dropdown">
                             <button class="btn btn-outline-primary" type="submit" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $user_Name;?></button>
                             <!-- <a class="btn btn-outline-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                
+
                             </a> -->
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="studentCourses.php">My Courses</a>

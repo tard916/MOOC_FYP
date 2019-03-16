@@ -2,7 +2,7 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
   if (Login::isLoggedIn()) {
-    $outputkey  = Login::isLoggedIn();   
+    $outputkey  = Login::isLoggedIn();
     list($user, $key) = explode("_", $outputkey);
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
@@ -18,7 +18,7 @@
     }
     else if ($user == 'ADM') {
       header("Location: admin.php"); /* Redirect browser */
-      exit();     
+      exit();
     }
   }else {
       include('mainHeader.php');
@@ -369,6 +369,21 @@
             }, false);
           });
         }, false);
+        $('#navbarDropdown').click(function() {
+            var http = new XMLHttpRequest();
+            var url = "./backend/ckle.php";
+            var userIDValue = $('#userIDValue')[0].value;
+            var params = "userID="+userIDValue;
+            /*http.open("POST", url, true);
+
+            //Send the proper header information along with the request
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                console.log(params);
+            }
+            http.send(params);*/
+            window.location.href = "./backend/ckle.php?" + params;
+        });
       })();
     </script>
 
