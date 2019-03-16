@@ -48,19 +48,14 @@
 <main role="main" class="course-page">
     <div class="curriculum-quiz ">
         <form class="" action="backend/quizAnswer.php?crs_UniqueID=<?php echo $courseID;?>" method="post">
-        
              <?php 
                     $quizQuestion = DB::query('SELECT *FROM quizquestion WHERE quiz_ID = :quizid', array(':quizid'=>$quizid));
                     foreach ($quizQuestion as  $value) {
-                   
                 ?>
             <div class="card mb-5">
-           
                 <div class="card-header">
                     Question
                 </div>
-           
-               
                     <div class="card-body">
                         <h6 class="mb-4"><?php echo $value['question_Title'];?></h6>
                         <input type="hidden" name="qqID" value="<?php echo $value['qq_UniqueID'];?>">
@@ -90,7 +85,6 @@
                             </label>
                         </div>
                     </div>
-                
             </div>
         <?php
             }
