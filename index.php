@@ -8,13 +8,13 @@
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
 
       include('./instructorHeader.php');
-      echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+      // echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
     else if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];
       include('./userHeader.php');
-      echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+      // echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
     }
     else if ($user == 'ADM') {
       header("Location: admin.php"); /* Redirect browser */
