@@ -19,7 +19,7 @@ if(isset($_GET['userID'])){
         header('Location: ../studentCourses.php');
     }else {
         
-        DB::query('INSERT INTO student_logs VALUES ( \'\':last_login, :std_uniqueID )',
+        DB::query('INSERT INTO student_logs VALUES ( \'\',:last_login, :std_uniqueID )',
         array(':last_login'=>$today_date,':std_uniqueID'=>$stdID));
         header('Location: ../index.php');
     }
