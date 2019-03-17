@@ -90,8 +90,7 @@
              array(':category_id'=>$categoryID, ':status'=>$status));
           }else{
             $select_course = DB::query('SELECT * FROM course WHERE status =:status', array(':status'=>$status));
-          }
-          
+          }          
           foreach ($select_course as $value) {
               $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
               //echo $imagePath;
