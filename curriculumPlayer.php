@@ -38,7 +38,7 @@
                                     $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
                                     foreach ($crriculum as $value) {
                                 ?>
-                                <li class="list-group-item"><a class="curriculum-link text-dark" href="<?php echo $value['path']?>"><?php echo $value['title'];?></a></li>
+                                <li class="list-group-item"><a class="curriculum-link text-dark" id="<?php echo $value['id'];?>" href="<?php echo $value['path']?>"><?php echo $value['title'];?></a></li>
                                     <?php
                                         }
                                     ?>
@@ -73,8 +73,10 @@
     <script src="js/video.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            var vidId;
             var player = videojs('curriculum-video');
             $(".curriculum-link").click(function(e){
+                vidID = this.id;
                 e.preventDefault();
                 var src = $(this).attr("href");
                 var srcArray = src.split(".");
@@ -97,14 +99,10 @@
             });
             videojs('curriculum-video').ready(function(){
                 this.on('ended', function() {
-                    $.post("./backend/nplayVideo.php",
-                    {
-                        userID: <?php echo $uID; ?>,
-                        videoID: <?php echo $value['id']; ?>
-                    },
+                    window.location.href = "./backend/nplayVideo.php?videoID=" + vidID,
                     function(){
-                        alert('video is done!');
-                    });
+                        alert('video is done!' + vidID);
+                    };
                 });
             });
 
