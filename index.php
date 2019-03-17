@@ -84,7 +84,14 @@
         <div class="row">
         <?php
           $status= 'approved';
-          $select_course = DB::query('SELECT * FROM course WHERE status =:status', array(':status'=>$status));
+          if(isset($_GET['categoryID'])){
+            $categoryID = $_GET['categoryID'];
+            $select_course = DB::query('SELECT * FROM course WHERE category_id = :category_id AND status =:status',
+             array(':category_id'=>$categoryID, ':status'=>$status));
+          }else{
+            $select_course = DB::query('SELECT * FROM course WHERE status =:status', array(':status'=>$status));
+          }
+          
           foreach ($select_course as $value) {
               $imagePath = $value['course_path_fol'].'/'.$value['course_image'];
               //echo $imagePath;

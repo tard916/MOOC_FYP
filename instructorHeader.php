@@ -52,10 +52,15 @@
                             Categories
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <?php 
+                                $category = DB::query('SELECT * FROM category');
+                                foreach ($category as  $value) {
+                                   
+                            ?>
+                                <a class="dropdown-item" href="#"><?php echo $value['category_name'];?></a>
+                            <?php  
+                                }
+                            ?>
                         </div>
                     </li>
                 </ul>
