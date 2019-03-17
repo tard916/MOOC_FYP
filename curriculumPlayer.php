@@ -10,7 +10,7 @@
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('userHeader.php');
-    
+
     }
   }else {
       include('../mainHeader.php');
@@ -24,6 +24,7 @@
                     <div class="card curriculum-player-card">
 
                         <?php
+                            $uID = Login::isLoggedIn();
                             $courseDuration = DB::query('SELECT duration FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID))[0]['duration'];
                             for($i = 1; $i<=$courseDuration; $i++){
                         ?>
@@ -55,7 +56,7 @@
                 <div class="curriculum-article d-none">
                     <embed id="article-src" src="" type="application/pdf" />
                 </div>
-                
+
             </div>
         </div>
     </main>
@@ -64,7 +65,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -94,6 +95,19 @@
 
                 }
             });
+            videojs('curriculum-video').ready(function(){
+                this.on('ended', function() {
+                    $.post("./backend/nplayVideo.php",
+                    {
+                        userID: <?php echo $uID; ?>,
+                        videoID: <?php echo $value['id']; ?>
+                    },
+                    function(){
+                        alert('video is done!');
+                    });
+                });
+            });
+
         });
     </script>
 
