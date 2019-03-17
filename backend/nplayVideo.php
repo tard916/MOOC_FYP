@@ -8,7 +8,7 @@ date_default_timezone_set("Asia/Kuala_Lumpur");
 // </script>';
 if(isset($_POST['userID']) && isset($_POST['videoID'])){
     $today_date=date("Y-m-d H:i:s");
-    $stdID = $_POST['userID'];
+    $stdID = Login::isLoggedIn();
     $vID = $_POST['videoID'];
     $npv = 1;
 
