@@ -2,7 +2,7 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
   if (Login::isLoggedIn()) {
-    $outputkey  = Login::isLoggedIn();   
+    $outputkey  = Login::isLoggedIn();
     list($user, $key) = explode("_", $outputkey);
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
@@ -18,7 +18,7 @@
     }
     else if ($user == 'ADM') {
       header("Location: admin.php"); /* Redirect browser */
-      exit();     
+      exit();
     }
   }else {
       include('mainHeader.php');
@@ -339,7 +339,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/eventsu bmiter.js"></script>
+    <script src="js/eventsubmiter.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
     <script src="js/ie10-viewport-bug-workaround.js"></script> -->
 
@@ -369,6 +369,21 @@
             }, false);
           });
         }, false);
+        $('#navbarDropdown').click(function() {
+            var http = new XMLHttpRequest();
+            var url = "./backend/ckle.php";
+            var userIDValue = $('#userIDValue')[0].value;
+            var params = "userID="+userIDValue;
+            /*http.open("POST", url, true);
+
+            //Send the proper header information along with the request
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                console.log(params);
+            }
+            http.send(params);*/
+            window.location.href = "./backend/ckle.php?" + params;
+        });
       })();
     </script>
 

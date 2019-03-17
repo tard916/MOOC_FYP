@@ -3,10 +3,12 @@ include('./classes/DB.php');
 include('./classes/Login.php');
 date_default_timezone_set("Asia/Kuala_Lumpur");
 
-
-if(isset($_POST['userID'])){
+echo '<script>
+console.log($_POST["userID"]);
+</script>';
+if(isset($_GET['userID'])){
     $today_date=date("Y-m-d H:i:s");
-    $stdID = $_POST['userID'];
+    $stdID = $_GET['userID'];
 
     echo $stdID;
 
