@@ -97,14 +97,10 @@
             });
             videojs('curriculum-video').ready(function(){
                 this.on('ended', function() {
-                    $.post("./backend/nplayVideo.php",
-                    {
-                        userID: <?php echo $uID; ?>,
-                        videoID: <?php echo $value['id']; ?>
-                    },
+                    window.location.href = "./backend/nplayVideo.php?videoID=" + <?php echo $value['id']; ?>,
                     function(){
                         alert('video is done!');
-                    });
+                    };
                 });
             });
 
