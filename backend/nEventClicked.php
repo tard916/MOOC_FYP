@@ -10,15 +10,15 @@
         $nEvent = $_POST['nEvent'];
         $cID = $_POST['cID'];
        
-        if (!DB::query('SELECT * FROM courseevencount WHERE std_uniqueID=:id AND courseID= :cid', array(':id'=>$stdID, ':cid'=>$cID))) {
+        if (!DB::query('SELECT * FROM courseevencount WHERE studentID=:id AND courseID= :cid', array(':id'=>$stdID, ':cid'=>$cID))) {
             DB::query('INSERT INTO courseevencount VALUES ( \'\', :courseID, :studentID, :nEvent)',
             array( ':courseID'=>$cID, ':studentID'=>$stdID, ':nEvent'=>$nEvent));
             //header('Location: ../curriculumPlayer.php?crs_UniqueID='.$cID);
         }else{
-            $lastEventCount = !DB::query('SELECT nEvent FROM courseevencount WHERE std_uniqueID=:id AND courseID= :cid', 
+            $lastEventCount = !DB::query('SELECT nEvent FROM courseevencount WHERE studentID=:id AND courseID= :cid', 
             array(':id'=>$stdID, ':cid'=>$cID))[0]['nEvent'];
             $lastEventCount = $lastEventCount + $nEvent;
-            DB::query('UPDATE courseevencount SET nEvent= :nEvent WHERE std_uniqueID=:id AND courseID= :cid', 
+            DB::query('UPDATE courseevencount SET nEvent= :nEvent WHERE studentID=:id AND courseID= :cid', 
             array(':id'=>$stdID, ':cid'=>$cID, 'nEvent'=>$lastEventCount));
         }
         
