@@ -11,18 +11,6 @@ if(isset($_GET['userID'])){
     $stdID = $_GET['userID'];
     $iniActD= 1;
     
-    // $cDate = new DateTime($today_date);
-    // $lastLogin = DB::query('SELECT * FROM student_logs WHERE std_uniqueID=:id', array(':id'=>$stdID))[0]['last_login'];
-    // $ltLogin = new DateTime($lastLogin);
-
-    // if($ltLogin < $cDate){
-    //     echo 'less';
-    // }else if($ltLogin == $cDate){
-    //     echo '=';
-    // }
-
-    //echo $stdID;
-
     if (DB::query('SELECT * FROM student_logs WHERE std_uniqueID=:id', array(':id'=>$stdID))) {
 
         // $lastLogin = DB::query('SELECT * FROM student_logs WHERE std_uniqueID=:id', array(':id'=>$stdID))[0]['last_login'];

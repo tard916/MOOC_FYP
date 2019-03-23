@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 09:52 PM
+-- Generation Time: Mar 23, 2019 at 10:52 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -180,7 +180,9 @@ INSERT INTO `enrollment` (`id`, `course_id`, `student_id`, `joining_data`) VALUE
 (9, 'CRS5bf3b262b8e250.64245568', 'INS_5bdbe6b61428f9.96761451', '2019-01-28 00:00:00'),
 (10, 'CRS5bf3b262b8e250.64245568', 'STD_5c4e937529d734.97040917', '2019-01-28 00:00:00'),
 (11, 'CRS5c4eb123cbbbe9.91086078', 'STD_5c4e937529d734.97040917', '2019-01-28 00:00:00'),
-(12, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', '2019-01-28 00:00:00');
+(12, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', '2019-01-28 00:00:00'),
+(13, 'CRS5c4eb123cbbbe9.91086078', 'STD_5bdbe778153f40.94600672', '2019-03-18 07:48:18'),
+(14, 'CRS5c4eb123cbbbe9.91086078', 'STD_5bf58233577018.44407051', '2019-03-18 07:50:01');
 
 -- --------------------------------------------------------
 
@@ -232,7 +234,7 @@ CREATE TABLE `login_tokens` (
 --
 
 INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
-(1, '8b34825a70c30a6751415cc7f38c4ebbee2394ba', 'STD_0000001');
+(11, '34b34e29ee14240c8fe02d4795cf81311e3ed605', 'STD_0000001');
 
 -- --------------------------------------------------------
 
@@ -408,9 +410,42 @@ INSERT INTO `student` (`id`, `std_uniquID`, `student_name`, `email`, `password`)
 
 CREATE TABLE `student_logs` (
   `id` int(11) NOT NULL,
-  `last_login` datetime NOT NULL,
-  `std_uniqueID` varchar(70) NOT NULL
+  `last_login` date NOT NULL,
+  `std_uniqueID` varchar(70) NOT NULL,
+  `active_days` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_logs`
+--
+
+INSERT INTO `student_logs` (`id`, `last_login`, `std_uniqueID`, `active_days`) VALUES
+(1, '2019-03-24', 'STD_0000001', 3),
+(5, '2019-03-18', 'STD_5bdbe778153f40.94600672', 1),
+(6, '2019-03-18', 'STD_5bf58233577018.44407051', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `videoplay_logs`
+--
+
+CREATE TABLE `videoplay_logs` (
+  `id` int(11) NOT NULL,
+  `std_uniqueID` varchar(50) NOT NULL,
+  `video_id` int(11) NOT NULL,
+  `nplayVideo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `videoplay_logs`
+--
+
+INSERT INTO `videoplay_logs` (`id`, `std_uniqueID`, `video_id`, `nplayVideo`) VALUES
+(1, 'STD_0000001', 11, 1),
+(2, 'STD_0000001', 1, 1),
+(3, 'STD_0000001', 3, 1),
+(4, 'STD_0000001', 10, 1);
 
 --
 -- Indexes for dumped tables
@@ -515,6 +550,12 @@ ALTER TABLE `student_logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `videoplay_logs`
+--
+ALTER TABLE `videoplay_logs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -546,7 +587,7 @@ ALTER TABLE `course_cirriculum`
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `instructor`
@@ -558,7 +599,7 @@ ALTER TABLE `instructor`
 -- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `question`
@@ -600,7 +641,13 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student_logs`
 --
 ALTER TABLE `student_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `videoplay_logs`
+--
+ALTER TABLE `videoplay_logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
