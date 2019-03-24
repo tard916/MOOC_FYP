@@ -44,8 +44,8 @@
 
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container">
-            <h6 class="text-center"><a class="text-dark" href="#"><?php echo $courseName;?>.</a></h6>
-            <p class="lead question"><strong><?php echo $qts_Content;?> 😂</strong></p>
+            <h6 class="text-center"><a class="text-dark" href="#"><?php echo $courseName;?></a></h6>
+            <p class="lead question"><strong><?php echo $qts_Content;?></strong></p>
             <div class="row">
                 <p class="col-6"><small>Asked by: </small><?php echo $studentName;?></p>
                 <p class="col-6 text-muted text-right"><i class="fa fa-reply" aria-hidden="true"></i> <?php echo $nun_Of_Responses;?> Responses</p>
