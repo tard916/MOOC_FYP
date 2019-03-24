@@ -10,10 +10,9 @@
         $nEvent = $_POST['nEvent'];
         $cID = $_POST['cID'];
        
-        if (DB::query('SELECT * FROM courseevencount WHERE studentID=:id AND courseID= :cid', array(':id'=>$stdID, ':cid'=>$cID))) {
-            
+        if (DB::query('SELECT * FROM courseevencount WHERE studentID=:id AND courseID= :cid', array(':id'=>$stdID, ':cid'=>$cID))) {            
 
-            $lastEventCount = !DB::query('SELECT nEvent FROM courseevencount WHERE studentID=:id AND courseID= :cid', 
+            $lastEventCount = DB::query('SELECT nEvent FROM courseevencount WHERE studentID=:id AND courseID= :cid', 
             array(':id'=>$stdID, ':cid'=>$cID))[0]['nEvent'];
             $lastEventCount = $lastEventCount + $nEvent;
             DB::query('UPDATE courseevencount SET nEvent= :nEvent WHERE studentID=:id AND courseID= :cid', 
