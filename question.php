@@ -1,7 +1,7 @@
 <?php
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
-   //$courseID = $_GET['crs_UniqueID'];
+   $courseID = $_GET['crs_UniqueID'];
    $qst_UniqueID = $_GET['qts_ID'];
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
@@ -40,7 +40,7 @@
 
 ?>
 
-<main role="main" class="question-page">
+<main role="main" class="question-page" id="<?php echo $courseID ?>">
 
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container">
@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="container responses-section">
-        <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#answerModal">Answer</button>
+        <button id="answerBtn" class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#answerModal">Answer</button>
         <!-- answer modal -->
         <form class="" action="backend/responseQuestion.php?qts_ID=<?php echo $qst_UniqueID;?>" method="post">
             <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalTitle" aria-hidden="true">
@@ -69,7 +69,7 @@
                       <div class="form-group">
                         <textarea required name="responseContent" class="form-control noresize" id="answer-input" rows="6" placeholder="Add your answer"></textarea>
                       </div>
-                      <button type="submit" name="submitResponseFrom" class="btn btn-outline-success btn-block submit-answer">Submit</button>
+                      <button id="submitAnswer" type="submit" name="submitResponseFrom" class="btn btn-outline-success btn-block submit-answer">Submit</button>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@
         <?php
             $responses = DB::query('SELECT * FROM response WHERE question_ID= :question_ID ORDER BY id DESC', array(':question_ID'=>$qst_UniqueID));
             foreach ($responses as  $valuesRP) {
-            
+
             $studentId = $valuesRP['student_ID'];
             $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
         ?>
@@ -115,6 +115,27 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).on('ready', function () {
+            var courseID = $("main").attr('id');
+            $("#answerBtn").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $("#submitAnswer").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+
+
+        });
+    </script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
     <script src="js/ie10-viewport-bug-workaround.js"></script> -->

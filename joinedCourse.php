@@ -28,22 +28,22 @@
 
   $courseResult = DB::query('SELECT * FROM course WHERE crs_uniqueID =:courseID', array(':courseID'=>$courseID));
 
-  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));  
+  $countOfRatings = DB::returnRowCount('SELECT id FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
 
   $valOfRatings = DB::query('SELECT rating_value FROM rating WHERE course_id= :courseID', array(':courseID'=>$courseID));
   $sumOfRatings = 0;
   foreach ($valOfRatings as  $valuert) {
     $sumOfRatings =  $sumOfRatings + (float)$valuert['rating_value'];
-  } 
+  }
 
   if ($countOfRatings >= 0 && $sumOfRatings >= 0) {
-      $avRating = $sumOfRatings / $countOfRatings;      
+      $avRating = $sumOfRatings / $countOfRatings;
   }
 
 
 ?>
 
-<main role="main" class="course-page">
+<main role="main" class="course-page" id="<?php echo $courseID ?>">
 
     <!--This part is for the Carousel slide -->
     <div class="course-jumbotron jumbotron m-0 text-light">
@@ -118,11 +118,11 @@
                     <?php
                         $crriculum = DB::query('SELECT * FROM course_cirriculum WHERE week_number = :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
                         foreach ($crriculum as $value) {
-                                                          
+
                     ?>
 
                     <li class=""><a class="curriculum-link text-dark" href="curriculumPlayer.php?crs_UniqueID=<?php echo $courseID;?>"><i class="fa fa-file-video-o" aria-hidden="true"></i> <?php echo $value['title'];?></a></li>
-                    <?php 
+                    <?php
                         $selectQuiz = DB::query('SELECT * FROM quiz WHERE week_ID= :id AND course_id= :courseID', array(':id'=>$i, ':courseID'=>$courseID));
                         foreach ($selectQuiz as $valueQyiz) {
                     ?>
@@ -142,7 +142,7 @@
             <div class="tab-pane fade py-4" id="review" role="tabpanel">
 
                 <!-- Button trigger review modal  -->
-                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#reviewModal">Write Review</button>
+                <button id="writeReview" class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#reviewModal">Write Review</button>
 
                 <!-- Review modal -->
                 <form class="" action="backend/submitRating.php?courseID=<?php echo $courseID;?>" method="post">
@@ -163,17 +163,17 @@
                                 What did the instructor do well, and what could use some improvement?"></textarea>
                               </div>
                               <p class="text-danger review-validation d-none">Please fill up above fields</p>
-                              <button type="submit" name="submitRatingForm" class="btn btn-outline-success btn-block submit-review">Submit</button>
+                              <button id="submitReview" type="submit" name="submitRatingForm" class="btn btn-outline-success btn-block submit-review">Submit</button>
                           </div>
                         </div>
                       </div>
                     </div>
                 </form>
-                
+
                 <?php
                     $ratings = DB::query('SELECT * FROM rating WHERE course_id= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
                     foreach ($ratings as  $value) {
-                    
+
                     $studentId = $value['student_ID'];
                     $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
                 ?>
@@ -181,10 +181,10 @@
                     <div class="col-md-3">
                         <?php
                             foreach ($studentsID as $valuestd) {
-                                
+
                         ?>
                             <h5><?php echo $valuestd['student_name'];?></h5>
-                        <?php 
+                        <?php
                             }
                         ?>
                             <input class="rating-loading individual-rating" value="<?php echo $value['rating_value'];?>">
@@ -196,13 +196,13 @@
                     <hr>
                 </div>
 
-                <?php 
+                <?php
                     }
                 ?>
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
 
-                <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#questionModal">Ask Question</button>
+                <button id="askQuestion" class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#questionModal">Ask Question</button>
                 <!-- question modal -->
                 <form class="" action="backend/submitQuestion.php?courseID=<?php echo $courseID;?>" method="post">
                     <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalTitle" aria-hidden="true">
@@ -218,7 +218,7 @@
                               <div class="form-group">
                                 <textarea required class="form-control noresize" name="qtsContent" id="question-input" rows="6" placeholder="Describe what you're trying to achieve and where you're getting stuck"></textarea>
                               </div>
-                              <button type="submit" name="submitQuestionFrom" class="btn btn-outline-success btn-block submit-question">Submit</button>
+                              <button id="submitQuestion" type="submit" name="submitQuestionFrom" class="btn btn-outline-success btn-block submit-question">Submit</button>
                           </div>
                         </div>
                       </div>
@@ -228,7 +228,7 @@
                 <?php
                     $questions = DB::query('SELECT * FROM question WHERE crs_UniqueID= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
                     foreach ($questions as  $valuesQT) {
-                    
+
                     $studentId = $valuesQT['student_ID'];
                     $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
                 ?>
@@ -236,10 +236,10 @@
                     <div class="question-row my-4 p-4">
                     <?php
                         foreach ($studentsID as $valuestd) {
-                            
+
                     ?>
                         <h6><?php echo $valuestd['student_name'];?></h6>
-                    <?php 
+                    <?php
                          }
                     ?>
                         <p class="text-muted"><?php echo $valuesQT['create_date'];?></p>
@@ -275,6 +275,7 @@
     <script src="js/theme.min.js"></script>
     <script>
         $(document).on('ready', function () {
+            var courseID = $("main").attr('id');
             $('.course-rating').rating({
                 theme: 'krajee-fa',
                 displayOnly: true,
@@ -313,6 +314,56 @@
                     e.stopPropagation();
                 }
             });
+            $("#course-sections .list-group-item").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $(".curriculum-link").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $("#writeReview").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $("#submitReview").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $("#askQuestion").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $("#submitQuestion").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+            $(".question-link").click(function(){
+              $.post("./backend/nEventClicked.php",
+              {
+                cID: courseID,
+                nEvent: 1
+              });
+            });
+
 
         });
     </script>
