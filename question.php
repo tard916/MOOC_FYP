@@ -1,7 +1,7 @@
 <?php
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
-   //$courseID = $_GET['crs_UniqueID'];
+   $courseID = $_GET['crs_UniqueID'];
    $qst_UniqueID = $_GET['qts_ID'];
   if (Login::isLoggedIn()) {
     //echo 'Logged In!';
@@ -55,7 +55,7 @@
     <div class="container responses-section">
         <button class="btn btn btn-outline-primary btn-block mb-5" type="button" name="button" data-toggle="modal" data-target="#answerModal">Answer</button>
         <!-- answer modal -->
-        <form class="" action="backend/responseQuestion.php?qts_ID=<?php echo $qst_UniqueID;?>" method="post">
+        <form class="" action="backend/responseQuestion.php?qts_ID=<?php echo $qst_UniqueID;?>&crs_UniqueID=<?php echo $courseID;?>" method="post">
             <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
