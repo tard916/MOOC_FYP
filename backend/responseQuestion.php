@@ -22,12 +22,12 @@
                 $nunOfResponse = $nunOfResponse + 1;
                 $update = DB::query('UPDATE question SET nun_Responses = :nun_Responses WHERE qst_UniqueID =:qst_UniqueID', array('nun_Responses'=>$nunOfResponse,':qst_UniqueID'=>$question_ID));
                 if (!$update) {
-                    header('Location: ../question.php?qts_ID='.$question_ID.'&crs_UniqeID='.$courseID);                
+                    header('Location: ../question.php?qts_ID='.$question_ID.'&crs_UniqueID='.$courseID);                
                     //echo  "<script> window.location.assign('../joinedCourse.php?crs_UniqueID='+$courseID); </script>";
                 }             
                 
             }else{
-                header('Location:  ../question.php?qts_ID='.$question_ID.'&crs_UniqeID='.$courseID);
+                header('Location:  ../question.php?qts_ID='.$question_ID.'&crs_UniqueID='.$courseID);
             }
             
         }
