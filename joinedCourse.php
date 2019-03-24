@@ -232,7 +232,7 @@
                     $studentId = $valuesQT['student_ID'];
                     $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
                 ?>
-                <a class="question-link text-dark" href="question.php?qts_ID=<?php echo $valuesQT['qst_UniqueID'];?>">
+                <a class="question-link text-dark" href="question.php?qts_ID=<?php echo $valuesQT['qst_UniqueID'];?>&crs_UniqueID=<?php echo $courseID;?>">
                     <div class="question-row my-4 p-4">
                     <?php
                         foreach ($studentsID as $valuestd) {
