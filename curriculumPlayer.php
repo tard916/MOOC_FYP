@@ -17,7 +17,7 @@
   }
 ?>
 
-    <main role="main" class="container-fluid curriculum-player-wrapper">
+    <main role="main" class="container-fluid curriculum-player-wrapper" id="<?php echo $courseID; ?>">
         <div class="row">
             <div class="col-3 p-0 h-100">
                 <div id="accordion-player">
@@ -73,6 +73,7 @@
     <script src="js/video.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            var courseID = $("main").attr('id');
             var vidId;
             var player = videojs('curriculum-video');
             $(".curriculum-link").click(function(e){
@@ -99,9 +100,8 @@
             });
             videojs('curriculum-video').ready(function(){
                 this.on('ended', function() {
-                    window.location.href = "./backend/nplayVideo.php?videoID=" + vidID,
-                    function(){
-                        alert('video is done!' + vidID);
+                    window.location.href = "./backend/nplayVideo.php?videoID=" + vidID + "&cID=" + courseID, function(){
+                        alert('video is done!' + vidID + courseID);
                     };
                 });
             });
