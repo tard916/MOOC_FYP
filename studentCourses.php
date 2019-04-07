@@ -8,7 +8,7 @@
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('userHeader.php');
-      $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];  
+      $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];
     }
   }else {
       include('../mainHeader.php');
@@ -45,9 +45,9 @@
                             <input type="hidden" name="std_ID" id="userIDValue" value="<?php echo $user_ID;?>">
                             <input type="hidden" name="crs_ID" id="courseIDValue" value="<?php echo $value['crs_uniqueID'];?>">
                         <?php }?>
-                        <button class="btn btn-outline-success btn-block" type="submit" id="viewCourse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View &raquo;</button>
+                        <button class="btn btn-outline-success btn-block viewCourse" type="submit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View &raquo;</button>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
     <script src="/MOOC/MOOC_FYP/js/bootstrap.min.js"></script>
     <script>
         (function() {
-        $('#viewCourse').click(function() {
+        $('.viewCourse').click(function() {
             var http = new XMLHttpRequest();
             var url = "./backend/ckle.php";
             var userIDValue = $('#userIDValue')[0].value;
