@@ -53,7 +53,6 @@
                                         <label for="resourceType">Resource Type</label>
                                         <select id="resourceType" class="form-control form-control-sm" name="fileType<?php echo $i;?>[]">
                                             <option value="Video" selected>Video</option>
-                                            <option value="Quiz">Quiz</option>
                                             <option value="Article">Article</option>
                                         </select>
                                     </div>
