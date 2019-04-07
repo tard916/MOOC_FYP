@@ -85,7 +85,7 @@
             var url = "./backend/ckle.php";
             var userIDValue = $('#userIDValue')[0].value;
             var courseIDValue = $('#courseIDValue')[0].value;
-            var params = "userID="+userIDValue+"courseID="+courseIDValue;
+            var params = "userID="+userIDValue+"&courseID="+courseIDValue;
             /*http.open("POST", url, true);
 
             //Send the proper header information along with the request

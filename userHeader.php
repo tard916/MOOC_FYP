@@ -75,10 +75,10 @@
                     <?php }?>
                     <ul class="nav navbar-nav pull-sm-right">
                         <li class="nav-item dropdown">
-                            <button class="btn btn-outline-primary" type="submit" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $user_Name;?></button>
-                            <!-- <a class="btn btn-outline-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                            </a> -->
+                            <!-- <button class="btn btn-outline-primary" type="submit" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $user_Name;?></button> -->
+                            <a class="btn btn-outline-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?php echo $user_Name;?>
+                            </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="studentCourses.php">My Courses</a>
                                 <a class="dropdown-item" href="allCourses.php">Explore Courses</a>

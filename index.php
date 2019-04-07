@@ -375,21 +375,21 @@
             }, false);
           });
         }, false);
-        $('#navbarDropdown').click(function() {
-            var http = new XMLHttpRequest();
-            var url = "./backend/ckle.php";
-            var userIDValue = $('#userIDValue')[0].value;
-            var params = "userID="+userIDValue;
-            /*http.open("POST", url, true);
+        // $('#navbarDropdown').click(function() {
+        //     var http = new XMLHttpRequest();
+        //     var url = "./backend/ckle.php";
+        //     var userIDValue = $('#userIDValue')[0].value;
+        //     var params = "userID="+userIDValue;
+        //     /*http.open("POST", url, true);
 
-            //Send the proper header information along with the request
-            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            http.onreadystatechange = function() {//Call a function when the state changes.
-                console.log(params);
-            }
-            http.send(params);*/
-            window.location.href = "./backend/ckle.php?" + params;
-        });
+        //     //Send the proper header information along with the request
+        //     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     http.onreadystatechange = function() {//Call a function when the state changes.
+        //         console.log(params);
+        //     }
+        //     http.send(params);*/
+        //     window.location.href = "./backend/ckle.php?" + params;
+        // });
       })();
     </script>
 
