@@ -2,15 +2,13 @@
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
   if (Login::isLoggedIn()) {
-    //echo 'Logged In!';
-    //echo Login::isLoggedIn();
     $outputkey  = Login::isLoggedIn();
     list($user, $key) = explode("_", $outputkey);
 
     if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       include('userHeader.php');
-
+      $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];  
     }
   }else {
       include('../mainHeader.php');
@@ -42,7 +40,14 @@
                     ?>
                     <h6 class="card-subtitle mb-4 text-muted"><?php echo $retrieve_the_instructor;?></h6>
                     <p>Rating: 0.0 <small class="text-muted">(0)</small><small class="text-muted pull-right mt-1"><?php echo $value['duration'];?> weeks</small></p>
-                    <a class="btn btn-outline-success btn-block" href="joinedCourse.php?crs_UniqueID=<?php echo $value['crs_uniqueID'];?>" role="button">View &raquo;</a>
+                    <form id="loginEvent">
+                        <?php if(isset($user_ID)) {?>
+                            <input type="hidden" name="std_ID" id="userIDValue" value="<?php echo $user_ID;?>">
+                            <input type="hidden" name="crs_ID" id="courseIDValue" value="<?php echo $value['crs_uniqueID'];?>">
+                        <?php }?>
+                        <button class="btn btn-outline-success btn-block" type="submit" id="viewCourse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View &raquo;</button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
@@ -73,6 +78,25 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="/MOOC/MOOC_FYP/js/bootstrap.min.js"></script>
+    <script>
+        (function() {
+        $('#viewCourse').click(function() {
+            var http = new XMLHttpRequest();
+            var url = "./backend/ckle.php";
+            var userIDValue = $('#userIDValue')[0].value;
+            var courseIDValue = $('#courseIDValue')[0].value;
+            var params = "userID="+userIDValue+"courseID="+courseIDValue;
+            /*http.open("POST", url, true);
 
+            //Send the proper header information along with the request
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                console.log(params);
+            }
+            http.send(params);*/
+            window.location.href = "./backend/ckle.php?" + params;
+        });
+      })();
+    </script>
 </body>
 </html>

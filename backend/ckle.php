@@ -9,6 +9,7 @@ date_default_timezone_set("Asia/Kuala_Lumpur");
 if(isset($_GET['userID'])){
     $today_date=date("Y-m-d");
     $stdID = $_GET['userID'];
+    $crsID = $_GET['courseID'];
     $iniActD= 1;
     
     if (DB::query('SELECT * FROM student_logs WHERE std_uniqueID=:id', array(':id'=>$stdID))) {

@@ -69,7 +69,7 @@
                       </div>
                     </div>
                 </ul>
-                <form id="loginEvent"v>
+                <form id="loginEvent">
                     <?php if(isset($user_ID)) {?>
                         <input type="hidden" name="std_ID" id="userIDValue" value="<?php echo $user_ID;?>">
                     <?php }?>
