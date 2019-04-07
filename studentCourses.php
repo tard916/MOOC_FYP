@@ -83,8 +83,8 @@
         $('.viewCourse').click(function() {
             var http = new XMLHttpRequest();
             var url = "./backend/ckle.php";
-            var userIDValue = $('#userIDValue')[0].value;
-            var courseIDValue = $('#courseIDValue')[0].value;
+            var userIDValue = $(this).siblings('#userIDValue')[0].value;
+            var courseIDValue = $(this).siblings('#courseIDValue')[0].value;
             var params = "userID="+userIDValue+"&courseID="+courseIDValue;
             /*http.open("POST", url, true);
 
