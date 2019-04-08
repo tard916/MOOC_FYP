@@ -43,17 +43,16 @@
                                 <div class="form-row align-items-center">
                                     <div class="form-group col-md-4">
                                         <label for="resourceTitle">Title</label>
-                                        <input type="text" class="form-control form-control-sm" id="resourceTitle" name="title<?php echo $i;?>[]">
+                                        <input required type="text" class="form-control form-control-sm" id="resourceTitle" name="title<?php echo $i;?>[]">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="resourceFile">Resource File</label>
-                                        <input type="file" class="form-control-file" id="resourceFile" name="fileName<?php echo $i;?>[]">
+                                        <input required type="file" class="form-control-file" id="resourceFile" name="fileName<?php echo $i;?>[]">
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="resourceType">Resource Type</label>
                                         <select id="resourceType" class="form-control form-control-sm" name="fileType<?php echo $i;?>[]">
                                             <option value="Video" selected>Video</option>
-                                            <option value="Quiz">Quiz</option>
                                             <option value="Article">Article</option>
                                         </select>
                                     </div>
@@ -100,10 +99,10 @@
             var formRow =   $(document.createElement("div")).addClass('form-row align-items-center pt-3').css( "border-top", "1px solid #d1d1d1" );
             var titleGroup= $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
                             $(document.createElement("label")).attr('for', 'resourceTitle').text('Title').appendTo(titleGroup);
-                            $(document.createElement("input")).attr({type: "text",id: "resourceTitle", name: "title"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(titleGroup);
+                            $(document.createElement("input")).attr({required: "true", type: "text",id: "resourceTitle", name: "title"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(titleGroup);
             var fileGroup = $(document.createElement("div")).addClass('form-group col-md-4').appendTo(formRow);
                             $(document.createElement("label")).attr('for', 'resourceFile').text('Resource File').appendTo(fileGroup);
-                            $(document.createElement("input")).attr({type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(fileGroup);
+                            $(document.createElement("input")).attr({required: "true", type: "file",id: "resourceFile", name: "fileName"+weekID+"[]"}).addClass('form-control-file').appendTo(fileGroup);
             var typeGroup = $(document.createElement("div")).addClass('form-group col-md-3').appendTo(formRow);
                             $(document.createElement("label")).attr('for', 'resourceType').text('Resource Type').appendTo(typeGroup);
             var select =    $(document.createElement("select")).attr({id: "resourceType", name: "fileType"+weekID+"[]"}).addClass('form-control form-control-sm').appendTo(typeGroup);
