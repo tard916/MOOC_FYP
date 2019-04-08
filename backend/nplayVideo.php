@@ -10,9 +10,11 @@
         $cID = $_GET['cID'];
         $npv = 1;
         
-        if (!DB::query('SELECT * FROM videoplay_logs WHERE std_uniqueID=:id AND video_id= :vid', array(':id'=>$stdID, ':vid'=>$vID))) {
-            DB::query('INSERT INTO videoplay_logs VALUES ( \'\', :std_uniqueID, :video_id, :nplayVideo)',
-            array(':std_uniqueID'=>$stdID, ':video_id'=>$vID, ':nplayVideo'=>$npv));
+        if (!DB::query('SELECT * FROM videoplay_logs WHERE std_uniqueID=:id AND video_id= :vid and course_ID= :cID', array(':id'=>$stdID, ':vid'=>$vID, ':cID'=>$cID))) {
+            DB::query('INSERT INTO videoplay_logs VALUES ( \'\', :std_uniqueID, :course_ID, :video_id, :nplayVideo)',
+            array(':std_uniqueID'=>$stdID, ':course_ID'=>$cID, ':video_id'=>$vID, ':nplayVideo'=>$npv));
+            header('Location: ../curriculumPlayer.php?crs_UniqueID='.$cID);
+        }else{
             header('Location: ../curriculumPlayer.php?crs_UniqueID='.$cID);
         }
         
