@@ -7,7 +7,7 @@ $courseID = $_GET['cid'];
     if (isset($_GET['id'])) {
         $rowID = $_GET['id'];
         $dbstatus = DB::query('SELECT status FROM course_cirriculum WHERE id = :rowID', array(':rowID'=>$rowID))[0]['status'];
-
+        
         if ($dbstatus == "show") {
             $stsHide = "hide";
             $hideResult =  DB::query('UPDATE course_cirriculum SET status=:stsHide WHERE id = :cntntID', 
