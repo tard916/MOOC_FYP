@@ -168,13 +168,13 @@
             </div>
             <div class="tab-pane fade py-4" id="qa" role="tabpanel">
 
-            <?php
-                $questions = DB::query('SELECT * FROM question WHERE crs_UniqueID= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
-                foreach ($questions as  $valuesQT) {
-                
-                $studentId = $valuesQT['student_ID'];
-                $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
-            ?>
+                <?php
+                    $questions = DB::query('SELECT * FROM question WHERE crs_UniqueID= :courseID ORDER BY id DESC', array(':courseID'=>$courseID));
+                    foreach ($questions as  $valuesQT) {
+                    
+                    $studentId = $valuesQT['student_ID'];
+                    $studentsID = DB::query('SELECT * FROM student WHERE  std_uniquID =:std_uniquID', array(':std_uniquID'=>$studentId));
+                ?>
                 <a class="question-link text-dark" href="question.php?qts_ID=<?php echo $valuesQT['qst_UniqueID'];?>">
                     <div class="question-row my-4 p-4">
                     <?php
@@ -207,18 +207,50 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mehrab Kamrani</td>
-                            <td>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100">71%</div>
-                                </div>
-                            </td>
-                            <td><i class="fa fa-times at-risk" aria-hidden="true"></i></td>
-                        </tr>
+                        <?php
+                            $listOfStudent = DB::query('SELECT student_at_risk.studentID as ID, 
+                            student.student_name as name,student_at_risk.dropout as dropout
+                            FROM student_at_risk, student
+                            WHERE student_at_risk.courseID = :courseID
+                            AND student_at_risk.studentID = student.std_uniquID',
+                             array(':courseID'=>$courseID));
+                            foreach ($listOfStudent as  $valuesSLT) {
+                            
+                            $studentId = $valuesSLT['ID'];
+                            $type="Video";
+                            $countVideo = DB::query('SELECT count(type) as totalVideo FROM course_cirriculum WHERE course_id = :courseID and type= :type',
+                            array(':type'=>$type, ':courseID'=>$courseID))[0]['totalVideo'];                            
+                            // echo $countVideo;
 
+                            $sumOfVideoWatched = DB::query('SELECT sum(nplayVideo) as sumOfVideoWatched FROM videoplay_logs WHERE std_uniqueID = :stdID AND course_ID = :courseID',
+                            array(':stdID'=>$studentId, ':courseID'=>$courseID))[0]['sumOfVideoWatched'];
+                            // echo $sumOfVideoWatched;
+
+                            $totalProgress = number_format((( $sumOfVideoWatched *100 ) / $countVideo), 2, '.', '');
+                            // ( $sumOfVideoWatched *100 ) / $countVideo;
+                            // echo $totalProgress;
+                            
+                        ?>
                         <tr>
+                            <th scope="row"><?php echo $valuesSLT['ID']?></th>
+                            <td><?php echo $valuesSLT['name']?></td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="<?php echo $totalProgress;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $totalProgress;?>%</div>
+                                </div>
+                            </td>
+                            
+                            <?php if ($valuesSLT['dropout'] == 0) {?>
+                                <td><i class="fa fa-times " aria-hidden="true"></i></td>
+                            <?php }else{?>
+                                <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                            <?php }?>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+
+                        <!-- <tr>
                             <th scope="row">2</th>
                             <td>Hassan Saleem</td>
                             <td>
@@ -317,7 +349,7 @@
                                 </div>
                             </td>
                             <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                     <tfoot>
                         <tr>
@@ -431,7 +463,7 @@
 
   <footer class="footer py-4 bg-dark text-light">
       <div class="container">
-      <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
+      <span class="cprTxt"> &copy;2019 HELP-MOOC</span>
       </div>
   </footer>
   <!--This part is for the footer section -->

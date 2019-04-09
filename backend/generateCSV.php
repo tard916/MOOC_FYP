@@ -1,10 +1,10 @@
 <?php 
 
-include('./classes/DB.php');
-include('./classes/Login.php');
+// include('./classes/DB.php');
+// include('./classes/Login.php');
 date_default_timezone_set("Asia/Kuala_Lumpur");
 
-$filelocation = '../ML_SRC/';
+$filelocation = './ML_SRC/';
 $filename     = 'studentList-'.date('Y-m-d H.i.s').'.csv';
 $file_export  =  $filelocation . $filename;
 

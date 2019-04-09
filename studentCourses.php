@@ -64,7 +64,7 @@
       <p class="float-right ">
           <a class="cprTxt" href="#">Back to top</a>
       </p>
-      <p class="cprTxt"> &copy;2018 HELP-MOOC</p>
+      <p class="cprTxt"> &copy;2019 HELP-MOOC</p>
 
       </div>
   </footer>

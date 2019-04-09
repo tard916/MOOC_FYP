@@ -96,7 +96,7 @@
 
   <footer class="footer py-4 bg-dark text-light">
       <div class="container">
-      <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
+      <span class="cprTxt"> &copy;2019 HELP-MOOC</span>
       </div>
   </footer>
   <!--This part is for the footer section -->

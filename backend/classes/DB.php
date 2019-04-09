@@ -9,7 +9,10 @@
         }
 
         public static function conn() {
-            $pdo = new PDO('mysql:host=127.0.0.1;dbname=help-mooc;charset=utf8', 'root', '');
+            $pdo = new PDO('mysql:host=127.0.0.1;dbname=help-mooc;charset=utf8', 'root', '', array(
+                PDO::MYSQL_ATTR_LOCAL_INFILE => true,
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            ));
             $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $pdo;
         }
@@ -28,19 +31,7 @@
             $statement->execute($params);
             $count = $statement->rowCount();
             return $count;
-        }
-
-        public static function generateCSV($query , $params = array()){
-           
-            $filelocation = '../ML_SRC/';
-            $filename     = 'studentList-'.date('Y-m-d H.i.s').'.csv';
-            $file_export  =  $filelocation . $filename;
-            $fp = fopen($file_export, 'w');
-            fputcsv($fp, array());
-
-        }
-
-        
+        }        
             
     }
     

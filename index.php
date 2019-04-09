@@ -6,15 +6,16 @@
     list($user, $key) = explode("_", $outputkey);
     if ($user == 'INS') {
       $user_Name = DB::query('SELECT instructor_name FROM instructor WHERE ins_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['instructor_name'];
-
-      include('./instructorHeader.php');
-      // echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+      include('./instructorHeader.php');     
+      include('./backend/generateCSV.php');
+      include('./backend/loadCSV.php');
+     
     }
     else if ($user == 'STD') {
       $user_Name = DB::query('SELECT student_name FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['student_name'];
       $user_ID = DB::query('SELECT std_uniquID FROM student WHERE std_uniquID=:outputkey', array(':outputkey'=>$outputkey))[0]['std_uniquID'];
       include('./userHeader.php');
-      // echo "<script>console.log( 'Debug Objects: " . $user_Name . "' );</script>";
+      
     }
     else if ($user == 'ADM') {
       header("Location: admin.php"); /* Redirect browser */
@@ -332,7 +333,7 @@
 
   <footer class="footer py-4 bg-dark text-light">
       <div class="container">
-      <span class="cprTxt"> &copy;2018 HELP-MOOC</span>
+      <span class="cprTxt"> &copy;2019 HELP-MOOC</span>
       </div>
   </footer>
   <!--This part is for the footer section -->
