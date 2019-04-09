@@ -24,7 +24,10 @@
     $file = "./ML_SRC/dropout_prediction.csv"; 
     $handle = fopen($file, "r"); 
     $pdo = DB::conn();
+
     try { 
+        //delete the old record
+        DB::query('DELETE FROM student_at_risk');
         // prepare for insertion
         $query_ip = $pdo->prepare('INSERT INTO student_at_risk (courseID, studentID, dropout) VALUES (?, ?, ?)');
 

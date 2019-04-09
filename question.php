@@ -1,4 +1,5 @@
 <?php
+  error_reporting(0);
   include('./backend/classes/DB.php');
   include('./backend/classes/Login.php');
    $courseID = $_GET['crs_UniqueID'];
