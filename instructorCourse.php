@@ -233,17 +233,17 @@
                         ?>
                         <tr>
                             <th scope="row"><?php echo $valuesSLT['ID']?></th>
-                            <td><?php echo $valuesSLT['name']?></td>
-                            <td>
+                            <td scope="row"><?php echo $valuesSLT['name']?></td>
+                            <td scope="row">
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="<?php echo $totalProgress;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $totalProgress;?>%</div>
+                                    <div class="progress-bar" role="progressbar" style="width: <?php echo $totalProgress;?>%;" aria-valuenow="<?php echo $totalProgress;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $totalProgress;?>%</div>
                                 </div>
                             </td>
                             
                             <?php if ($valuesSLT['dropout'] == 0) {?>
-                                <td><i class="fa fa-times " aria-hidden="true"></i></td>
+                                <td scope="row"><i class="fa fa-times " aria-hidden="true"></i></td>
                             <?php }else{?>
-                                <td><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
+                                <td scope="row"><i class="fa fa-check at-risk" aria-hidden="true"></i></td>
                             <?php }?>
                         </tr>
                         <?php
