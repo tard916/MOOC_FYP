@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 01:33 PM
+-- Generation Time: Apr 15, 2019 at 04:35 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -103,10 +103,10 @@ CREATE TABLE `course` (
 
 INSERT INTO `course` (`id`, `crs_uniqueID`, `course_name`, `category_id`, `starting_date`, `duration`, `pre_requirments`, `learning_outcomes`, `descriptions`, `status`, `instructor_id`, `course_path_fol`, `course_image`) VALUES
 (1, 'CRS5bf3b262b8e250.64245568', 'Learn Advanced C++ Programming', 10, '2018-11-26', 14, 'You will need a grasp of basic C++, together with a C++ compiler.', 'Develop complex C++ applications. Be in a position to apply for jobs requiring good C++ knowledge. Understand C++ 11.', 'This course will take you from a basic knowledge of C++ to using more advanced features of the language. This course is for you if you want to deepen your basic knowledge of C++, you want to learn C++ 11 features, or you\'ve taken my free beginners\' C++ course and you\'re looking for the next step.  We\'ll start with a look at C++ file handling and move through STL, template classes, operator overloading, lambda expressions, move constructors and much more besides.  At the end of the course I\'ll show you how to create a program that generates fractal images, using a a few of the language features we\'ve seen in the course and giving you a great work out with smart pointers and arrays.  I\'ll give you exercises throughout the course, ranging from easy near the start, to quite tricky (but optional!) near the end of the course.', 'pending', 'INS_5bdbe6b61428f9.96761451', './src/courses/Learn Advanced C++ Programming', 'c++_image.jpg'),
-(4, 'CRS5bf503ec83b320.09956687', 'AWS Certified Solutions Architect - Associate 2018 ', 10, '2018-11-26', 14, 'You will need to set up an AWS Account (you can use the free tier for this course)     Your own domain name (optional, but recommended)     A Windows, Linux or Mac PC/Laptop', 'Pass the AWS Certified Solutions Architect - Associate Exam Design Highly Resilient and Scaleable Websites on AWS Become Intimately Familiar With The AWS Platform Become Amazon Certified Become A Cloud Guru ', 'Are you looking for AWS Training?  Amazon Web Services (AWS) Certification is fast becoming the must have certificates for any IT professional working with AWS. This course is designed to help you pass the AWS Certified Solutions Architect (CSA) - Associate Exam. Even if you have never logged in to the AWS platform before, by the end of our AWS training you will be able to take the CSA exam. No programming knowledge needed and no prior AWS experience required. With this AWS certification under your belt (and optionally after completing our AWS Certified Developer 2018 - also available on Udemy), you will be in high demand by many employers and you can command a superior salary.  In this course we will start with a broad overview of the AWS platform and then deep dive into the individual elements of the AWS platform. You will explore Route53, EC2, S3, Cloud Front, Autoscaling, Load Balancing, RDS, RedShift, DynamoDB, EMR, VPC etc.  Read the fantastic reviews of our course!  Alex describes this course as \"The b', 'pending', 'INS_5bdbe6b61428f9.96761451', './src/courses/AWS Certified Solutions Architect - Associate 2018 ', 'aws.png'),
-(5, 'CRS5bf57dd1b867c0.24701603', 'Build a PHP MVC Framework From Scratch ', 10, '2019-01-01', 14, '      You should already be familiar with PHP and HTML.     You should be comfortable installing software on your computer - in the first section we\'ll be installing a web server.', 'Separate application code from presentation code Organise your PHP code into models, views and controllers in an MVC framework Use namespaces and an autoloader to load PHP classes automatically Use the Composer tool to manage third-party package dependenc', 'Learn the basic concepts of using a model-view-controller framework that will make your PHP projects faster, easier to write and maintain, and more secure.  Learn to Structure your PHP Code Like a Professional by Building a PHP MVC Framework from Scratch.      Model-view-controller (MVC) pattern concepts     Build an MVC framework in PHP from scratch     Separate application code from presentation code     Use namespaces and an autoloader to load classes automatically  Take your PHP Projects to the Next Level  Learning how to use an MVC framework puts a very powerful tool at your fingertips. Most commercial websites and web applications written in PHP use some sort of framework, and the MVC pattern is the most popular type of framework in use.  The gap between knowing PHP and using a framework can be huge. This course bridges that gap. By writing your own framework from scratch, you\'ll gain an understanding of just how each component works. Frameworks like Laravel, Symfony and CodeIgniter all use the MVC patt', 'pending', 'INS_5bf57b2ce6ca93.54920529', './src/courses/Build a PHP MVC Framework From Scratch ', 'php.png'),
+(4, 'CRS5bf503ec83b320.09956687', 'AWS Certified Solutions Architect - Associate 2018 ', 10, '2018-11-26', 14, 'You will need to set up an AWS Account (you can use the free tier for this course)     Your own domain name (optional, but recommended)     A Windows, Linux or Mac PC/Laptop', 'Pass the AWS Certified Solutions Architect - Associate Exam Design Highly Resilient and Scaleable Websites on AWS Become Intimately Familiar With The AWS Platform Become Amazon Certified Become A Cloud Guru ', 'Are you looking for AWS Training?  Amazon Web Services (AWS) Certification is fast becoming the must have certificates for any IT professional working with AWS. This course is designed to help you pass the AWS Certified Solutions Architect (CSA) - Associate Exam. Even if you have never logged in to the AWS platform before, by the end of our AWS training you will be able to take the CSA exam. No programming knowledge needed and no prior AWS experience required. With this AWS certification under your belt (and optionally after completing our AWS Certified Developer 2018 - also available on Udemy), you will be in high demand by many employers and you can command a superior salary.  In this course we will start with a broad overview of the AWS platform and then deep dive into the individual elements of the AWS platform. You will explore Route53, EC2, S3, Cloud Front, Autoscaling, Load Balancing, RDS, RedShift, DynamoDB, EMR, VPC etc.  Read the fantastic reviews of our course!  Alex describes this course as \"The b', 'approved', 'INS_5bdbe6b61428f9.96761451', './src/courses/AWS Certified Solutions Architect - Associate 2018 ', 'aws.png'),
+(5, 'CRS5bf57dd1b867c0.24701603', 'Build a PHP MVC Framework From Scratch ', 10, '2019-01-01', 14, '      You should already be familiar with PHP and HTML.     You should be comfortable installing software on your computer - in the first section we\'ll be installing a web server.', 'Separate application code from presentation code Organise your PHP code into models, views and controllers in an MVC framework Use namespaces and an autoloader to load PHP classes automatically Use the Composer tool to manage third-party package dependenc', 'Learn the basic concepts of using a model-view-controller framework that will make your PHP projects faster, easier to write and maintain, and more secure.  Learn to Structure your PHP Code Like a Professional by Building a PHP MVC Framework from Scratch.      Model-view-controller (MVC) pattern concepts     Build an MVC framework in PHP from scratch     Separate application code from presentation code     Use namespaces and an autoloader to load classes automatically  Take your PHP Projects to the Next Level  Learning how to use an MVC framework puts a very powerful tool at your fingertips. Most commercial websites and web applications written in PHP use some sort of framework, and the MVC pattern is the most popular type of framework in use.  The gap between knowing PHP and using a framework can be huge. This course bridges that gap. By writing your own framework from scratch, you\'ll gain an understanding of just how each component works. Frameworks like Laravel, Symfony and CodeIgniter all use the MVC patt', 'approved', 'INS_5bf57b2ce6ca93.54920529', './src/courses/Build a PHP MVC Framework From Scratch ', 'php.png'),
 (6, 'CRS5bf57f1fdf6911.21308780', 'Modern React with Redux 2019 Update', 10, '2019-01-01', 10, 'A Mac or Windows Computer', 'Build amazing single page applications with React JS and Redux Master fundamental concepts behind structuring Redux applications Realize the power of building composable components Be the engineer who explains how Redux works to everyone else, because you', 'Course Last Updated November 2018 for React v16.6.3 and Redux v4.0.1!  All content is brand new!  Congratulations!  You\'ve found the most popular, most complete, and most up-to-date resource online for learning React and Redux!  Thousands of other engineers have learned React and Redux, and you can too.  This course uses a time-tested, battle-proven method to make sure you understand exactly how React and Redux work, and will get you a new job working as a software engineer or help you build that app you\'ve always been dreaming about.  The difference between this course and all the others: you will understand the design patterns used by top companies to build massively popular web apps.  React is the most popular Javascript library of the last five years, and the job market is still hotter than ever.  Companies large and small can\'t hire engineers who understand React and Redux fast enough, and salaries for engineers are at an all time high.  It\'s a great time to learn React!  ----------------------  What will you build?  This course features hundreds of videos with dozens of custom diagrams to help you understand how React and Redux work.  No prior experience with either is necessary. Through tireless, patient explanations and many interesting practical examples, you\'ll learn the fundamentals of building dynamic and live web apps using React.  Each topic included in this course is added incrementally, to make sure that you have a solid foundation of knowledge.  You\'ll find plenty of discussion added in to help you understand exactly when and where to use each feature of React and Redux.  My guarantee to you: there is no other course online that teaches more features of React and Redux.  This is the most comprehensive resource there is.   Below is a partial list of the topics you\'ll find in this course:      Master the fundamental features of React, including JSX, state, and props      From square one, understand how to build reusable components      Dive into the source code of Redux to understand how it works behind the scenes      Test your knowledge and hone your skills with numerous coding exercises      Integrate React with advanced browser features, even geolocation API\'s!      Use popular styling libraries to build beautiful apps      Master different techniques of deployment so you can show off the apps you build!      See different methods of building UI\'s through composition of components   Besides just React and Redux, you\'ll pick up countless other tidbits of knowledge, including ES2015 syntax, popular design patterns, even the clearest explanation of the keyword \'this\' in Javascript that you\'ll ever hear.  This is the course I wanted to take when I first learned React: complete, up-to-date, and clear.   Who is the target audience?      Programmers looking to learn React     Developers who want to grow out of just using jQuery     Engineers who have researched React but have had trouble mastering some concepts', 'pending', 'INS_5bf57b2ce6ca93.54920529', './src/courses/Modern React with Redux 2019 Update', 'react.png'),
-(7, 'CRS5bf581a165e472.55878742', 'Instagram Masterclass 2018', 12, '2019-01-01', 14, '      Have access to a smartphone and a consistent internet connection     No prior experience with Instagram required', 'Learn how to create a successful themed, business, or personal account on Instagram Be able to pick an effective name for their account Understand the platform specific and growth marketing jargon associated with Instagram Create an attractive logo and fu', '***Join the over 8,900 students that have joined this course in the first 4 days of being live!***   This is the most comprehensive course on Instagram Marketing anywhere.   With over 21 hours of video and 60+ custom resources & guides, you won’t find a more thorough and up to date course out there.   We cover everything you need to know to start from scratch and grow an account to 20k, 40k, even 100k followers.   This course is for both beginners to Instagram and more advanced students that have some experience with the platform.   We’ll first start by teaching the basics of:  • Setting up and optimizing an account  • Developing a content strategy  • Creating your first batch of content  • Learning how to post & how to optimize hashtags   After that, we’ll start exploring intermediate growth strategies like:  • Shoutouts  • Bots & automated systems  • Top post targeted hashtags   After we establish a consistent system for growing our audience we’ll start diving into advanced concepts:   • Hiring low cost content producers and designing a production system  • Introducing automation into content production, posting, and even outreach  • Using stories to increase engagement through your feed and expand your reach  • Designing an Instagram Live strategy to consistently create spikes in follows  • Creating zombie accounts that help drive traffic to your main account  • Design effective Instagram ads and how to incorporate them into your overall growth strategy  • How to run competitions to grow engagement and follows.   And much much more!   This course is designed to apply to both individuals that want to grow a following for themselves, but also businesses that want to start a presence on the platform and use it to grow their brand.                                                     ----------------------------------------------------   Are you tired of courses that just repeat information you could have found on a blog or YouTube? Or maybe you’ve been stuck with instructors that TELL you what to do but have no idea what it takes to really accomplish what they’re teaching?  In this course, we don’t just TALK the TALK. We will actually DO what we are teaching.   Follow along as we take an account from complete scratch to 43,000 followers.   We start from the absolute beginning with conceptualizing the account, and we end with a well defined content strategy, over 700 posts, and have even started to generate revenue with our account.   @innovationstation <<check it out  No fake followers, no boosted posts, & no cheating. 43,000 REAL followers with an average engagement rate over 7%. Our account is growing by over 300+ followers a day, using the strategies taught in this course.                                                     ----------------------------------------------------   Beware other Instagram courses are outdated, shallow, and taught by instructors who have never grown an account themselves.    Outdated: Instagram changes its system, it’s features, and it’s algorithm at least 3 times a year. That means if your instructor filmed their course in 2015, they’ve missed at least 9 different cycles! Their advice is not only out-dated, it’s worthless.   Shallow: Instagram is a huge opportunity and very complicated product. Anyone who tells you that you can “master Instagram” in 4 hours simply is not telling the truth. It’s not enough to just SHOW you how to add a hashtag. You have to understand how they work, how to track them, and how you can apply a comprehensive strategy to your posts to stay ahead of the game.   Your Instructor:  Evan Kimbrell is a top-rated Udemy instructor with over 30 courses on Entrepreneurship & Marketing. His courses have over 280,000 students, 16,000+ 5 star reviews, and have been covered in publications such as TechCrunch, Entrepreneur Magazine, and Buzzfeed. Who is the target audience?      Anyone interested in starting an Instagram account for theirself or their business     Anyone with an already existing account that they want to improve and grow', 'pending', 'INS_5bf57b2ce6ca93.54920529', './src/courses/Instagram Masterclass 2018', 'instagram.png'),
+(7, 'CRS5bf581a165e472.55878742', 'Instagram Masterclass 2018', 12, '2019-01-01', 14, '      Have access to a smartphone and a consistent internet connection     No prior experience with Instagram required', 'Learn how to create a successful themed, business, or personal account on Instagram Be able to pick an effective name for their account Understand the platform specific and growth marketing jargon associated with Instagram Create an attractive logo and fu', '***Join the over 8,900 students that have joined this course in the first 4 days of being live!***   This is the most comprehensive course on Instagram Marketing anywhere.   With over 21 hours of video and 60+ custom resources & guides, you won’t find a more thorough and up to date course out there.   We cover everything you need to know to start from scratch and grow an account to 20k, 40k, even 100k followers.   This course is for both beginners to Instagram and more advanced students that have some experience with the platform.   We’ll first start by teaching the basics of:  • Setting up and optimizing an account  • Developing a content strategy  • Creating your first batch of content  • Learning how to post & how to optimize hashtags   After that, we’ll start exploring intermediate growth strategies like:  • Shoutouts  • Bots & automated systems  • Top post targeted hashtags   After we establish a consistent system for growing our audience we’ll start diving into advanced concepts:   • Hiring low cost content producers and designing a production system  • Introducing automation into content production, posting, and even outreach  • Using stories to increase engagement through your feed and expand your reach  • Designing an Instagram Live strategy to consistently create spikes in follows  • Creating zombie accounts that help drive traffic to your main account  • Design effective Instagram ads and how to incorporate them into your overall growth strategy  • How to run competitions to grow engagement and follows.   And much much more!   This course is designed to apply to both individuals that want to grow a following for themselves, but also businesses that want to start a presence on the platform and use it to grow their brand.                                                     ----------------------------------------------------   Are you tired of courses that just repeat information you could have found on a blog or YouTube? Or maybe you’ve been stuck with instructors that TELL you what to do but have no idea what it takes to really accomplish what they’re teaching?  In this course, we don’t just TALK the TALK. We will actually DO what we are teaching.   Follow along as we take an account from complete scratch to 43,000 followers.   We start from the absolute beginning with conceptualizing the account, and we end with a well defined content strategy, over 700 posts, and have even started to generate revenue with our account.   @innovationstation <<check it out  No fake followers, no boosted posts, & no cheating. 43,000 REAL followers with an average engagement rate over 7%. Our account is growing by over 300+ followers a day, using the strategies taught in this course.                                                     ----------------------------------------------------   Beware other Instagram courses are outdated, shallow, and taught by instructors who have never grown an account themselves.    Outdated: Instagram changes its system, it’s features, and it’s algorithm at least 3 times a year. That means if your instructor filmed their course in 2015, they’ve missed at least 9 different cycles! Their advice is not only out-dated, it’s worthless.   Shallow: Instagram is a huge opportunity and very complicated product. Anyone who tells you that you can “master Instagram” in 4 hours simply is not telling the truth. It’s not enough to just SHOW you how to add a hashtag. You have to understand how they work, how to track them, and how you can apply a comprehensive strategy to your posts to stay ahead of the game.   Your Instructor:  Evan Kimbrell is a top-rated Udemy instructor with over 30 courses on Entrepreneurship & Marketing. His courses have over 280,000 students, 16,000+ 5 star reviews, and have been covered in publications such as TechCrunch, Entrepreneur Magazine, and Buzzfeed. Who is the target audience?      Anyone interested in starting an Instagram account for theirself or their business     Anyone with an already existing account that they want to improve and grow', 'approved', 'INS_5bf57b2ce6ca93.54920529', './src/courses/Instagram Masterclass 2018', 'instagram.png'),
 (8, 'CRS5bf5837d5dfbb6.84482592', 'Introduction to Finance, Accounting, Modeling and Valuation', 1, '2019-01-01', 14, 'You don’t need to have any accounting or finance experience as we will cover all of the concepts from scratch. A requirement is that you have access to and a very basic understanding of how to use Microsoft Excel as we will use Microsoft Excel in the cour', 'Analyze and understand a balance sheet (even if you have no experience with balance sheets).Understand and use modeling best practices so you can create financial models. Know where to get data in order to build a financial model (in depth understanding o', '1 Best Selling Accounting Course on Udemy (Learn Finance and Accounting the Easy Way)!     ** ACCORDING TO BUSINESS INSIDER: \"Haroun is one of the highest rated professors on Udemy, so you can expect to be in good hands through the course of your education.\" **  He is the author of the best selling business course on Udemy this year called \'An Entire MBA in 1 Course\'  This course will help you understand accounting, finance, financial modeling and valuation from scratch (no prior accounting, finance, modeling or valuation experience is required).  After taking this course you will understand how to create, analyze and forecast an income statement, balance sheet and cash flow statement.   By the end of his course you will also know how to value companies using several different valuation methodologies that I have used during my Wall Street career so you can come up with target prices for the companies that you are analyzing.  By the end of this course you will also know how to analyze financial statements usin', 'pending', 'INS_5bdbe6b61428f9.96761451', './src/courses/Introduction to Finance, Accounting, Modeling and Valuation', 'finance.jpg'),
 (9, 'CRS5bf59afa380cc1.59183764', 'Learn Advanced C++ Programming', 10, '2018-12-03', 14, 'You will need a grasp of basic C++, together with a C++ compiler.', 'Develop complex C++ applications. Be in a position to apply for jobs requiring good C++ knowledge. Understand C++ 11.', 'This course will take you from a basic knowledge of C++ to using more advanced features of the language. This course is for you if you want to deepen your basic knowledge of C++, you want to learn C++ 11 features, or you\'ve taken my free beginners\' C++ course and you\'re looking for the next step.  We\'ll start with a look at C++ file handling and move through STL, template classes, operator overloading, lambda expressions, move constructors and much more besides.  At the end of the course I\'ll show you how to create a program that generates fractal images, using a a few of the language features we\'ve seen in the course and giving you a great work out with smart pointers and arrays.  I\'ll give you exercises throughout the course, ranging from easy near the start, to quite tricky (but optional!) near the end of the course.', 'approved', 'INS_5bf59a9b237236.61314317', './src/courses/Learn Advanced C++ Programming', 'c++_image.jpg'),
 (10, 'CRS5c21e7b6ecb710.15500033', 'Statistics for Data Science and Business Analysis', 10, '2019-01-01', 14, '      Absolutely no experience is required. We will start from the basics and gradually build up your knowledge. Everything is in the course.     A willingness to learn and practice', '    Understand the fundamentals of statistics     Learn how to work with different types of data     How to plot different types of data     Calculate the measures of central tendency, asymmetry, and variability     Calculate correlation and covariance   ', 'Is statistics a driving force in the industry you want to enter? Do you want to work as a Marketing Analyst, a Business Intelligence Analyst, a Data Analyst, or a Data Scientist?  Well then, you’ve come to the right place!    Statistics for Data Science and Business Analysis is here for you with TEMPLATES in Excel included!    This is where you start. And it is the perfect beginning!    In no time, you will acquire the fundamental skills that will enable you to understand complicated statistical analysis directly applicable to real-life situations. We have created a course that is:         Easy to understand        Comprehensive        Practical        To the point        Packed with plenty of exercises and resources          Data-driven        Introduces you to the statistical scientific lingo        Teaches you about data visualization        Shows you the main pillars of quant research     It is no secret that a lot of these topics have been explained online. Thousands of times. However, it is next to impossible to find a structured program that gives you an understanding of why certain statistical tests are being used so often. Modern software packages and programming languages are automating most of these activities, but this course gives you something more valuable – critical thinking abilities. Computers and programming languages are like ships at sea. They are fine vessels that will carry you to the desired destination, but it is up to you, the aspiring data scientist or BI analyst, to navigate and point them in the right direction.     Teaching is our passion    We worked hard for over four months to create the best possible Statistics course which would deliver the most value to you. We want you to succeed, which is why the course aims to be as engaging as possible. High-quality animations, superb course materials, quiz questions, handouts and course notes, as well as a glossary with all new terms you will learn, are just some of the perks you will get by subscribing.     What makes this course different from the rest of the Statistics courses out there?        High-quality production – HD video and animations (This isn’t a collection of boring lectures!)        Knowledgeable instructor (An adept mathematician and statistician who has competed at an international level)           Complete training – we will cover all major statistical topics and skills you need to become a marketing analyst, a business intelligence analyst, a data analyst, or a data scientist        Extensive Case Studies that will help you reinforce everything you’ve learned        Excellent support - if you don’t understand a concept or you simply want to drop us a line, you’ll receive an answer within 1 business day        Dynamic - we don’t want to waste your time! The instructor sets a very good pace throughout the whole course  Why do you need these skills?        Salary/Income – careers in the field of data science are some of the most popular in the corporate world today. And, given that most businesses are starting to realize the advantages of working with the data at their disposal, this trend will only continue to grow        Promotions – If you understand Statistics well, you will be able to back up your business ideas with quantitative evidence, which is an easy path to career growth        Secure Future – as we said, the demand for people who understand numbers and data, and can interpret it, is growing exponentially; you’ve probably heard of the number of jobs that will be automated soon, right? Well, data science careers are the ones doing the automating, not getting automated        Growth - this isn’t a boring job. Every day, you will face different challenges that will test your existing skills and require you to learn something new      Please bear in mind that the course comes with Udemy’s 30-day unconditional money-back guarantee. And why not give such a guarantee? We are certain this course will provide a ton of value for you.    Let\'s start learning together now!   Who this course is for:      People who want a career in Data Science     People who want a career in Business Intelligence     Business analysts     Business executives     Individuals who are passionate about numbers and quant analysis     Anyone who wants to learn the subtleties of Statistics and how it is used in the business world     People who want to start learning statistics     People who want to learn the fundamentals of statistics', 'approved', 'INS_5bdbe6b61428f9.96761451', './src/courses/Statistics for Data Science and Business Analysis', 'statistics.png'),
@@ -114,7 +114,8 @@ INSERT INTO `course` (`id`, `crs_uniqueID`, `course_name`, `category_id`, `start
 (12, 'CRS5c329be62eb699.50944317', ' fcnbln kv nkv nnvknm;nnb nktemlnzn ngvni', 1, '2190-04-09', 3, 'fncbn dgmhnbnmgnr onm i4h krmcgvw hkmdsfhvnbothfub 4 vrhfucnkaifbvencbc hbtgbfcngbbhas ;uf;vhdvbf bhdgbcvhbuhgbvhadndfbhhfda', 'vbmsblbnvb bfnbadnvugebdg sokehfabvd ejcbnkvsofhvbsnlksphkzbvga', 'vgbgjhuvndbhgvhd bahfsiohfufgdhv h gusb kiv f', 'rejected', 'INS_5bdbe6b61428f9.96761451', './src/courses/ fcnbln kv nkv nnvknm;nnb nktemlnzn ngvni', 'instagram.png'),
 (13, 'CRS5c3bdfaf4b4cd8.86009674', 'fc bnmlgvmla', 1, '2019-02-03', 10, 'nsdbbvknkvds', 'bfc vn knwvsj', 'dvnkbndx', 'pending', 'INS_5c3bdd8aa1c4d4.93420482', './src/courses/fc bnmlgvmla', '224tech1.png'),
 (14, 'CRS5c4eb123cbbbe9.91086078', 'Model View Controler (MVC) with PHP', 10, '2019-02-01', 10, 'None', 'Able to use MVC with php', 'Model View Controler (MVC) with PHP ', 'approved', 'INS_5bdbe6b61428f9.96761451', './src/courses/Model View Controler (MVC) with PHP', 'mvcphp.png'),
-(15, 'CRS5c7ef15175af02.77830947', 'Data Warehouse', 10, '2019-03-18', 1, 'Data Warehouse 101', 'Data Warehouse 202', 'cnkv s lm v', 'approved', 'INS_5bdbe6b61428f9.96761451', './src/courses/Data Warehouse', '02-01.jpg');
+(15, 'CRS5c7ef15175af02.77830947', 'Data Warehouse', 10, '2019-03-18', 1, 'Data Warehouse 101', 'Data Warehouse 202', 'cnkv s lm v', 'approved', 'INS_5bdbe6b61428f9.96761451', './src/courses/Data Warehouse', '02-01.jpg'),
+(16, 'CRS5cb2ab7b437ce3.52954794', 'Try 1', 10, '2019-04-15', 1, 'None', 'none', 'none', 'pending', 'INS_5bdbe6b61428f9.96761451', './src/courses/Try 1', '2012-11-18 20.28.00.jpg');
 
 -- --------------------------------------------------------
 
@@ -138,9 +139,19 @@ INSERT INTO `courseevencount` (`id`, `courseID`, `studentID`, `nEvent`) VALUES
 (2, 'CRS5c4eb123cbbbe9.91086078', 'STD_5ca9d78252c711.63825561', 17),
 (3, 'CRS5c4eb123cbbbe9.91086078', 'STD_5c96aef14f7496.33836012', 28),
 (4, 'CRS5c21e7b6ecb710.15500033', 'STD_5c96aef14f7496.33836012', 7),
-(5, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 4),
-(6, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa8489d38f92.41826219', 25),
-(7, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa88fd8b1b95.52450101', 17);
+(5, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 19),
+(6, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa8489d38f92.41826219', 33),
+(7, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa88fd8b1b95.52450101', 17),
+(8, 'CRS5c4eb123cbbbe9.91086078', 'INS_5bdbe6b61428f9.96761451', 1),
+(9, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3e88839c44.04067260', 13),
+(10, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3f338fbbb5.21970188', 5),
+(11, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3fd550bf84.96345135', 1),
+(12, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad43c5dc8b93.08437113', 23),
+(13, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad4695d00c66.27037325', 27),
+(14, 'CRS5c4eb123cbbbe9.91086078', 'STD_5bdbfc006984e0.62219977', 4),
+(15, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad680ebf50b7.57723405', 13),
+(16, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad68bf41eae7.25405127', 9),
+(17, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cb30eff7f8072.81956736', 30);
 
 -- --------------------------------------------------------
 
@@ -175,7 +186,9 @@ INSERT INTO `course_cirriculum` (`id`, `week_number`, `title`, `file_name`, `typ
 (9, 8, 'Model View Controler (MVC) with PHP part 9', 'New Social Network - Part 9 - Forgot Passwords.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 9 - Forgot Passwords.mp4', 'show', 'CRS5c4eb123cbbbe9.91086078'),
 (10, 9, 'Model View Controler (MVC) with PHP part 10', 'New Social Network - Part 10 - Following Users.mp4', 'Video', './src/courses/Model View Controler (MVC) with PHP/courseContent/New Social Network - Part 10 - Following Users.mp4', 'show', 'CRS5c4eb123cbbbe9.91086078'),
 (11, 10, 'Model View Controler (MVC) with PHP pdf', 'Pro PHP MVC.pdf', 'Article', './src/courses/Model View Controler (MVC) with PHP/courseContent/Pro PHP MVC.pdf', 'show', 'CRS5c4eb123cbbbe9.91086078'),
-(12, 1, 'intro', 'Getting started with Data Studio_Lab__.pdf', 'Article', './src/courses/Introduction to Finance, Accounting, Modeling and Valuation/courseContent/Getting started with Data Studio_Lab__.pdf', '', 'CRS5bf5837d5dfbb6.84482592');
+(12, 1, 'intro', 'Getting started with Data Studio_Lab__.pdf', 'Article', './src/courses/Introduction to Finance, Accounting, Modeling and Valuation/courseContent/Getting started with Data Studio_Lab__.pdf', '', 'CRS5bf5837d5dfbb6.84482592'),
+(13, 1, 'Intro', '20180910_042335.mp4', 'Video', './src/courses/Data Warehouse/courseContent/20180910_042335.mp4', 'pendi', 'CRS5c7ef15175af02.77830947'),
+(14, 1, 'Intro to MVC', 'timeTableV1.pdf', 'Article', './src/courses/Try 1/courseContent/timeTableV1.pdf', 'pendi', 'CRS5cb2ab7b437ce3.52954794');
 
 -- --------------------------------------------------------
 
@@ -200,7 +213,17 @@ INSERT INTO `enrollment` (`id`, `course_id`, `student_id`, `joining_data`) VALUE
 (16, 'CRS5c4eb123cbbbe9.91086078', 'STD_5ca9d78252c711.63825561', '2019-04-07'),
 (17, 'CRS5c21e7b6ecb710.15500033', 'STD_5c96aef14f7496.33836012', '2019-04-07'),
 (18, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa8489d38f92.41826219', '2019-04-08'),
-(19, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa88fd8b1b95.52450101', '2019-04-08');
+(19, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa88fd8b1b95.52450101', '2019-04-08'),
+(20, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3e88839c44.04067260', '2019-04-10'),
+(21, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3f338fbbb5.21970188', '2019-04-10'),
+(22, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3fd550bf84.96345135', '2019-04-10'),
+(23, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad43c5dc8b93.08437113', '2019-04-10'),
+(24, 'CRS5c4eb123cbbbe9.91086078', 'INS_5bdbe6b61428f9.96761451', '2019-04-10'),
+(25, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad4695d00c66.27037325', '2019-04-10'),
+(26, 'CRS5c4eb123cbbbe9.91086078', 'STD_5bdbfc006984e0.62219977', '2019-04-10'),
+(27, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad680ebf50b7.57723405', '2019-04-10'),
+(28, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad68bf41eae7.25405127', '2019-04-10'),
+(29, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cb30eff7f8072.81956736', '2019-04-14');
 
 -- --------------------------------------------------------
 
@@ -252,7 +275,7 @@ CREATE TABLE `login_tokens` (
 --
 
 INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
-(24, '934c7b5464cf991fcbf61f57b4ba7dc96371e81f', 'STD_5caa8489d38f92.41826219');
+(53, '2d6b606a6658aaf93d1279b6f92e61b8f3d01b58', 'STD_5cb30eff7f8072.81956736');
 
 -- --------------------------------------------------------
 
@@ -278,7 +301,9 @@ INSERT INTO `question` (`id`, `qst_UniqueID`, `question_Content`, `crs_UniqueID`
 (1, 'QTS_5c622034660e26.16011388', 'I would like to know how to create a Route for the MVC?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 1, '2019-02-12 09:24:04'),
 (2, 'QTS_5c622b7db7e835.30141038', 'Is it true that PHP is going to die soon?', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 4, '2019-02-12 10:12:13'),
 (3, 'QTS_5c7ed833b5dcb8.02275328', 'pothuf04io4eo1lm 0ip toh;l', 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 3, '2019-03-06 04:12:35'),
-(4, 'QTS_5caa8b7e0def93.40052751', 'How can set the xampp server on my Mac having issues?', 'CRS5c4eb123cbbbe9.91086078', 'STD_5c96aef14f7496.33836012', 1, '2019-04-08 07:45:02');
+(4, 'QTS_5caa8b7e0def93.40052751', 'How can set the xampp server on my Mac having issues?', 'CRS5c4eb123cbbbe9.91086078', 'STD_5c96aef14f7496.33836012', 2, '2019-04-08 07:45:02'),
+(5, 'QTS_5cad455d722cd3.28395745', 'Dear Thierno,\r\n\r\nWill it be possible to have a course about Flutter MVC?', 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad43c5dc8b93.08437113', 0, '2019-04-10 09:22:37'),
+(6, 'QTS_5cad68eed1e9a4.62977591', 'can play here', 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad68bf41eae7.25405127', 1, '2019-04-10 11:54:22');
 
 -- --------------------------------------------------------
 
@@ -300,7 +325,8 @@ CREATE TABLE `quiz` (
 
 INSERT INTO `quiz` (`id`, `quiz_UniqueID`, `week_ID`, `course_ID`, `created_date`) VALUES
 (4, 'QIZ_5c62a1412d0f54.80206397', 3, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:34:41'),
-(5, 'QIZ_5c62a2013530d9.40641576', 7, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:37:53');
+(5, 'QIZ_5c62a2013530d9.40641576', 7, 'CRS5c4eb123cbbbe9.91086078', '2019-02-12 18:37:53'),
+(6, 'QIZ_5cb2ac6f2b75e0.25380134', 1, 'CRS5cb2ab7b437ce3.52954794', '2019-04-14 11:43:43');
 
 -- --------------------------------------------------------
 
@@ -328,7 +354,9 @@ INSERT INTO `quizquestion` (`id`, `qq_UniqueID`, `question_Title`, `option_A`, `
 (1, 'QIZ_Q5c62a1415095d0.11123170', 'Salut?', 'q', 'q', 'q', 'q', 'A', 'QIZ_5c62a1412d0f54.80206397'),
 (2, 'QIZ_Q5c62a1416d8353.76848079', 'qqqqqqqsdax?', 'w', 'qw', 'wq', 'qa', 'D', 'QIZ_5c62a1412d0f54.80206397'),
 (3, 'QIZ_Q5c62a2015786e6.98717130', 'true or false/?', 'true', 'false', 'false', 'false', 'A', 'QIZ_5c62a2013530d9.40641576'),
-(4, 'QIZ_Q5c62a201604b43.59307247', 'd is right', 'wrong', 'wrong', 'wrong', 'correct', 'D', 'QIZ_5c62a2013530d9.40641576');
+(4, 'QIZ_Q5c62a201604b43.59307247', 'd is right', 'wrong', 'wrong', 'wrong', 'correct', 'D', 'QIZ_5c62a2013530d9.40641576'),
+(5, 'QIZ_Q5cb2ac6f7b5341.28314389', 'Who are you?', 'me', 'you', 'not me', 'Not you', 'A', 'QIZ_5cb2ac6f2b75e0.25380134'),
+(6, 'QIZ_Q5cb2ac6f9bd4f1.80905399', 'Where are You?', 'HELP ', 'MALAYSIA', 'GUINEA', 'IRAN', 'A', 'QIZ_5cb2ac6f2b75e0.25380134');
 
 -- --------------------------------------------------------
 
@@ -361,7 +389,8 @@ INSERT INTO `rating` (`id`, `rating_ID`, `rating_value`, `rating_Content`, `stud
 (8, 'RTG_5c64f794358ae2.42423256', '5', 'sfcx mb', 'STD_0000001', '2019-02-14 13:07:32', 'CRS5c4eb123cbbbe9.91086078'),
 (9, 'RTG_5c7bb26c9c8583.49463994', '3', 'cxz bv dn ', 'STD_0000001', '2019-03-03 18:54:36', 'CRS5c4eb123cbbbe9.91086078'),
 (10, 'RTG_5c7ed8258c74c0.47749386', '1.5', 'eri5ylmhg65y', 'STD_0000001', '2019-03-06 04:12:21', 'CRS5c4eb123cbbbe9.91086078'),
-(11, 'RTG_5caa8b4577dac3.40271056', '5', 'Very Phenomenal chihuahua.', 'STD_5c96aef14f7496.33836012', '2019-04-08 07:44:05', 'CRS5c4eb123cbbbe9.91086078');
+(11, 'RTG_5caa8b4577dac3.40271056', '5', 'Very Phenomenal chihuahua.', 'STD_5c96aef14f7496.33836012', '2019-04-08 07:44:05', 'CRS5c4eb123cbbbe9.91086078'),
+(12, 'RTG_5cad44f7ab8398.75010591', '5', 'This course is very good. it help me develop my skills in MVC.', 'STD_5cad43c5dc8b93.08437113', '2019-04-10 09:20:55', 'CRS5c4eb123cbbbe9.91086078');
 
 -- --------------------------------------------------------
 
@@ -391,7 +420,9 @@ INSERT INTO `response` (`id`, `response_uniqueID`, `response_Content`, `student_
 (6, 'RQTS_5c972c296690a0.80447435', 'guygigufyg', 'STD_0000001', 'QTS_5c7ed833b5dcb8.02275328', '2019-03-24 15:05:13'),
 (7, 'RQTS_5c972d4aa4f851.80901990', 'guygigufyg', 'STD_0000001', 'QTS_5c7ed833b5dcb8.02275328', '2019-03-24 15:10:02'),
 (8, 'RQTS_5c972d806b0d30.16614001', 'guygigufyg', 'STD_0000001', 'QTS_5c7ed833b5dcb8.02275328', '2019-03-24 15:10:56'),
-(9, 'RQTS_5caa8c9708edd5.42483012', 'Hello S,\r\n\r\nplease follow this link to fix your issues.\r\nhttps://www.webucator.com/how-to/how-install-start-test-xampp-on-mac-osx.cfm', 'STD_5caa8489d38f92.41826219', 'QTS_5caa8b7e0def93.40052751', '2019-04-08 07:49:43');
+(9, 'RQTS_5caa8c9708edd5.42483012', 'Hello S,\r\n\r\nplease follow this link to fix your issues.\r\nhttps://www.webucator.com/how-to/how-install-start-test-xampp-on-mac-osx.cfm', 'STD_5caa8489d38f92.41826219', 'QTS_5caa8b7e0def93.40052751', '2019-04-08 07:49:43'),
+(10, 'RQTS_5cac62f88a28d3.50552241', 'follow that link', 'INS_5bdbe6b61428f9.96761451', 'QTS_5caa8b7e0def93.40052751', '2019-04-09 17:16:40'),
+(11, 'RQTS_5cb1a63fa2e0f5.19103790', 'YESSSSSSSSSSSSSSSSS', 'STD_0000001', 'QTS_5cad68eed1e9a4.62977591', '2019-04-13 17:05:03');
 
 -- --------------------------------------------------------
 
@@ -429,7 +460,15 @@ INSERT INTO `student` (`id`, `std_uniquID`, `student_name`, `email`, `password`)
 (15, 'STD_5c96aef14f7496.33836012', 's', 's@s.com', '$2y$10$310L6aemT68wqqdxFBvBQ.YLeKs9CG/qfPA2t8UYW7FKJq9auHO5e'),
 (16, 'STD_5ca9d78252c711.63825561', 'alpha', 'alpha@helpmooc.com', '$2y$10$FUzxRmj1FFwW2VItlw1OmuMvv2Z0J2P8lvDlMbfEgjClg4lfUnH8G'),
 (17, 'STD_5caa8489d38f92.41826219', 'Kadiatou', 'kadiatou@helpmooc.com', '$2y$10$kXtPmG/jR2qube0woDYC6eVwcSyDQbhSrd1ypeOcDi17rOUtSbNUi'),
-(18, 'STD_5caa88fd8b1b95.52450101', 'Daniel', 'daniel@helpmooc.com', '$2y$10$60RtCnvZftSex7oOSqjAq.npo4NV4xPYbVaxXFJMxaI6sOsbUEep2');
+(18, 'STD_5caa88fd8b1b95.52450101', 'Daniel', 'daniel@helpmooc.com', '$2y$10$60RtCnvZftSex7oOSqjAq.npo4NV4xPYbVaxXFJMxaI6sOsbUEep2'),
+(19, 'STD_5cad3e88839c44.04067260', 'Ousmane Diallo', 'ousmane@helpmooc.com', '$2y$10$GQZh8SUhDHgBKGJlZDL5b.cq/KHJNloxlsXFWPGIwLU6a/fF1aoAm'),
+(20, 'STD_5cad3f338fbbb5.21970188', 'Hamid', 'hamid@helpmooc.com', '$2y$10$YykMBLAvvh.u4UEZ8jpJe.X6s/LJlwT8a7SPRzU04V7Q6ydhtUkMu'),
+(21, 'STD_5cad3fd550bf84.96345135', 'Ibrahim', 'ibrahim@helpmooc.com', '$2y$10$Q1UbAMKB/klvN9WRMI89GeVCEFLq0AI4FB03y3gSRC9r0aAI/m0/q'),
+(22, 'STD_5cad43c5dc8b93.08437113', 'Sandra', 'sandra@helpmooc.com', '$2y$10$HOP0gSuO9CuuuiZhkzzY5.yZ7AZiy6RsunveLWyQd7kWZ7mAccC0K'),
+(23, 'STD_5cad4695d00c66.27037325', 'Dr.Fong', 'fong@helpmooc.com', '$2y$10$IiyU9AFDshpjRGiHgi3aJuwh3bvG41VajF.aBLpLJCrqpOQ.heDbW'),
+(24, 'STD_5cad680ebf50b7.57723405', 'Max', 'max@helpmooc.com', '$2y$10$o7E46njk4NctcOrIoGVDI.Bu/1Zm7k4NhAGsENdc0KvwMb5b0KAEa'),
+(25, 'STD_5cad68bf41eae7.25405127', 'Boom', 'boom@helpmooc.com', '$2y$10$DJCobNNK10hpLEQnZrDY4eQ60hM14gnuP1gF9d49VUHVSax.rO0xq'),
+(26, 'STD_5cb30eff7f8072.81956736', 'Balo', 'balo@helpmooc.com', '$2y$10$4LqJ4lNInwU7OAQx0Mkb4e1AwLMMDyXRqA2MratwP70.8bzoF9oxK');
 
 -- --------------------------------------------------------
 
@@ -443,6 +482,26 @@ CREATE TABLE `student_at_risk` (
   `studentID` varchar(50) NOT NULL,
   `dropout` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_at_risk`
+--
+
+INSERT INTO `student_at_risk` (`id`, `courseID`, `studentID`, `dropout`) VALUES
+(188, 'CRS5c21e7b6ecb710.15500033', 'STD_5c96aef14f7496.33836012', 0),
+(189, 'CRS5c4eb123cbbbe9.91086078', 'STD_0000001', 0),
+(190, 'CRS5c4eb123cbbbe9.91086078', 'STD_5bdbfc006984e0.62219977', 1),
+(191, 'CRS5c4eb123cbbbe9.91086078', 'STD_5c96aef14f7496.33836012', 1),
+(192, 'CRS5c4eb123cbbbe9.91086078', 'STD_5ca9d78252c711.63825561', 1),
+(193, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa8489d38f92.41826219', 0),
+(194, 'CRS5c4eb123cbbbe9.91086078', 'STD_5caa88fd8b1b95.52450101', 1),
+(195, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3e88839c44.04067260', 1),
+(196, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3f338fbbb5.21970188', 1),
+(197, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad3fd550bf84.96345135', 1),
+(198, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad43c5dc8b93.08437113', 0),
+(199, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad4695d00c66.27037325', 0),
+(200, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad680ebf50b7.57723405', 1),
+(201, 'CRS5c4eb123cbbbe9.91086078', 'STD_5cad68bf41eae7.25405127', 0);
 
 -- --------------------------------------------------------
 
@@ -463,12 +522,21 @@ CREATE TABLE `student_logs` (
 --
 
 INSERT INTO `student_logs` (`id`, `last_login`, `std_uniqueID`, `course_ID`, `active_days`) VALUES
-(1, '2019-04-08', 'STD_0000001', 'CRS5c4eb123cbbbe9.91086078', 2),
+(1, '2019-04-14', 'STD_0000001', 'CRS5c4eb123cbbbe9.91086078', 4),
 (2, '2019-04-08', 'STD_5ca9d78252c711.63825561', 'CRS5c4eb123cbbbe9.91086078', 2),
 (3, '2019-04-08', 'STD_5c96aef14f7496.33836012', 'CRS5c4eb123cbbbe9.91086078', 2),
 (4, '2019-04-08', 'STD_5c96aef14f7496.33836012', 'CRS5c21e7b6ecb710.15500033', 2),
-(5, '2019-04-08', 'STD_5caa8489d38f92.41826219', 'CRS5c4eb123cbbbe9.91086078', 1),
-(6, '2019-04-08', 'STD_5caa88fd8b1b95.52450101', 'CRS5c4eb123cbbbe9.91086078', 1);
+(5, '2019-04-10', 'STD_5caa8489d38f92.41826219', 'CRS5c4eb123cbbbe9.91086078', 2),
+(6, '2019-04-08', 'STD_5caa88fd8b1b95.52450101', 'CRS5c4eb123cbbbe9.91086078', 1),
+(7, '2019-04-10', 'STD_5cad3e88839c44.04067260', 'CRS5c4eb123cbbbe9.91086078', 1),
+(8, '2019-04-10', 'STD_5cad3f338fbbb5.21970188', 'CRS5c4eb123cbbbe9.91086078', 1),
+(9, '2019-04-10', 'STD_5cad3fd550bf84.96345135', 'CRS5c4eb123cbbbe9.91086078', 1),
+(10, '2019-04-10', 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 1),
+(11, '2019-04-10', 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 1),
+(12, '2019-04-10', 'STD_5bdbfc006984e0.62219977', 'CRS5c4eb123cbbbe9.91086078', 1),
+(13, '2019-04-10', 'STD_5cad680ebf50b7.57723405', 'CRS5c4eb123cbbbe9.91086078', 1),
+(14, '2019-04-10', 'STD_5cad68bf41eae7.25405127', 'CRS5c4eb123cbbbe9.91086078', 1),
+(15, '2019-04-15', 'STD_5cb30eff7f8072.81956736', 'CRS5c4eb123cbbbe9.91086078', 2);
 
 -- --------------------------------------------------------
 
@@ -507,7 +575,35 @@ INSERT INTO `videoplay_logs` (`id`, `std_uniqueID`, `course_ID`, `video_id`, `np
 (16, 'STD_5caa8489d38f92.41826219', 'CRS5c4eb123cbbbe9.91086078', 6, 1),
 (17, 'STD_5caa8489d38f92.41826219', 'CRS5c4eb123cbbbe9.91086078', 8, 1),
 (18, 'STD_5caa88fd8b1b95.52450101', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
-(19, 'STD_5caa88fd8b1b95.52450101', 'CRS5c4eb123cbbbe9.91086078', 3, 1);
+(19, 'STD_5caa88fd8b1b95.52450101', 'CRS5c4eb123cbbbe9.91086078', 3, 1),
+(20, 'STD_5caa8489d38f92.41826219', 'CRS5c4eb123cbbbe9.91086078', 5, 1),
+(21, 'STD_5cad3e88839c44.04067260', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(22, 'STD_5cad3e88839c44.04067260', 'CRS5c4eb123cbbbe9.91086078', 3, 1),
+(23, 'STD_5cad3e88839c44.04067260', 'CRS5c4eb123cbbbe9.91086078', 4, 1),
+(24, 'STD_5cad3f338fbbb5.21970188', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(25, 'STD_5cad3fd550bf84.96345135', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(26, 'STD_5cad3fd550bf84.96345135', 'CRS5c4eb123cbbbe9.91086078', 4, 1),
+(27, 'STD_5cad3fd550bf84.96345135', 'CRS5c4eb123cbbbe9.91086078', 10, 1),
+(28, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(29, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 3, 1),
+(30, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 4, 1),
+(31, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 5, 1),
+(32, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 6, 1),
+(33, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 8, 1),
+(34, 'STD_5cad43c5dc8b93.08437113', 'CRS5c4eb123cbbbe9.91086078', 10, 1),
+(35, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(36, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 3, 1),
+(37, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 4, 1),
+(38, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 5, 1),
+(39, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 6, 1),
+(40, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 8, 1),
+(41, 'STD_5cad4695d00c66.27037325', 'CRS5c4eb123cbbbe9.91086078', 9, 1),
+(42, 'STD_5bdbfc006984e0.62219977', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(43, 'STD_5cad680ebf50b7.57723405', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(44, 'STD_5cad68bf41eae7.25405127', 'CRS5c4eb123cbbbe9.91086078', 1, 1),
+(45, 'STD_5cad68bf41eae7.25405127', 'CRS5c4eb123cbbbe9.91086078', 4, 1),
+(46, 'STD_5cad68bf41eae7.25405127', 'CRS5c4eb123cbbbe9.91086078', 8, 1),
+(47, 'STD_5cad68bf41eae7.25405127', 'CRS5c4eb123cbbbe9.91086078', 10, 1);
 
 --
 -- Indexes for dumped tables
@@ -649,25 +745,25 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `courseevencount`
 --
 ALTER TABLE `courseevencount`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `course_cirriculum`
 --
 ALTER TABLE `course_cirriculum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `instructor`
@@ -679,61 +775,61 @@ ALTER TABLE `instructor`
 -- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `quizquestion`
 --
 ALTER TABLE `quizquestion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `response`
 --
 ALTER TABLE `response`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `student_at_risk`
 --
 ALTER TABLE `student_at_risk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
 
 --
 -- AUTO_INCREMENT for table `student_logs`
 --
 ALTER TABLE `student_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `videoplay_logs`
 --
 ALTER TABLE `videoplay_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
